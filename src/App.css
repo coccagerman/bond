@@ -1,0 +1,483 @@
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.btn {
+  font-size: 1.25rem;
+  height: 2.5rem;
+  border-radius: 1rem;
+  padding: 0 .5rem;
+  border: solid black 2px;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #FDBE14;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.btn-primary:hover {
+  background-color: #e4a700;
+}
+
+.btn-secondary {
+  background-color: #ccc;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.btn-secondary:hover {
+  background-color: #9b9b9b;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #FDBE14;
+  padding: 1rem 0 0 1rem;
+}
+
+nav .logo {
+  width: 7rem;
+  margin: -1.5rem 0 -.5rem 1rem;
+}
+
+nav .companyName {
+  text-align: right;
+  line-height: 2rem;
+  margin-left: 1.5rem;
+}
+
+nav .companyName .tittle {
+  font-family: 'Dosis', sans-serif;
+  font-size: 3rem;
+}
+
+nav .companyName .subTittle {
+  font-family: 'Dosis', sans-serif;
+  font-size: 1.5rem;
+  margin-right: .1rem;
+}
+
+.initialForm {
+  font-size: 1.5rem;
+  margin: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.initialForm .inputs-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 1rem;
+}
+
+.initialForm .formInput {
+  margin: 0 2rem;
+  min-width: 8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.initialForm .formInput label {
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: .5rem;
+}
+
+.initialForm .formInput .selectBox {
+  border-radius: 1rem;
+  border: gray solid 1px;
+  font-size: 1.1rem;
+  width: 12rem;
+  text-align: center;
+}
+
+.initialForm .switch-container {
+  width: 17rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.initialForm .switch-container .switchTittle {
+  font-weight: bold;
+}
+
+.initialForm .switch-container .switchTittle .gray {
+  color: #ccc;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.initialForm .switch-container .small-tittle {
+  font-size: 1rem;
+  width: 20rem;
+  margin-top: 1rem;
+}
+
+.initialForm .switch-container .switch {
+  margin-top: .25rem;
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+}
+
+.initialForm .switch-container .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.initialForm .switch-container .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.initialForm .switch-container .slider:before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.initialForm .switch-container input:checked + .slider {
+  background-color: #FDBE14;
+}
+
+.initialForm .switch-container input:focus + .slider {
+  -webkit-box-shadow: 0 0 1px #FDBE14;
+          box-shadow: 0 0 1px #FDBE14;
+}
+
+.initialForm .switch-container input:checked + .slider:before {
+  -webkit-transform: translateX(29px);
+  transform: translateX(29px);
+}
+
+.initialForm .switch-container .slider.round {
+  border-radius: 34px;
+}
+
+.initialForm .switch-container .slider.round:before {
+  border-radius: 50%;
+}
+
+.initialForm .small-switch-container .switchTittle {
+  font-size: 1rem;
+  width: 20rem;
+  margin-top: 1rem;
+}
+
+.initialForm .small-switch-container .switch {
+  height: 22px;
+}
+
+.initialForm .small-switch-container .slider:before {
+  height: 16px;
+  width: 16px;
+  bottom: 3px;
+}
+
+.initialForm .small-switch-container input:checked + .slider:before {
+  -webkit-transform: translateX(35px);
+  transform: translateX(35px);
+}
+
+.initialForm .btnAndError-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.formInput-display-none {
+  margin: 0 2rem;
+  min-width: 8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: none;
+}
+
+.formInput-display-block {
+  margin: 0 2rem;
+  min-width: 8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: block;
+}
+
+.searchResult {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2rem;
+}
+
+.flightOption {
+  background-color: #e4e2e2;
+  border: solid black 2px;
+  margin: 3rem;
+  padding: 2rem;
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.66);
+  -webkit-box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.66);
+  -moz-box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.66);
+}
+
+.flightOption-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.flightOption-div p {
+  margin-right: 2rem;
+}
+
+.flightSelected {
+  background-color: white;
+  border: solid gray 2px;
+  margin: 1.5rem;
+  padding: 1rem;
+  box-shadow: 0px 0px 5px 2px gray;
+  -webkit-box-shadow: 0px 0px 5px 2px gray;
+  -moz-box-shadow: 0px 0px 5px 2px gray;
+}
+
+.checkOut-section {
+  text-align: center;
+  padding: 2rem;
+}
+
+.checkOut-section button {
+  margin: 1rem;
+}
+
+.checkOut-section .checkOut-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1rem 0;
+}
+
+.checkOut-section .checkOut-container .selectedFlights-container .flight {
+  text-align: left;
+  border: black solid 2px;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin: 1rem;
+}
+
+.checkOut-section .checkOut-container .checkOutform {
+  padding: 2rem;
+  background-color: #ccc;
+  border-radius: 1rem;
+  font-size: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.checkOut-section .checkOut-container .checkOutform .formInput {
+  margin: .5rem 2rem;
+  min-width: 8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.checkOut-section .checkOut-container .checkOutform .formInput label {
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: .5rem;
+}
+
+.checkOut-section .checkOut-container .checkOutform .formInput .textBox {
+  border-radius: 1rem;
+  border: gray solid 1px;
+  font-size: 1.1rem;
+  width: 15rem;
+  height: 2rem;
+  text-align: center;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+footer .company_identity {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+}
+
+footer .company_identity .footer_logo {
+  width: 7rem;
+}
+
+footer .company_identity .companyName {
+  text-align: right;
+  line-height: 2rem;
+  margin: 1.5rem 0 0 1.5rem;
+}
+
+footer .company_identity .companyName .tittle {
+  font-family: 'Dosis', sans-serif;
+  font-size: 3rem;
+}
+
+footer .company_identity .companyName .subTittle {
+  font-family: 'Dosis', sans-serif;
+  font-size: 1.5rem;
+  margin-right: .2rem;
+}
+
+footer .socialNetwork {
+  color: white;
+  font-size: 2rem;
+  margin: 0 1.5rem;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+footer .socialNetwork:hover {
+  color: #FDBE14;
+}
+/*# sourceMappingURL=App.css.map */
