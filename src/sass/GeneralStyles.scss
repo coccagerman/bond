@@ -8,6 +8,12 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+.mainContainer {
+    display: flex;
+        justify-content: center;
+        align-items: center;
+}
+
 .btn {
     font-size: 1.25rem;
     height: 2.5rem;
@@ -34,4 +40,3 @@
         background-color: rgb(155, 155, 155);
     }
 }
-

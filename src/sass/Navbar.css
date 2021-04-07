@@ -9,12 +9,14 @@ nav {
 nav .logo {
   width: 7rem;
   margin: -1.5rem 0 -.5rem 1rem;
+  cursor: pointer;
 }
 
 nav .companyName {
   text-align: right;
   line-height: 2rem;
   margin-left: 1.5rem;
+  cursor: pointer;
 }
 
 nav .companyName .tittle {

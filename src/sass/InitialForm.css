@@ -1,6 +1,6 @@
 .initialForm {
   font-size: 1.5rem;
-  margin: 4rem;
+  margin: 5rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -20,6 +20,12 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   margin: 1rem;
 }
 
@@ -52,7 +58,8 @@
   border: gray solid 1px;
   font-size: 1.1rem;
   width: 12rem;
-  text-align: center;
+  padding: .45rem;
+  cursor: pointer;
 }
 
 .initialForm .switch-container {
@@ -221,5 +228,36 @@
       -ms-flex-align: center;
           align-items: center;
   display: block;
+}
+
+.formInput-display-block .labelAndSelector-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.formInput-display-block .labelAndSelector-container .desiredReturnDate-label {
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: .5rem;
+}
+
+.formInput-display-block .labelAndSelector-container .selectBox {
+  border-radius: 1rem;
+  border: gray solid 1px;
+  font-size: 1.1rem;
+  width: 12rem;
+  padding: .45rem;
+  cursor: pointer;
 }
 /*# sourceMappingURL=InitialForm.css.map */

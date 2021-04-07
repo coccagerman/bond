@@ -16,6 +16,7 @@ footer .company_identity {
   display: -ms-flexbox;
   display: flex;
   margin: 0;
+  cursor: pointer;
 }
 
 footer .company_identity .footer_logo {

@@ -1,70 +1,79 @@
 import { useState } from 'react';
 import ReturnFlightOption from './ReturnFlightOption'
-import FlightOption from './FlightOption'
 
-function AvailableReturnFlights ({flightSearchParams, searchFlights, setSectionShown, setChosenReturnFlight, chosenReturnFlight, chosenDepartureFlight, setTypeOfTripSwitch}) {
+function AvailableReturnFlights ({flightSearchParams, searchFlights, setSectionShown, setChosenReturnFlight, chosenReturnFlight, chosenDepartureFlight, formatPlaces,handleSearchAgain}) {
 
-    // Hook used to store the results of the flight search done
-    const [availableReturnFlightsList, setAvailableReturnFlightsList] = useState(searchFlights(flightSearchParams[1], flightSearchParams[0], flightSearchParams[2], flightSearchParams[4]));
+    // Hook used to store the results of the return flight search done
+    const [availableReturnFlightsList, setAvailableReturnFlightsList] = useState(searchFlights(chosenDepartureFlight[2], chosenDepartureFlight[1], chosenDepartureFlight[4], flightSearchParams[4], flightSearchParams[5]));
 
     // Function that displays the flight search results
     const showFlights = () => {
-        if (
-            (flightSearchParams[0] === 'COR' && flightSearchParams[1] === 'COR') ||
-            (flightSearchParams[0] === 'COR' && flightSearchParams[1] === 'EPA') ||
-            (flightSearchParams[0] === 'EPA' && flightSearchParams[1] === 'EPA') ||
-            (flightSearchParams[0] === 'EPA' && flightSearchParams[1] === 'COR') ||
-            (flightSearchParams[0] === 'EPA' && flightSearchParams[1] === 'MDZ') ||
-            (flightSearchParams[0] === 'MDZ' && flightSearchParams[1] === 'MDZ') ||
-            (flightSearchParams[0] === 'MDZ' && flightSearchParams[1] === 'BRC') ||
-            (flightSearchParams[0] === 'MDZ' && flightSearchParams[1] === 'EPA') ||
-            (flightSearchParams[0] === 'BRC' && flightSearchParams[1] === 'BRC') ||
-            (flightSearchParams[0] === 'BRC' && flightSearchParams[1] === 'MDZ')
-        ) {
+
+        if (availableReturnFlightsList.length === 0) {
             return <p>Lo sentimos, no tenemos vuelos disponibles con las parámetros seleccionados.</p>
         } else {
             return availableReturnFlightsList.map((item) => (
                 <article className='flightOption'>
-                    <ReturnFlightOption data={item.data} origin={item.origin} destination={item.destination} price={item.price} availability={item.availability} setSectionShown={setSectionShown} setChosenReturnFlight={setChosenReturnFlight} chosenReturnFlight={chosenReturnFlight} />
+                    <ReturnFlightOption data={item.data} origin={item.origin} destination={item.destination} price={item.price} totalPrice={item.price*flightSearchParams[2]} passengers={flightSearchParams[2]} setSectionShown={setSectionShown} setChosenReturnFlight={setChosenReturnFlight} chosenReturnFlight={chosenReturnFlight} formatPlaces={formatPlaces}/>
                 </article>
               ))
         }
     }
 
-    // Function that returns to AvailableFlights section when ReturnToSearchResults is pressed
-    function handleReturnToSearchResults(e) {
-        e.preventDefault();
-        setSectionShown('AvailableFlights')
+    // Function used to display a different price search parameter depending on the param entered in the search form
+    function priceParam () {
+        if (flightSearchParams[5] === '1000') {
+            return 'Hasta $1000'
+        } else if (flightSearchParams[5] === '800') {
+            return 'Hasta $800' 
+        } else if (flightSearchParams[5] === '400') {
+            return 'Hasta $400'
+        } else {
+            return 'Hasta $200'
+        }
     }
 
-    // Function that changes the section back to InitialForm
-    function handleSearchAgain(e) {
+    // Function that returns to AvailableDepartureFlights section when ReturnToSearchResults is pressed
+    function handleReturnToDepartureSearchResults(e) {
         e.preventDefault();
-        setTypeOfTripSwitch(0)
-        setSectionShown('InitialForm')
+        setSectionShown('AvailableDepartureFlights')
     }
 
     return (
         <div className='searchResult'>
-            <h1>Resultados de búsqueda para ...(parámetros de búsqueda)</h1>
+            <article className="flight searchParameters">
+            <h2>Resultados de búsqueda para:</h2>
+                <div className="row row1">
+                    <p><span className="label">Fecha de salida:</span> {flightSearchParams[3]}</p>
+                    <p><span className="label">Fecha de retorno:</span> {flightSearchParams[4]}</p>
+                    <p><span className="label">Origen:</span> {flightSearchParams[0] === '' ? 'N/A' : formatPlaces(flightSearchParams[0])}</p>
+                    <p><span className="label">Destino:</span> {flightSearchParams[0] === '' ? 'N/A' : formatPlaces(flightSearchParams[0])}</p>
+                </div>
+                <div className="row row2">
+                    <p><span className="label">Pasajeros:</span>  {flightSearchParams[2]}</p>
+                    <p><span className="label">Precio:</span> {priceParam()}</p>
+                </div>
+            </article>
+
 
             <h2>Vuelo de ida seleccionado:</h2>
             <article className="flight flightSelected">
                 <div className="row row1">
                     <p><span className="label">Fecha:</span> {chosenDepartureFlight[0]}</p>
-                    <p><span className="label">Origen:</span> {chosenDepartureFlight[1]}</p>
-                    <p><span className="label">Destino:</span> {chosenDepartureFlight[2]}</p>
+                    <p><span className="label">Origen:</span> {formatPlaces(chosenDepartureFlight[1])}</p>
+                    <p><span className="label">Destino:</span> {formatPlaces(chosenDepartureFlight[2])}</p>
                 </div>
                 <div className="row row2">
-                    <p><span className="label">Availability:</span>  {chosenDepartureFlight[4]}</p>
-                    <p><span className="label">Precio:</span> $ {chosenDepartureFlight[3]}</p>
-                    <button className="btn btn-secondary" onClick={(e) => handleReturnToSearchResults(e)}>Modificar</button>
+                    <p><span className="label">Pasajeros:</span>  {chosenDepartureFlight[4]}</p>
+                    <p><span className="label">Precio unitario:</span> $ {chosenDepartureFlight[3]}</p>
+                    <p><span className="label">Precio total:</span> $ {(chosenDepartureFlight[4]*chosenDepartureFlight[3]).toFixed(2)}</p>
+                    <button className="btn btn-secondary" onClick={(e) => handleReturnToDepartureSearchResults(e)}>Modificar</button>
                 </div>
             </article>
 
-            <h2>Vuelos de vuelta disponibles:</h2>
+            <h1>Vuelos de vuelta disponibles:</h1>
             {showFlights()}
-            <button className='btn btn-secondary' onClick={(e) => handleSearchAgain(e)}>Search again</button>
+            <button className='btn btn-secondary' onClick={(e) => handleSearchAgain(e)}>Buscar más vuelos</button>
         </div>
     )
 }

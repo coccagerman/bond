@@ -29,8 +29,8 @@
   text-align: left;
   border: black solid 2px;
   border-radius: 1rem;
-  padding: 1.5rem;
-  margin: 1rem;
+  padding: .5rem;
+  margin: .5rem;
 }
 
 .flight .row {
@@ -57,5 +57,26 @@
 
 .flight .row .btn {
   margin: 0;
+}
+
+.searchParameters {
+  border: none;
+}
+
+.NoAvailableFlightsError {
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.NoAvailableFlightsError img {
+  width: 20rem;
+  margin: 1.5rem;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.NoAvailableFlightsError img:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 /*# sourceMappingURL=FlightSearchResults.css.map */

@@ -1,0 +1,149 @@
+@media screen and (max-width: 767px) {
+
+    nav {
+        width: 100%;
+    
+        .logo {
+            width: 5rem;
+            margin: -1rem 0 0rem .25rem;
+        }
+        
+        .companyName {
+            text-align: right;
+            line-height: 1.5rem;
+            margin-left: .5rem;
+        
+            .tittle {
+                font-size: 2.35rem;
+            }
+            
+            .subTittle {
+                font-size: 1.10rem;
+            }
+        }
+    }
+
+    .initialForm {
+        margin: 0;
+    
+        .inputs-div {
+            flex-direction: column;
+            margin: 0;
+        }
+    
+        .formInput{
+            margin: .5rem auto;
+    
+            label {
+                margin-bottom: .25rem;
+            }
+    
+            .selectBox {
+                margin-bottom: .5rem;
+            }
+        }
+
+        .btnAndError-div {
+            text-align: center;
+        }
+
+            p {
+                font-size: 1.25rem;
+                max-width: 20rem;
+                margin-bottom: .5rem;
+            }
+        
+    }
+
+    footer {    
+          justify-content: space-around;
+      
+        .company_identity {
+          margin: 0 0 0 1rem;
+      
+          .footer_logo {
+            width: 5rem;
+          }
+            
+          .companyName {
+            line-height: 1.5rem;
+            margin: 1rem 0 0 .5rem;
+      
+            .tittle {
+              font-size: 2.35rem;
+            }
+            
+            .subTittle {
+              font-size: 1.1rem;
+              margin-right: .2rem;
+            }
+          }
+        }
+      
+        .socialNetwork {
+          font-size: 1.5rem;
+          margin: .75rem;
+        }
+    }
+    
+    .flight {
+      text-align: center;
+  
+      .row {
+          flex-direction: column;
+  
+        .btn {
+            margin: .5rem 0;
+            font-size: 1.15rem;
+        }
+      }
+    }
+
+  .searchResult {
+    text-align: center;
+    padding: 2rem 0;
+
+    .btn-secondary{
+      margin-top: 1rem;
+    }
+
+    .searchParameters {
+      h2 {
+        max-width: 20rem;
+      }
+    }
+  }
+
+  .checkOut-section {
+    padding: 1rem;
+    max-width: 24rem;
+
+    h1 {
+      font-size: 1.15rem;
+      max-width: 20rem;
+      margin: 0 auto;
+    }
+
+    .checkOut-container {
+        display: flex;
+        flex-direction: column;
+
+        .checkOutform-container {
+            margin: 1rem 0;
+            width: 20rem;
+            }
+
+            .thanksMessage {
+                .paperPlaneIcon{
+                    margin: 2rem 0;
+                    width: 8rem;
+                    transition: 1s;
+
+                    &:hover {
+                        transform: scale(1.05);
+                    }
+                }
+            }
+        }
+    }
+}

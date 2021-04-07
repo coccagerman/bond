@@ -8,6 +8,18 @@
   font-family: 'Montserrat', sans-serif;
 }
 
+.mainContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .btn {
   font-size: 1.25rem;
   height: 2.5rem;
@@ -48,12 +60,14 @@ nav {
 nav .logo {
   width: 7rem;
   margin: -1.5rem 0 -.5rem 1rem;
+  cursor: pointer;
 }
 
 nav .companyName {
   text-align: right;
   line-height: 2rem;
   margin-left: 1.5rem;
+  cursor: pointer;
 }
 
 nav .companyName .tittle {
@@ -69,7 +83,7 @@ nav .companyName .subTittle {
 
 .initialForm {
   font-size: 1.5rem;
-  margin: 4rem;
+  margin: 5rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -89,6 +103,12 @@ nav .companyName .subTittle {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   margin: 1rem;
 }
 
@@ -121,7 +141,8 @@ nav .companyName .subTittle {
   border: gray solid 1px;
   font-size: 1.1rem;
   width: 12rem;
-  text-align: center;
+  padding: .45rem;
+  cursor: pointer;
 }
 
 .initialForm .switch-container {
@@ -292,6 +313,37 @@ nav .companyName .subTittle {
   display: block;
 }
 
+.formInput-display-block .labelAndSelector-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.formInput-display-block .labelAndSelector-container .desiredReturnDate-label {
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: .5rem;
+}
+
+.formInput-display-block .labelAndSelector-container .selectBox {
+  border-radius: 1rem;
+  border: gray solid 1px;
+  font-size: 1.1rem;
+  width: 12rem;
+  padding: .45rem;
+  cursor: pointer;
+}
+
 .searchResult {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -309,17 +361,25 @@ nav .companyName .subTittle {
   padding: 2rem;
 }
 
-.flightOption {
-  background-color: #e4e2e2;
-  border: solid black 2px;
-  margin: 3rem;
-  padding: 2rem;
-  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.66);
-  -webkit-box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.66);
-  -moz-box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.66);
+.flightSelected {
+  background-color: #ccc;
+  border: solid gray 2px;
+  margin: 1.5rem;
+  padding: 0;
+  box-shadow: 0px 0px 5px 2px gray;
+  -webkit-box-shadow: 0px 0px 5px 2px gray;
+  -moz-box-shadow: 0px 0px 5px 2px gray;
 }
 
-.flightOption-div {
+.flight {
+  text-align: left;
+  border: black solid 2px;
+  border-radius: 1rem;
+  padding: .5rem;
+  margin: .5rem;
+}
+
+.flight .row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -329,20 +389,41 @@ nav .companyName .subTittle {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 1rem;
+  font-size: 1rem;
 }
 
-.flightOption-div p {
-  margin-right: 2rem;
+.flight .row p {
+  margin: 0 1.5rem;
 }
 
-.flightSelected {
-  background-color: white;
-  border: solid gray 2px;
+.flight .row p span {
+  font-weight: bold;
+}
+
+.flight .row .btn {
+  margin: 0;
+}
+
+.searchParameters {
+  border: none;
+}
+
+.NoAvailableFlightsError {
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.NoAvailableFlightsError img {
+  width: 20rem;
   margin: 1.5rem;
-  padding: 1rem;
-  box-shadow: 0px 0px 5px 2px gray;
-  -webkit-box-shadow: 0px 0px 5px 2px gray;
-  -moz-box-shadow: 0px 0px 5px 2px gray;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.NoAvailableFlightsError img:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 .checkOut-section {
@@ -352,6 +433,10 @@ nav .companyName .subTittle {
 
 .checkOut-section button {
   margin: 1rem;
+}
+
+.checkOut-section .display-none {
+  display: none;
 }
 
 .checkOut-section .checkOut-container {
@@ -367,19 +452,13 @@ nav .companyName .subTittle {
   margin: 1rem 0;
 }
 
-.checkOut-section .checkOut-container .selectedFlights-container .flight {
-  text-align: left;
-  border: black solid 2px;
-  border-radius: 1rem;
-  padding: 1.5rem;
-  margin: 1rem;
-}
-
-.checkOut-section .checkOut-container .checkOutform {
+.checkOut-section .checkOut-container .checkOutform-container {
   padding: 2rem;
   background-color: #ccc;
   border-radius: 1rem;
   font-size: 1.5rem;
+  width: 30rem;
+  height: 29.25rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -395,7 +474,11 @@ nav .companyName .subTittle {
           justify-content: center;
 }
 
-.checkOut-section .checkOut-container .checkOutform .formInput {
+.checkOut-section .checkOut-container .checkOutform-container .checkOutErrorMessage {
+  font-size: 1rem;
+}
+
+.checkOut-section .checkOut-container .checkOutform-container .checkOutform .formInput {
   margin: .5rem 2rem;
   min-width: 8rem;
   display: -webkit-box;
@@ -413,19 +496,31 @@ nav .companyName .subTittle {
           align-items: center;
 }
 
-.checkOut-section .checkOut-container .checkOutform .formInput label {
+.checkOut-section .checkOut-container .checkOutform-container .checkOutform .formInput label {
   font-weight: bold;
   text-align: center;
   margin-bottom: .5rem;
 }
 
-.checkOut-section .checkOut-container .checkOutform .formInput .textBox {
+.checkOut-section .checkOut-container .checkOutform-container .checkOutform .formInput .textBox {
   border-radius: 1rem;
   border: gray solid 1px;
   font-size: 1.1rem;
   width: 15rem;
   height: 2rem;
   text-align: center;
+}
+
+.checkOut-section .checkOut-container .checkOutform-container .thanksMessage .paperPlaneIcon {
+  margin: 2rem 0;
+  width: 8rem;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.checkOut-section .checkOut-container .checkOutform-container .thanksMessage .paperPlaneIcon:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 footer {
@@ -446,6 +541,7 @@ footer .company_identity {
   display: -ms-flexbox;
   display: flex;
   margin: 0;
+  cursor: pointer;
 }
 
 footer .company_identity .footer_logo {
@@ -479,5 +575,47 @@ footer .socialNetwork {
 
 footer .socialNetwork:hover {
   color: #FDBE14;
+}
+
+@media screen and (max-width: 767px) {
+  nav {
+    width: 110%;
+  }
+  nav .logo {
+    width: 3rem;
+    margin: -1.5rem 0 -.5rem 1rem;
+    cursor: pointer;
+  }
+  nav .companyName {
+    text-align: right;
+    line-height: 2rem;
+    margin-left: 1.5rem;
+    cursor: pointer;
+  }
+  nav .companyName .tittle {
+    font-family: 'Dosis', sans-serif;
+    font-size: 3rem;
+  }
+  nav .companyName .subTittle {
+    font-family: 'Dosis', sans-serif;
+    font-size: 1.5rem;
+    margin-right: .1rem;
+  }
+  .initialForm .inputs-div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin: 1rem;
+  }
 }
 /*# sourceMappingURL=App.css.map */

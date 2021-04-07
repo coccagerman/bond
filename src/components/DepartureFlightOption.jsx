@@ -1,9 +1,9 @@
-function FlightOption ({data, origin, destination, price, availability, setSectionShown, setChosenDepartureFlight, typeOfTripSwitch}) {
+function DepartureFlightOption ({data, origin, destination, price, passengers, setSectionShown, setChosenDepartureFlight, typeOfTripSwitch, totalPrice, formatPlaces}) {
 
     // Function that executes when Select flight button is pressed
     function handleSelectFlight(e) {
         e.preventDefault();
-        setChosenDepartureFlight([data, origin, destination, price, availability])
+        setChosenDepartureFlight([data, origin, destination, price, passengers])
 
         if (typeOfTripSwitch%2 === 1) {
             setSectionShown('AvailableReturnFlights')
@@ -25,16 +25,17 @@ function FlightOption ({data, origin, destination, price, availability, setSecti
         <article className="flight">
             <div className="row row1">
                 <p><span className="label">Fecha:</span> {data}</p>
-                <p><span className="label">Origen:</span> {origin}</p>
-                <p><span className="label">Destino:</span> {destination}</p>
+                <p><span className="label">Origen:</span> {formatPlaces(origin)}</p>
+                <p><span className="label">Destino:</span> {formatPlaces(destination)}</p>
             </div>
             <div className="row row2">
-                <p><span className="label">Availability:</span>  {availability}</p>
-                <p><span className="label">Precio:</span> $ {price}</p>
+                <p><span className="label">Pasajeros:</span>  {passengers}</p>
+                <p><span className="label">Precio unitario:</span> $ {price}</p>
+                <p><span className="label">Precio total:</span> $ {totalPrice.toFixed(2)}</p>
                 {selectFlightBtnContent()}
             </div>
         </article>
     )
 }
 
-export default FlightOption
+export default DepartureFlightOption
