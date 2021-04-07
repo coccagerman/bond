@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import ReturnFlightOption from './ReturnFlightOption'
+import ErrorMessageNoAvailableFlights from './ErrorMessageNoAvailableFlights'
 
 function AvailableReturnFlights ({flightSearchParams, searchFlights, setSectionShown, setChosenReturnFlight, chosenReturnFlight, chosenDepartureFlight, formatPlaces,handleSearchAgain}) {
 
@@ -10,7 +11,7 @@ function AvailableReturnFlights ({flightSearchParams, searchFlights, setSectionS
     const showFlights = () => {
 
         if (availableReturnFlightsList.length === 0) {
-            return <p>Lo sentimos, no tenemos vuelos disponibles con las parámetros seleccionados.</p>
+            return <ErrorMessageNoAvailableFlights/>
         } else {
             return availableReturnFlightsList.map((item) => (
                 <article className='flightOption'>
@@ -47,7 +48,7 @@ function AvailableReturnFlights ({flightSearchParams, searchFlights, setSectionS
                     <p><span className="label">Fecha de salida:</span> {flightSearchParams[3]}</p>
                     <p><span className="label">Fecha de retorno:</span> {flightSearchParams[4]}</p>
                     <p><span className="label">Origen:</span> {flightSearchParams[0] === '' ? 'N/A' : formatPlaces(flightSearchParams[0])}</p>
-                    <p><span className="label">Destino:</span> {flightSearchParams[0] === '' ? 'N/A' : formatPlaces(flightSearchParams[0])}</p>
+                    <p><span className="label">Destino:</span> {flightSearchParams[0] === '' ? 'N/A' : formatPlaces(flightSearchParams[1])}</p>
                 </div>
                 <div className="row row2">
                     <p><span className="label">Pasajeros:</span>  {flightSearchParams[2]}</p>
