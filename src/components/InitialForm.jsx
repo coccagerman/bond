@@ -2,50 +2,29 @@ import { useState } from 'react';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
-function InitialForm ({dataset, setFlightSearchParams, setSectionShown, setTypeOfTripSwitch, typeOfTripSwitch, formatPlaces}) {
+function InitialForm ({dataset, setFlightSearchParams, setSectionShown, setTypeOfTripSwitch, typeOfTripSwitch, formatPlaces, typeOfDepartureDate, setTypeOfDepartureDate, typeOfReturnDate, setTypeOfReturnDate, desiredFlexDepartureDates, setDesiredFlexDepartureDates, desiredFlexReturnDates, setDesiredFlexReturnDates, desiredOrigin, setDesiredOrigin, desiredDestination, setDesiredDestination, desiredPassengers, setDesiredPassengers, desiredDepartureDate, setDesiredDepartureDate, desiredReturnDate, setDesiredReturnDate, desiredTotalPrice, setDesiredTotalPrice}) {
 
     // Variables with functions that identify the different possible origins and destinations for the flights.
     const distinctOrigins = [...new Set(dataset.map(x => x.origin))]
     const distinctDestinations = [...new Set(dataset.map(x => x.destination))]
 
-    // Hooks that stores the click count on the flexible/exact search switches
-    const [typeOfDepartureDate, setTypeOfDepartureDate] = useState(0);
-    const [typeOfReturnDate, setTypeOfReturnDate] = useState(0);
-
     // Function that executes actions when the oneWay/roundTrip switch is clicked
     function switchIsDisabled () {
-        if (typeOfTripSwitch%2 === 0) {
-            return 'formInput-display-none' }
-        else { 
-            return 'formInput-display-block'
-        }
+        if (typeOfTripSwitch%2 === 0) { return 'formInput-display-none' }
+        else { return 'formInput-display-block' }
     }
 
     // Functions that switch the className of switchTittles when the buttons are clicked
     function switchClass1 (state) {
-        if  (state%2 === 1) {
-            return 'gray'
-        } else {
-            return null
-        }
+        if  (state%2 === 1) { return 'gray' } 
+        else { return null }
     }
 
     function switchClass2 (state) {
-        if  (state%2 === 1) {
-            return null
-        } else {
-            return 'gray'
-        }
+        if  (state%2 === 1) { return null } 
+        else { return 'gray' }
     }
-
-    // Hooks that store the options selected in the form
-    const [desiredOrigin, setDesiredOrigin] = useState('');
-    const [desiredDestination, setDesiredDestination] = useState('');
-    const [desiredPassengers, setDesiredPassengers] = useState(1);
-    const [desiredDepartureDate, setDesiredDepartureDate] = useState(new Date());
-    const [desiredReturnDate, setDesiredReturnDate] = useState(new Date())
-    const [desiredTotalPrice, setDesiredTotalPrice] = useState(1000);
-
+    
     // Hook used to show error message when form fields are uncompleted
     const [errorMessage, setErrorMessage] = useState(null);
 
@@ -75,29 +54,114 @@ function InitialForm ({dataset, setFlightSearchParams, setSectionShown, setTypeO
         return (retDate >= depDate)
     }
 
+    // Function that searchs flexible departure dates
+    function searchFlexDepartureDates () {
+        setDesiredFlexDepartureDates([])
+        let possibleDepartureDates = [] 
+        for (let i = 0; i < 4; i++) {
+            const departureDate = new Date(desiredDepartureDate)
+            possibleDepartureDates.push(formatDate(departureDate.setDate(departureDate.getDate() + i)));
+        }
+        for (let i = 1; i < 4; i++) {
+            const departureDate = new Date(desiredDepartureDate)
+            possibleDepartureDates.push(formatDate(departureDate.setDate(departureDate.getDate() - i)));
+        }
+        setDesiredFlexDepartureDates(possibleDepartureDates)
+    }
+
+    // Function that searchs flexible return dates
+    function searchFlexReturnDates () {
+        setDesiredFlexReturnDates([])
+        let possibleReturnDates = [] 
+        for (let i = 0; i < 4; i++) {
+            const returnDate = new Date(desiredReturnDate)
+            possibleReturnDates.push(formatDate(returnDate.setDate(returnDate.getDate() + i)));
+        }
+        for (let i = 1; i < 4; i++) {
+            const returnDate = new Date(desiredReturnDate)
+            possibleReturnDates.push(formatDate(returnDate.setDate(returnDate.getDate() - i)));
+        }
+        setDesiredFlexReturnDates(possibleReturnDates)
+    }
+
     // Function that takes actions when submit button is clicked
     function handleSubmit (e) {
         e.preventDefault()
-        
-        console.log('desiredDepartureDate ' + desiredDepartureDate)
-        console.log('today ' + new Date())
+        let flexibleDeparture = typeOfDepartureDate%2 === 1 ? true : false
+        let flexibleReturn = typeOfReturnDate%2 === 1 ? true : false
+
 
         if (checkDepartureDate (desiredDepartureDate) === false) {
             setErrorMessage('La fecha de salida no puede estar en el pasado.')
+
         } else if (typeOfTripSwitch%2 === 1 && (checkDepartureAndReturnDates(desiredDepartureDate, desiredReturnDate) === false)) {
             setErrorMessage('La fecha de retorno no pude ser anterior a la fecha de salida.')
+
         } else {
-        setFlightSearchParams([desiredOrigin, desiredDestination, desiredPassengers, formatDate(desiredDepartureDate), formatDate(desiredReturnDate), desiredTotalPrice])
-        setSectionShown('AvailableDepartureFlights')
+        
+            if (flexibleDeparture === false && flexibleReturn === false){
+                setFlightSearchParams([desiredOrigin, desiredDestination, desiredPassengers, formatDate(desiredDepartureDate), formatDate(desiredReturnDate), desiredTotalPrice])
+
+            } else if (flexibleDeparture === true && flexibleReturn === false) {
+                searchFlexDepartureDates()
+                setFlightSearchParams([desiredOrigin, desiredDestination, desiredPassengers, desiredFlexDepartureDates, formatDate(desiredReturnDate), desiredTotalPrice])
+
+            } else if (flexibleDeparture === false && flexibleReturn === true) {
+                searchFlexReturnDates()
+                setFlightSearchParams([desiredOrigin, desiredDestination, desiredPassengers, formatDate(desiredDepartureDate), desiredFlexReturnDates, desiredTotalPrice])
+
+            } else {
+                searchFlexDepartureDates()
+                searchFlexReturnDates()
+                setFlightSearchParams([desiredOrigin, desiredDestination, desiredPassengers, desiredFlexDepartureDates, desiredFlexReturnDates, desiredTotalPrice])
+            }
+            
+            setSectionShown('AvailableDepartureFlights')
+            console.log('desiredOrigin ' + desiredOrigin, 'desiredDestination ' + desiredDestination)
         }
     }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// function handleMockSearch (e) {
-//     e.preventDefault()
-//     setFlightSearchParams([desiredOrigin, desiredDestination, desiredPassengers, formatDate(desiredDepartureDate), formatDate(desiredReturnDate), desiredTotalPrice])
-//     searchFlightsAltered()
-// }
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+function handleMockSearch (e) {
+    e.preventDefault()
+
+    let flexibleDeparture = typeOfDepartureDate%2 === 1 ? true : false
+    let flexibleReturn = typeOfReturnDate%2 === 1 ? true : false
+    setDesiredFlexDepartureDates([])
+    setDesiredFlexReturnDates([])
+
+    if (flexibleDeparture === true) {
+        let possibleDepartureDates = [] 
+        for (let i = 0; i < 6; i++) {
+            const departureDate = new Date(desiredDepartureDate)
+            possibleDepartureDates.push(formatDate(departureDate.setDate(departureDate.getDate() + i)));
+        }
+        for (let i = 1; i < 6; i++) {
+            const departureDate = new Date(desiredDepartureDate)
+            possibleDepartureDates.push(formatDate(departureDate.setDate(departureDate.getDate() - i)));
+        }
+        setDesiredFlexDepartureDates(possibleDepartureDates)
+    }
+
+    if (flexibleReturn === true) {
+        let possibleReturnDates = [] 
+        for (let i = 0; i < 6; i++) {
+            const returnDate = new Date(desiredReturnDate)
+            possibleReturnDates.push(formatDate(returnDate.setDate(returnDate.getDate() + i)));
+        }
+        for (let i = 1; i < 6; i++) {
+            const returnDate = new Date(desiredReturnDate)
+            possibleReturnDates.push(formatDate(returnDate.setDate(returnDate.getDate() - i)));
+        }
+        setDesiredFlexReturnDates(possibleReturnDates)
+    }
+
+    console.log(desiredFlexDepartureDates)
+    console.log(desiredFlexReturnDates)
+}
 ////////////////////////////////////////////////////////////////////////////////////////////
 
     return (
@@ -186,7 +250,7 @@ function InitialForm ({dataset, setFlightSearchParams, setSectionShown, setTypeO
                 </article>
 
                 <article className="formInput">
-                    <label for="desiredTotalPrice">Precio total</label>
+                    <label for="desiredTotalPrice">Precio total por persona</label>
                     <select id="desiredTotalPrice" className="selectBox" onChange={e => setDesiredTotalPrice(e.target.value)}>
                         <option value="200">Hasta $200</option>
                         <option value="400">Hasta $400</option>
@@ -201,7 +265,7 @@ function InitialForm ({dataset, setFlightSearchParams, setSectionShown, setTypeO
             <div className='btnAndError-div'>
                 <p>{errorMessage}</p>
                 <button className="btn btn-primary" onClick={(e) => handleSubmit(e)}>Buscar vuelos</button>
-                <button className="btn btn-secondary">Run mock search</button>
+                <button className="btn btn-secondary" onClick={(e) => handleMockSearch(e)}>Run mock search</button>
             </div>
         </form>
     )

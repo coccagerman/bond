@@ -2,24 +2,30 @@ import { useState } from 'react';
 import ReturnFlightOption from './ReturnFlightOption'
 import ErrorMessageNoAvailableFlights from './ErrorMessageNoAvailableFlights'
 
-function AvailableReturnFlights ({flightSearchParams, searchFlights, setSectionShown, setChosenReturnFlight, chosenReturnFlight, chosenDepartureFlight, formatPlaces,handleSearchAgain}) {
+function AvailableReturnFlights ({flightSearchParams, setSectionShown, setChosenReturnFlight, chosenReturnFlight, chosenDepartureFlight, formatPlaces, handleSearchAgain, searchReturnFlights, typeOfDepartureDate, typeOfReturnDate,typeOfTripSwitch}) {
 
     // Hook used to store the results of the return flight search done
-    const [availableReturnFlightsList, setAvailableReturnFlightsList] = useState(searchFlights(chosenDepartureFlight[2], chosenDepartureFlight[1], chosenDepartureFlight[4], flightSearchParams[4], flightSearchParams[5]));
+    const [availableReturnFlightsList, setAvailableReturnFlightsList] = useState(searchReturnFlights(chosenDepartureFlight[2], chosenDepartureFlight[1], chosenDepartureFlight[4], flightSearchParams[4], flightSearchParams[5]));
 
+    // Variable used to hold only the search results that are after the date of the departure flight
+    let checkedFlightsList = availableReturnFlightsList.filter(item => (new Date(item.data) >= new Date(chosenDepartureFlight[0])))
+    
     // Function that displays the flight search results
     const showFlights = () => {
 
         if (availableReturnFlightsList.length === 0) {
             return <ErrorMessageNoAvailableFlights/>
         } else {
-            return availableReturnFlightsList.map((item) => (
+            return checkedFlightsList.map((item) => (
                 <article className='flightOption'>
                     <ReturnFlightOption data={item.data} origin={item.origin} destination={item.destination} price={item.price} totalPrice={item.price*flightSearchParams[2]} passengers={flightSearchParams[2]} setSectionShown={setSectionShown} setChosenReturnFlight={setChosenReturnFlight} chosenReturnFlight={chosenReturnFlight} formatPlaces={formatPlaces}/>
                 </article>
               ))
         }
     }
+
+    ////////////////////////////////////////////////////////////////////////////////////////////
+    // Estas funciones se deben mover a componente superior y pasarlas como param
 
     // Function used to display a different price search parameter depending on the param entered in the search form
     function priceParam () {
@@ -34,6 +40,18 @@ function AvailableReturnFlights ({flightSearchParams, searchFlights, setSectionS
         }
     }
 
+    ////////////////////////////////////////////////////////////////////////////////////////////
+    let flexibleDeparture = typeOfDepartureDate%2 === 1 ? true : false
+    let flexibleReturn = typeOfReturnDate%2 === 1 ? true : false
+    ////////////////////////////////////////////////////////////////////////////////////////////
+
+    // Function used to display a different return date search parameter depending on the type of search entered in the search form
+    function returnDateParam () {    
+        if (typeOfTripSwitch%2 === 0){ return 'N/A' }
+        else if (flexibleReturn === true){ return 'Flex' }
+        else { return flightSearchParams[4]}
+    }
+
     // Function that returns to AvailableDepartureFlights section when ReturnToSearchResults is pressed
     function handleReturnToDepartureSearchResults(e) {
         e.preventDefault();
@@ -41,12 +59,13 @@ function AvailableReturnFlights ({flightSearchParams, searchFlights, setSectionS
     }
 
     return (
+        // flight searchParameters debiese ser un componente aparte 
         <div className='searchResult'>
             <article className="flight searchParameters">
             <h2>Resultados de búsqueda para:</h2>
                 <div className="row row1">
-                    <p><span className="label">Fecha de salida:</span> {flightSearchParams[3]}</p>
-                    <p><span className="label">Fecha de retorno:</span> {flightSearchParams[4]}</p>
+                    <p><span className="label">Fecha de salida:</span> {flexibleDeparture === true ? 'Flex' : flightSearchParams[3]}</p>
+                    <p><span className="label">Fecha de retorno:</span> {returnDateParam()}</p>
                     <p><span className="label">Origen:</span> {flightSearchParams[0] === '' ? 'N/A' : formatPlaces(flightSearchParams[0])}</p>
                     <p><span className="label">Destino:</span> {flightSearchParams[0] === '' ? 'N/A' : formatPlaces(flightSearchParams[1])}</p>
                 </div>

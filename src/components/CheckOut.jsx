@@ -31,8 +31,8 @@ function CheckOut({setSectionShown, typeOfTripSwitch, chosenDepartureFlight, cho
                     </div>
                     <div className="row row2">
                         <p><span className="label">Pasajeros:</span>  {chosenReturnFlight[4]}</p>
-                        <p><span className="label">Precio unitario:</span> $ {chosenReturnFlight[3]}</p>
-                        <p><span className="label">Precio total:</span> $ {chosenReturnFlight[3]*chosenReturnFlight[4]}</p>
+                        <p><span className="label">Precio unitario:</span> $ {(chosenReturnFlight[3]).toFixed(2)}</p>
+                        <p><span className="label">Precio total:</span> $ {(chosenReturnFlight[3]*chosenReturnFlight[4]).toFixed(2)}</p>
                         <button className="btn btn-secondary" disabled={buttonDisabled} onClick={(e) => handleReturnToReturnSearchResults(e)}>Modificar</button>
                     </div>
                 </article>
@@ -53,7 +53,7 @@ function CheckOut({setSectionShown, typeOfTripSwitch, chosenDepartureFlight, cho
         } else if (typeOfTripSwitch%2 === 0) {
 
             if (infoRequired === 'unitPrice') {return chosenDepartureFlight[3]}
-            else if (infoRequired === 'totalPrice') {return chosenDepartureFlight[3]*chosenDepartureFlight[4]}
+            else if (infoRequired === 'totalPrice') {return (chosenDepartureFlight[3]*chosenDepartureFlight[4])}
             else if (infoRequired === 'extension') {return 'N/A'}
                 
         }
@@ -88,8 +88,8 @@ function CheckOut({setSectionShown, typeOfTripSwitch, chosenDepartureFlight, cho
                         </div>
                         <div className="row row2">
                             <p><span className="label">Pasajeros:</span>  {chosenDepartureFlight[4]}</p>
-                            <p><span className="label">Precio unitario:</span> $ {chosenDepartureFlight[3]}</p>
-                            <p><span className="label">Precio total:</span> $ {chosenDepartureFlight[3]*chosenDepartureFlight[4]}</p>
+                            <p><span className="label">Precio unitario:</span> $ {(chosenDepartureFlight[3]).toFixed(2)}</p>
+                            <p><span className="label">Precio total:</span> $ {(chosenDepartureFlight[3]*chosenDepartureFlight[4]).toFixed(2)}</p>
                             <button className="btn btn-secondary" disabled={buttonDisabled} onClick={(e) => handleReturnToDepartureSearchResults(e)}>Modificar</button>
                         </div>
                     </article>
