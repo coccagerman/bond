@@ -2,13 +2,13 @@ import { useState } from 'react';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
-function InitialForm ({dataset, setFlightSearchParams, setSectionShown, setTypeOfTripSwitch, typeOfTripSwitch, formatPlaces, typeOfDepartureDate, setTypeOfDepartureDate, typeOfReturnDate, setTypeOfReturnDate, desiredFlexDepartureDates, setDesiredFlexDepartureDates, desiredFlexReturnDates, setDesiredFlexReturnDates, desiredOrigin, setDesiredOrigin, desiredDestination, setDesiredDestination, desiredPassengers, setDesiredPassengers, desiredDepartureDate, setDesiredDepartureDate, desiredReturnDate, setDesiredReturnDate, desiredTotalPrice, setDesiredTotalPrice}) {
+function InitialForm ({searchReturnFlights, chosenDepartureFlight, flightSearchParams, searchDepartureFlights, dataset, setFlightSearchParams, setSectionShown, setTypeOfTripSwitch, typeOfTripSwitch, formatPlaces, typeOfDepartureDate, setTypeOfDepartureDate, typeOfReturnDate, setTypeOfReturnDate, desiredFlexDepartureDates, setDesiredFlexDepartureDates, desiredFlexReturnDates, setDesiredFlexReturnDates, desiredOrigin, setDesiredOrigin, desiredDestination, setDesiredDestination, desiredPassengers, setDesiredPassengers, desiredDepartureDate, setDesiredDepartureDate, desiredReturnDate, setDesiredReturnDate, desiredTotalPrice, setDesiredTotalPrice}) {
 
     // Variables with functions that identify the different possible origins and destinations for the flights.
-    const distinctOrigins = [...new Set(dataset.map(x => x.origin))]
-    const distinctDestinations = [...new Set(dataset.map(x => x.destination))]
+    const distinctOrigins = [...new Set(dataset.map(item => item.origin))]
+    const distinctDestinations = [...new Set(dataset.map(item => item.destination))]
 
-    // Function that executes actions when the oneWay/roundTrip switch is clicked
+    // Function that shows/hides the return date selector when the oneWay/roundTrip switch is clicked
     function switchIsDisabled () {
         if (typeOfTripSwitch%2 === 0) { return 'formInput-display-none' }
         else { return 'formInput-display-block' }
@@ -87,18 +87,19 @@ function InitialForm ({dataset, setFlightSearchParams, setSectionShown, setTypeO
     // Function that takes actions when submit button is clicked
     function handleSubmit (e) {
         e.preventDefault()
+        let typeOfTrip = typeOfTripSwitch%2 === 0 ? 'oneWay' : 'round'
         let flexibleDeparture = typeOfDepartureDate%2 === 1 ? true : false
         let flexibleReturn = typeOfReturnDate%2 === 1 ? true : false
 
-
+        // Shows error messages if the dates entered have errors
         if (checkDepartureDate (desiredDepartureDate) === false) {
             setErrorMessage('La fecha de salida no puede estar en el pasado.')
 
-        } else if (typeOfTripSwitch%2 === 1 && (checkDepartureAndReturnDates(desiredDepartureDate, desiredReturnDate) === false)) {
+        } else if (typeOfTrip === 'round' && (checkDepartureAndReturnDates(desiredDepartureDate, desiredReturnDate) === false)) {
             setErrorMessage('La fecha de retorno no pude ser anterior a la fecha de salida.')
 
         } else {
-        
+            // Passes different params to the searchFlight function depending if the dates entered are exact or flex
             if (flexibleDeparture === false && flexibleReturn === false){
                 setFlightSearchParams([desiredOrigin, desiredDestination, desiredPassengers, formatDate(desiredDepartureDate), formatDate(desiredReturnDate), desiredTotalPrice])
 
@@ -117,52 +118,18 @@ function InitialForm ({dataset, setFlightSearchParams, setSectionShown, setTypeO
             }
             
             setSectionShown('AvailableDepartureFlights')
-            console.log('desiredOrigin ' + desiredOrigin, 'desiredDestination ' + desiredDestination)
         }
     }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 function handleMockSearch (e) {
     e.preventDefault()
-
-    let flexibleDeparture = typeOfDepartureDate%2 === 1 ? true : false
-    let flexibleReturn = typeOfReturnDate%2 === 1 ? true : false
-    setDesiredFlexDepartureDates([])
-    setDesiredFlexReturnDates([])
-
-    if (flexibleDeparture === true) {
-        let possibleDepartureDates = [] 
-        for (let i = 0; i < 6; i++) {
-            const departureDate = new Date(desiredDepartureDate)
-            possibleDepartureDates.push(formatDate(departureDate.setDate(departureDate.getDate() + i)));
-        }
-        for (let i = 1; i < 6; i++) {
-            const departureDate = new Date(desiredDepartureDate)
-            possibleDepartureDates.push(formatDate(departureDate.setDate(departureDate.getDate() - i)));
-        }
-        setDesiredFlexDepartureDates(possibleDepartureDates)
-    }
-
-    if (flexibleReturn === true) {
-        let possibleReturnDates = [] 
-        for (let i = 0; i < 6; i++) {
-            const returnDate = new Date(desiredReturnDate)
-            possibleReturnDates.push(formatDate(returnDate.setDate(returnDate.getDate() + i)));
-        }
-        for (let i = 1; i < 6; i++) {
-            const returnDate = new Date(desiredReturnDate)
-            possibleReturnDates.push(formatDate(returnDate.setDate(returnDate.getDate() - i)));
-        }
-        setDesiredFlexReturnDates(possibleReturnDates)
-    }
-
+    searchFlexDepartureDates ()
     console.log(desiredFlexDepartureDates)
-    console.log(desiredFlexReturnDates)
 }
-////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     return (
         <form action="" method="get" className="initialForm">
@@ -254,6 +221,7 @@ function handleMockSearch (e) {
                     <select id="desiredTotalPrice" className="selectBox" onChange={e => setDesiredTotalPrice(e.target.value)}>
                         <option value="200">Hasta $200</option>
                         <option value="400">Hasta $400</option>
+                        <option value="600">Hasta $600</option>
                         <option value="800">Hasta $800</option>
                         <option value="1000" selected>Hasta $1000</option>
                     </select>

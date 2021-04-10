@@ -3,6 +3,8 @@ import CheckOutForm from './CheckOutForm'
 
 function CheckOut({setSectionShown, typeOfTripSwitch, chosenDepartureFlight, chosenReturnFlight, handleSearchAgain, formatPlaces}) {
     
+    let typeOfTrip = typeOfTripSwitch%2 === 0 ? 'oneWay' : 'round'
+
     // Function that returns to AvailableDepartureFlights section when ReturnToSearchResults is pressed
     function handleReturnToDepartureSearchResults(e) {
         e.preventDefault();
@@ -20,7 +22,7 @@ function CheckOut({setSectionShown, typeOfTripSwitch, chosenDepartureFlight, cho
 
     // Function that displays the data of the return flight selected when the trip chosen is roundTrip
     function showReturnFlight () {
-        if (typeOfTripSwitch%2 === 1) {
+        if (typeOfTrip === 'round') {
             return (
                 <article className="flight">
                     <h2>Vuelo de vuelta:</h2>
@@ -44,13 +46,13 @@ function CheckOut({setSectionShown, typeOfTripSwitch, chosenDepartureFlight, cho
 
     // Function that alternates the recap info depending if the trip selected is one way or round trip.
     function showRecapInfo (infoRequired) {
-        if (typeOfTripSwitch%2 === 1) {
+        if (typeOfTrip === 'round') {
 
             if (infoRequired === 'unitPrice') {return (chosenDepartureFlight[3]+chosenReturnFlight[3]).toFixed(2)}
             else if (infoRequired === 'totalPrice') {return ((chosenDepartureFlight[3]+chosenReturnFlight[3])*chosenDepartureFlight[4]).toFixed(2)}
             else if (infoRequired === 'extension') {return (`${chosenDepartureFlight[0]} al ${chosenReturnFlight[0]} (${numberOfDaysBetweenDates(chosenDepartureFlight[0], chosenReturnFlight[0])} días)`)}
             
-        } else if (typeOfTripSwitch%2 === 0) {
+        } else if (typeOfTrip === 'oneWay') {
 
             if (infoRequired === 'unitPrice') {return chosenDepartureFlight[3]}
             else if (infoRequired === 'totalPrice') {return (chosenDepartureFlight[3]*chosenDepartureFlight[4])}

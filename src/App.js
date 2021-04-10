@@ -1,8 +1,8 @@
+import './App.scss';
 import { useState } from 'react';
+import dataset from './dataset.json'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
-import './App.scss';
-import dataset from './dataset.json'
 import InitialForm from './components/InitialForm'
 import AvailableDepartureFlights from './components/AvailableDepartureFlights'
 import AvailableReturnFlights from './components/AvailableReturnFlights'
@@ -16,13 +16,13 @@ function App() {
     // Function used to display and hide the different sections of the app
     const showSection = () => {
       if (sectionShown === 'InitialForm') {
-          return (<InitialForm dataset={dataset} setFlightSearchParams={setFlightSearchParams} setSectionShown={setSectionShown} setTypeOfTripSwitch={setTypeOfTripSwitch} typeOfTripSwitch={typeOfTripSwitch} formatPlaces={formatPlaces} typeOfDepartureDate={typeOfDepartureDate} setTypeOfDepartureDate={setTypeOfDepartureDate} typeOfReturnDate={typeOfReturnDate} setTypeOfReturnDate={setTypeOfReturnDate} desiredFlexDepartureDates={desiredFlexDepartureDates} setDesiredFlexDepartureDates={setDesiredFlexDepartureDates} desiredFlexReturnDates={desiredFlexReturnDates} setDesiredFlexReturnDates={setDesiredFlexReturnDates} desiredOrigin={desiredOrigin} setDesiredOrigin={setDesiredOrigin} desiredDestination={desiredDestination} setDesiredDestination={setDesiredDestination} desiredPassengers={desiredPassengers} setDesiredPassengers={setDesiredPassengers} desiredDepartureDate={desiredDepartureDate} setDesiredDepartureDate={setDesiredDepartureDate} desiredReturnDate={desiredReturnDate} setDesiredReturnDate={setDesiredReturnDate} desiredTotalPrice={desiredTotalPrice} setDesiredTotalPrice={setDesiredTotalPrice} />)
+          return (<InitialForm searchReturnFlights={searchReturnFlights} chosenDepartureFlight={chosenDepartureFlight} flightSearchParams={flightSearchParams} searchDepartureFlights={searchDepartureFlights} dataset={dataset} setFlightSearchParams={setFlightSearchParams} setSectionShown={setSectionShown} setTypeOfTripSwitch={setTypeOfTripSwitch} typeOfTripSwitch={typeOfTripSwitch} formatPlaces={formatPlaces} typeOfDepartureDate={typeOfDepartureDate} setTypeOfDepartureDate={setTypeOfDepartureDate} typeOfReturnDate={typeOfReturnDate} setTypeOfReturnDate={setTypeOfReturnDate} desiredFlexDepartureDates={desiredFlexDepartureDates} setDesiredFlexDepartureDates={setDesiredFlexDepartureDates} desiredFlexReturnDates={desiredFlexReturnDates} setDesiredFlexReturnDates={setDesiredFlexReturnDates} desiredOrigin={desiredOrigin} setDesiredOrigin={setDesiredOrigin} desiredDestination={desiredDestination} setDesiredDestination={setDesiredDestination} desiredPassengers={desiredPassengers} setDesiredPassengers={setDesiredPassengers} desiredDepartureDate={desiredDepartureDate} setDesiredDepartureDate={setDesiredDepartureDate} desiredReturnDate={desiredReturnDate} setDesiredReturnDate={setDesiredReturnDate} desiredTotalPrice={desiredTotalPrice} setDesiredTotalPrice={setDesiredTotalPrice} />)
       } else if (sectionShown === 'AvailableDepartureFlights') {
-          return <AvailableDepartureFlights flightSearchParams={flightSearchParams} searchDepartureFlights={searchDepartureFlights} setSectionShown={setSectionShown} setChosenDepartureFlight={setChosenDepartureFlight} chosenDepartureFlight={chosenDepartureFlight}typeOfTripSwitch={typeOfTripSwitch} setTypeOfTripSwitch={setTypeOfTripSwitch} formatPlaces={formatPlaces} handleSearchAgain={handleSearchAgain} typeOfDepartureDate={typeOfDepartureDate} typeOfReturnDate={typeOfReturnDate}/>
+          return <AvailableDepartureFlights flightSearchParams={flightSearchParams} searchDepartureFlights={searchDepartureFlights} setSectionShown={setSectionShown} setChosenDepartureFlight={setChosenDepartureFlight} chosenDepartureFlight={chosenDepartureFlight} typeOfTripSwitch={typeOfTripSwitch} setTypeOfTripSwitch={setTypeOfTripSwitch} formatPlaces={formatPlaces} handleSearchAgain={handleSearchAgain} typeOfDepartureDate={typeOfDepartureDate} typeOfReturnDate={typeOfReturnDate} searchReturnFlights={searchReturnFlights} />
       } else if (sectionShown === 'AvailableReturnFlights') {
           return <AvailableReturnFlights flightSearchParams={flightSearchParams} setSectionShown={setSectionShown} setChosenReturnFlight={setChosenReturnFlight} chosenReturnFlight={chosenReturnFlight} chosenDepartureFlight={chosenDepartureFlight} setTypeOfTripSwitch={setTypeOfTripSwitch} typeOfTripSwitch={typeOfTripSwitch} formatPlaces={formatPlaces} handleSearchAgain={handleSearchAgain} searchReturnFlights={searchReturnFlights} typeOfDepartureDate={typeOfDepartureDate} typeOfReturnDate={typeOfReturnDate}/>
       } else if (sectionShown === 'CheckOut') {
-          return <CheckOut flightSearchParams={flightSearchParams} setSectionShown={setSectionShown} typeOfTripSwitch={typeOfTripSwitch} chosenDepartureFlight={chosenDepartureFlight} chosenReturnFlight={chosenReturnFlight} handleSearchAgain={handleSearchAgain} formatPlaces={formatPlaces}/>
+          return <CheckOut flightSearchParams={flightSearchParams} setSectionShown={setSectionShown} typeOfTripSwitch={typeOfTripSwitch} chosenDepartureFlight={chosenDepartureFlight} chosenReturnFlight={chosenReturnFlight} handleSearchAgain={handleSearchAgain} formatPlaces={formatPlaces} />
       }
     }
 
@@ -82,10 +82,7 @@ function App() {
                 o.data === desiredFlexDepartureDates[4] ||
                 o.data === desiredFlexDepartureDates[5] ||
                 o.data === desiredFlexDepartureDates[6] ||
-                o.data === desiredFlexDepartureDates[7] ||
-                o.data === desiredFlexDepartureDates[8] ||
-                o.data === desiredFlexDepartureDates[9] ||
-                o.data === desiredFlexDepartureDates[10])
+                o.data === desiredFlexDepartureDates[7])
                 )))
             
         // Cases with certain origin and uncertain destination
@@ -101,10 +98,7 @@ function App() {
                 o.data === desiredFlexDepartureDates[4] ||
                 o.data === desiredFlexDepartureDates[5] ||
                 o.data === desiredFlexDepartureDates[6] ||
-                o.data === desiredFlexDepartureDates[7] ||
-                o.data === desiredFlexDepartureDates[8] ||
-                o.data === desiredFlexDepartureDates[9] ||
-                o.data === desiredFlexDepartureDates[10])
+                o.data === desiredFlexDepartureDates[7])
                 )))
 
         // Cases with uncertain origin and uncertain destination
@@ -120,10 +114,7 @@ function App() {
                 o.data === desiredFlexDepartureDates[4] ||
                 o.data === desiredFlexDepartureDates[5] ||
                 o.data === desiredFlexDepartureDates[6] ||
-                o.data === desiredFlexDepartureDates[7] ||
-                o.data === desiredFlexDepartureDates[8] ||
-                o.data === desiredFlexDepartureDates[9] ||
-                o.data === desiredFlexDepartureDates[10])
+                o.data === desiredFlexDepartureDates[7])
                 )))
         
         // Cases with certain origin and certain destination
@@ -139,10 +130,7 @@ function App() {
                 o.data === desiredFlexDepartureDates[4] ||
                 o.data === desiredFlexDepartureDates[5] ||
                 o.data === desiredFlexDepartureDates[6] ||
-                o.data === desiredFlexDepartureDates[7] ||
-                o.data === desiredFlexDepartureDates[8] ||
-                o.data === desiredFlexDepartureDates[9] ||
-                o.data === desiredFlexDepartureDates[10])
+                o.data === desiredFlexDepartureDates[7])
                 )))
 
         }
@@ -165,10 +153,7 @@ function App() {
                 o.data === desiredFlexReturnDates[4] ||
                 o.data === desiredFlexReturnDates[5] ||
                 o.data === desiredFlexReturnDates[6] ||
-                o.data === desiredFlexReturnDates[7] ||
-                o.data === desiredFlexReturnDates[8] ||
-                o.data === desiredFlexReturnDates[9] ||
-                o.data === desiredFlexReturnDates[10])
+                o.data === desiredFlexReturnDates[7])
                 )))
         
         // Cases with certain origin and uncertain destination
@@ -184,10 +169,7 @@ function App() {
                 o.data === desiredFlexReturnDates[4] ||
                 o.data === desiredFlexReturnDates[5] ||
                 o.data === desiredFlexReturnDates[6] ||
-                o.data === desiredFlexReturnDates[7] ||
-                o.data === desiredFlexReturnDates[8] ||
-                o.data === desiredFlexReturnDates[9] ||
-                o.data === desiredFlexReturnDates[10])
+                o.data === desiredFlexReturnDates[7])
                 )))
         
         // Cases with uncertain origin and uncertain destination
@@ -203,13 +185,13 @@ function App() {
                 o.data === desiredFlexReturnDates[4] ||
                 o.data === desiredFlexReturnDates[5] ||
                 o.data === desiredFlexReturnDates[6] ||
-                o.data === desiredFlexReturnDates[7] ||
-                o.data === desiredFlexReturnDates[8] ||
-                o.data === desiredFlexReturnDates[9] ||
-                o.data === desiredFlexReturnDates[10])
+                o.data === desiredFlexReturnDates[7])
                 )))
 
         // Cases with certain origin and certain destination
+        } else if (origin !== '' && destination !== '' && flexibleReturn === false) {
+        return dataset.filter(o => (o.origin === origin && o.destination === destination && o.availability >= passengers && o.data === departureDate && o.price <= price))
+
         } else if (origin !== '' && destination !== '' && flexibleReturn === true) {
             return (dataset.filter(o => (o.origin === origin && o.destination === destination && o.availability >= passengers && o.price <= price &&
                 (o.data === desiredFlexReturnDates[0] ||
@@ -219,39 +201,10 @@ function App() {
                 o.data === desiredFlexReturnDates[4] ||
                 o.data === desiredFlexReturnDates[5] ||
                 o.data === desiredFlexReturnDates[6] ||
-                o.data === desiredFlexReturnDates[7] ||
-                o.data === desiredFlexReturnDates[8] ||
-                o.data === desiredFlexReturnDates[9] ||
-                o.data === desiredFlexReturnDates[10])
+                o.data === desiredFlexReturnDates[7])
                 )))
         }
     }
-
-    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-    // // Mock search function used as a parameter to the search function alteration functions
-    // function mockSearchDepartureFlights (origin, destination, passengers, departureDate, price) {
-    //     return dataset.filter(o => (o.origin === origin && o.destination === destination && o.availability >= passengers && o.data === departureDate && o.price <= price))
-    // }
-
-    // // Function that alters the searchDepartureFlights function depending on the parameters entered in the initial form
-    // function searchDepartureFlightsAltered () {
-    //     // // correr busqueda de departure
-    //     let departureFlightOptions = mockSearchDepartureFlights(flightSearchParams[0], flightSearchParams[1], flightSearchParams[2], flightSearchParams[3], 1000)
-    //     // // correr busqueda de return
-    //     let returnFlightOptions = mockSearchDepartureFlights(flightSearchParams[1], flightSearchParams[0], flightSearchParams[2], flightSearchParams[4], 1000)
-    //     // // chequear si suma de precios de ambas opciones es menor al precio ingresado como param
-    //     let departureFlight = departureFlightOptions[0]
-    //     let returnFlight = returnFlightOptions[0]
-    //     let result = (departureFlight.price + returnFlight.price) > flightSearchParams[5] ? 'available' : 'notAvailable'
-    //     console.log(result)
-    // }
-
-    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     // Hooks that contain the parameters of the flight chosen by the user
     const [chosenDepartureFlight,setChosenDepartureFlight] = useState([]);

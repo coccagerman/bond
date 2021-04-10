@@ -1,755 +1,755 @@
 [
     {
-        "data": "2020-11-15",
+        "data": "2021-11-15",
         "origin": "COR",
         "destination": "MDZ",
         "price": 474.05,
         "availability": 9
     },
     {
-        "data": "2020-11-15",
+        "data": "2021-11-15",
         "origin": "COR",
         "destination": "BRC",
         "price": 197.68,
         "availability": 2
     },
     {
-        "data": "2020-11-15",
+        "data": "2021-11-15",
         "origin": "EPA",
         "destination": "BRC",
         "price": 300.3,
         "availability": 1
     },
     {
-        "data": "2020-11-20",
+        "data": "2021-11-20",
         "origin": "COR",
         "destination": "MDZ",
         "price": 373.19,
         "availability": 6
     },
     {
-        "data": "2020-11-20",
+        "data": "2021-11-20",
         "origin": "COR",
         "destination": "BRC",
         "price": 191.74,
         "availability": 7
     },
     {
-        "data": "2020-11-20",
+        "data": "2021-11-20",
         "origin": "EPA",
         "destination": "BRC",
         "price": 215.89,
         "availability": 8
     },
     {
-        "data": "2020-11-16",
+        "data": "2021-11-16",
         "origin": "COR",
         "destination": "MDZ",
         "price": 498.97,
         "availability": 2
     },
     {
-        "data": "2020-11-16",
+        "data": "2021-11-16",
         "origin": "COR",
         "destination": "BRC",
         "price": 327.07,
         "availability": 6
     },
     {
-        "data": "2020-11-16",
+        "data": "2021-11-16",
         "origin": "EPA",
         "destination": "BRC",
         "price": 335.29,
         "availability": 5
     },
     {
-        "data": "2020-11-19",
+        "data": "2021-11-19",
         "origin": "COR",
         "destination": "MDZ",
         "price": 284.86,
         "availability": 1
     },
     {
-        "data": "2020-11-19",
+        "data": "2021-11-19",
         "origin": "COR",
         "destination": "BRC",
         "price": 399.34,
         "availability": 9
     },
     {
-        "data": "2020-11-19",
+        "data": "2021-11-19",
         "origin": "EPA",
         "destination": "BRC",
         "price": 459.26,
         "availability": 9
     },
     {
-        "data": "2020-11-26",
+        "data": "2021-11-26",
         "origin": "COR",
         "destination": "MDZ",
         "price": 168.63,
         "availability": 8
     },
     {
-        "data": "2020-11-26",
+        "data": "2021-11-26",
         "origin": "COR",
         "destination": "BRC",
         "price": 204.47,
         "availability": 9
     },
     {
-        "data": "2020-11-26",
+        "data": "2021-11-26",
         "origin": "EPA",
         "destination": "BRC",
         "price": 440.26,
         "availability": 5
     },
     {
-        "data": "2020-11-21",
+        "data": "2021-11-21",
         "origin": "COR",
         "destination": "MDZ",
         "price": 277.06,
         "availability": 3
     },
     {
-        "data": "2020-11-21",
+        "data": "2021-11-21",
         "origin": "COR",
         "destination": "BRC",
         "price": 453.05,
         "availability": 5
     },
     {
-        "data": "2020-11-21",
+        "data": "2021-11-21",
         "origin": "EPA",
         "destination": "BRC",
         "price": 213.52,
         "availability": 7
     },
     {
-        "data": "2020-11-17",
+        "data": "2021-11-17",
         "origin": "COR",
         "destination": "MDZ",
         "price": 298.25,
         "availability": 4
     },
     {
-        "data": "2020-11-17",
+        "data": "2021-11-17",
         "origin": "COR",
         "destination": "BRC",
         "price": 352.73,
         "availability": 6
     },
     {
-        "data": "2020-11-17",
+        "data": "2021-11-17",
         "origin": "EPA",
         "destination": "BRC",
         "price": 336.71,
         "availability": 4
     },
     {
-        "data": "2020-11-18",
+        "data": "2021-11-18",
         "origin": "COR",
         "destination": "MDZ",
         "price": 229.48,
         "availability": 2
     },
     {
-        "data": "2020-11-18",
+        "data": "2021-11-18",
         "origin": "COR",
         "destination": "BRC",
         "price": 483.83,
         "availability": 2
     },
     {
-        "data": "2020-11-18",
+        "data": "2021-11-18",
         "origin": "EPA",
         "destination": "BRC",
         "price": 252.05,
         "availability": 6
     },
     {
-        "data": "2020-11-27",
+        "data": "2021-11-27",
         "origin": "COR",
         "destination": "MDZ",
         "price": 287.99,
         "availability": 3
     },
     {
-        "data": "2020-11-27",
+        "data": "2021-11-27",
         "origin": "COR",
         "destination": "BRC",
         "price": 401.16,
         "availability": 4
     },
     {
-        "data": "2020-11-27",
+        "data": "2021-11-27",
         "origin": "EPA",
         "destination": "BRC",
         "price": 390.96,
         "availability": 5
     },
     {
-        "data": "2020-11-28",
+        "data": "2021-11-28",
         "origin": "COR",
         "destination": "MDZ",
         "price": 357,
         "availability": 3
     },
     {
-        "data": "2020-11-28",
+        "data": "2021-11-28",
         "origin": "COR",
         "destination": "BRC",
         "price": 162.85,
         "availability": 4
     },
     {
-        "data": "2020-11-28",
+        "data": "2021-11-28",
         "origin": "EPA",
         "destination": "BRC",
         "price": 196.39,
         "availability": 5
     },
     {
-        "data": "2020-11-25",
+        "data": "2021-11-25",
         "origin": "COR",
         "destination": "MDZ",
         "price": 492.82,
         "availability": 6
     },
     {
-        "data": "2020-11-25",
+        "data": "2021-11-25",
         "origin": "COR",
         "destination": "BRC",
         "price": 435.74,
         "availability": 9
     },
     {
-        "data": "2020-11-25",
+        "data": "2021-11-25",
         "origin": "EPA",
         "destination": "BRC",
         "price": 354.13,
         "availability": 3
     },
     {
-        "data": "2020-11-23",
+        "data": "2021-11-23",
         "origin": "COR",
         "destination": "MDZ",
         "price": 335.83,
         "availability": 2
     },
     {
-        "data": "2020-11-23",
+        "data": "2021-11-23",
         "origin": "COR",
         "destination": "BRC",
         "price": 407.09,
         "availability": 3
     },
     {
-        "data": "2020-11-23",
+        "data": "2021-11-23",
         "origin": "EPA",
         "destination": "BRC",
         "price": 319.94,
         "availability": 3
     },
     {
-        "data": "2020-12-03",
+        "data": "2021-12-03",
         "origin": "COR",
         "destination": "MDZ",
         "price": 417.6,
         "availability": 1
     },
     {
-        "data": "2020-12-03",
+        "data": "2021-12-03",
         "origin": "COR",
         "destination": "BRC",
         "price": 415.8,
         "availability": 2
     },
     {
-        "data": "2020-12-03",
+        "data": "2021-12-03",
         "origin": "EPA",
         "destination": "BRC",
         "price": 390.77,
         "availability": 7
     },
     {
-        "data": "2020-11-30",
+        "data": "2021-11-30",
         "origin": "COR",
         "destination": "MDZ",
         "price": 290.93,
         "availability": 2
     },
     {
-        "data": "2020-11-30",
+        "data": "2021-11-30",
         "origin": "COR",
         "destination": "BRC",
         "price": 289.3,
         "availability": 4
     },
     {
-        "data": "2020-11-30",
+        "data": "2021-11-30",
         "origin": "EPA",
         "destination": "BRC",
         "price": 196.18,
         "availability": 3
     },
     {
-        "data": "2020-11-24",
+        "data": "2021-11-24",
         "origin": "COR",
         "destination": "MDZ",
         "price": 203.56,
         "availability": 8
     },
     {
-        "data": "2020-11-24",
+        "data": "2021-11-24",
         "origin": "COR",
         "destination": "BRC",
         "price": 364.48,
         "availability": 6
     },
     {
-        "data": "2020-11-24",
+        "data": "2021-11-24",
         "origin": "EPA",
         "destination": "BRC",
         "price": 335.77,
         "availability": 9
     },
     {
-        "data": "2020-11-22",
+        "data": "2021-11-22",
         "origin": "COR",
         "destination": "MDZ",
         "price": 456.26,
         "availability": 7
     },
     {
-        "data": "2020-11-22",
+        "data": "2021-11-22",
         "origin": "COR",
         "destination": "BRC",
         "price": 395.67,
         "availability": 7
     },
     {
-        "data": "2020-11-22",
+        "data": "2021-11-22",
         "origin": "EPA",
         "destination": "BRC",
         "price": 448.25,
         "availability": 3
     },
     {
-        "data": "2020-12-02",
+        "data": "2021-12-02",
         "origin": "COR",
         "destination": "MDZ",
         "price": 270.12,
         "availability": 3
     },
     {
-        "data": "2020-12-02",
+        "data": "2021-12-02",
         "origin": "COR",
         "destination": "BRC",
         "price": 345.12,
         "availability": 9
     },
     {
-        "data": "2020-12-02",
+        "data": "2021-12-02",
         "origin": "EPA",
         "destination": "BRC",
         "price": 434.13,
         "availability": 6
     },
     {
-        "data": "2020-12-04",
+        "data": "2021-12-04",
         "origin": "COR",
         "destination": "MDZ",
         "price": 299.28,
         "availability": 4
     },
     {
-        "data": "2020-12-04",
+        "data": "2021-12-04",
         "origin": "COR",
         "destination": "BRC",
         "price": 433.98,
         "availability": 9
     },
     {
-        "data": "2020-12-04",
+        "data": "2021-12-04",
         "origin": "EPA",
         "destination": "BRC",
         "price": 373.12,
         "availability": 6
     },
     {
-        "data": "2020-11-29",
+        "data": "2021-11-29",
         "origin": "COR",
         "destination": "MDZ",
         "price": 327.93,
         "availability": 5
     },
     {
-        "data": "2020-11-29",
+        "data": "2021-11-29",
         "origin": "COR",
         "destination": "BRC",
         "price": 448.2,
         "availability": 2
     },
     {
-        "data": "2020-11-29",
+        "data": "2021-11-29",
         "origin": "EPA",
         "destination": "BRC",
         "price": 433.94,
         "availability": 8
     },
     {
-        "data": "2020-12-06",
+        "data": "2021-12-06",
         "origin": "COR",
         "destination": "MDZ",
         "price": 341.23,
         "availability": 6
     },
     {
-        "data": "2020-12-06",
+        "data": "2021-12-06",
         "origin": "COR",
         "destination": "BRC",
         "price": 415.79,
         "availability": 3
     },
     {
-        "data": "2020-12-06",
+        "data": "2021-12-06",
         "origin": "EPA",
         "destination": "BRC",
         "price": 164.21,
         "availability": 8
     },
     {
-        "data": "2020-12-12",
+        "data": "2021-12-12",
         "origin": "COR",
         "destination": "MDZ",
         "price": 416.69,
         "availability": 6
     },
     {
-        "data": "2020-12-12",
+        "data": "2021-12-12",
         "origin": "COR",
         "destination": "BRC",
         "price": 442.13,
         "availability": 6
     },
     {
-        "data": "2020-12-12",
+        "data": "2021-12-12",
         "origin": "EPA",
         "destination": "BRC",
         "price": 188.68,
         "availability": 6
     },
     {
-        "data": "2020-12-05",
+        "data": "2021-12-05",
         "origin": "COR",
         "destination": "MDZ",
         "price": 391.23,
         "availability": 5
     },
     {
-        "data": "2020-12-05",
+        "data": "2021-12-05",
         "origin": "COR",
         "destination": "BRC",
         "price": 279.98,
         "availability": 8
     },
     {
-        "data": "2020-12-05",
+        "data": "2021-12-05",
         "origin": "EPA",
         "destination": "BRC",
         "price": 222.73,
         "availability": 4
     },
     {
-        "data": "2020-12-11",
+        "data": "2021-12-11",
         "origin": "COR",
         "destination": "MDZ",
         "price": 261.96,
         "availability": 7
     },
     {
-        "data": "2020-12-11",
+        "data": "2021-12-11",
         "origin": "COR",
         "destination": "BRC",
         "price": 403.83,
         "availability": 5
     },
     {
-        "data": "2020-12-11",
+        "data": "2021-12-11",
         "origin": "EPA",
         "destination": "BRC",
         "price": 187.81,
         "availability": 4
     },
     {
-        "data": "2020-12-07",
+        "data": "2021-12-07",
         "origin": "COR",
         "destination": "MDZ",
         "price": 417.33,
         "availability": 2
     },
     {
-        "data": "2020-12-07",
+        "data": "2021-12-07",
         "origin": "COR",
         "destination": "BRC",
         "price": 414.04,
         "availability": 4
     },
     {
-        "data": "2020-12-07",
+        "data": "2021-12-07",
         "origin": "EPA",
         "destination": "BRC",
         "price": 402.36,
         "availability": 3
     },
     {
-        "data": "2020-12-13",
+        "data": "2021-12-13",
         "origin": "COR",
         "destination": "MDZ",
         "price": 432.29,
         "availability": 3
     },
     {
-        "data": "2020-12-13",
+        "data": "2021-12-13",
         "origin": "COR",
         "destination": "BRC",
         "price": 296.15,
         "availability": 5
     },
     {
-        "data": "2020-12-13",
+        "data": "2021-12-13",
         "origin": "EPA",
         "destination": "BRC",
         "price": 406.01,
         "availability": 2
     },
     {
-        "data": "2020-12-08",
+        "data": "2021-12-08",
         "origin": "COR",
         "destination": "MDZ",
         "price": 226.38,
         "availability": 7
     },
     {
-        "data": "2020-12-08",
+        "data": "2021-12-08",
         "origin": "COR",
         "destination": "BRC",
         "price": 232.95,
         "availability": 2
     },
     {
-        "data": "2020-12-08",
+        "data": "2021-12-08",
         "origin": "EPA",
         "destination": "BRC",
         "price": 156.73,
         "availability": 7
     },
     {
-        "data": "2020-12-01",
+        "data": "2021-12-01",
         "origin": "COR",
         "destination": "MDZ",
         "price": 375.78,
         "availability": 4
     },
     {
-        "data": "2020-12-01",
+        "data": "2021-12-01",
         "origin": "COR",
         "destination": "BRC",
         "price": 214.08,
         "availability": 7
     },
     {
-        "data": "2020-12-01",
+        "data": "2021-12-01",
         "origin": "EPA",
         "destination": "BRC",
         "price": 326.67,
         "availability": 3
     },
     {
-        "data": "2020-12-17",
+        "data": "2021-12-17",
         "origin": "COR",
         "destination": "MDZ",
         "price": 292.02,
         "availability": 7
     },
     {
-        "data": "2020-12-17",
+        "data": "2021-12-17",
         "origin": "COR",
         "destination": "BRC",
         "price": 376.21,
         "availability": 5
     },
     {
-        "data": "2020-12-17",
+        "data": "2021-12-17",
         "origin": "EPA",
         "destination": "BRC",
         "price": 207.88,
         "availability": 9
     },
     {
-        "data": "2020-12-21",
+        "data": "2021-12-21",
         "origin": "COR",
         "destination": "MDZ",
         "price": 196.49,
         "availability": 8
     },
     {
-        "data": "2020-12-21",
+        "data": "2021-12-21",
         "origin": "COR",
         "destination": "BRC",
         "price": 396.9,
         "availability": 7
     },
     {
-        "data": "2020-12-21",
+        "data": "2021-12-21",
         "origin": "EPA",
         "destination": "BRC",
         "price": 224.62,
         "availability": 4
     },
     {
-        "data": "2020-12-09",
+        "data": "2021-12-09",
         "origin": "COR",
         "destination": "MDZ",
         "price": 335.94,
         "availability": 3
     },
     {
-        "data": "2020-12-09",
+        "data": "2021-12-09",
         "origin": "COR",
         "destination": "BRC",
         "price": 473.09,
         "availability": 1
     },
     {
-        "data": "2020-12-09",
+        "data": "2021-12-09",
         "origin": "EPA",
         "destination": "BRC",
         "price": 368.3,
         "availability": 4
     },
     {
-        "data": "2020-12-23",
+        "data": "2021-12-23",
         "origin": "COR",
         "destination": "MDZ",
         "price": 266.02,
         "availability": 1
     },
     {
-        "data": "2020-12-23",
+        "data": "2021-12-23",
         "origin": "COR",
         "destination": "BRC",
         "price": 455.07,
         "availability": 1
     },
     {
-        "data": "2020-12-23",
+        "data": "2021-12-23",
         "origin": "EPA",
         "destination": "BRC",
         "price": 394.3,
         "availability": 4
     },
     {
-        "data": "2020-12-16",
+        "data": "2021-12-16",
         "origin": "COR",
         "destination": "MDZ",
         "price": 197.38,
         "availability": 2
     },
     {
-        "data": "2020-12-16",
+        "data": "2021-12-16",
         "origin": "COR",
         "destination": "BRC",
         "price": 387.25,
         "availability": 8
     },
     {
-        "data": "2020-12-16",
+        "data": "2021-12-16",
         "origin": "EPA",
         "destination": "BRC",
         "price": 230.1,
         "availability": 9
     },
     {
-        "data": "2020-12-20",
+        "data": "2021-12-20",
         "origin": "COR",
         "destination": "MDZ",
         "price": 269.71,
         "availability": 1
     },
     {
-        "data": "2020-12-20",
+        "data": "2021-12-20",
         "origin": "COR",
         "destination": "BRC",
         "price": 468.44,
         "availability": 4
     },
     {
-        "data": "2020-12-20",
+        "data": "2021-12-20",
         "origin": "EPA",
         "destination": "BRC",
         "price": 328.71,
         "availability": 5
     },
     {
-        "data": "2020-12-15",
+        "data": "2021-12-15",
         "origin": "COR",
         "destination": "MDZ",
         "price": 306.84,
         "availability": 4
     },
     {
-        "data": "2020-12-15",
+        "data": "2021-12-15",
         "origin": "COR",
         "destination": "BRC",
         "price": 262.49,
         "availability": 7
     },
     {
-        "data": "2020-12-15",
+        "data": "2021-12-15",
         "origin": "EPA",
         "destination": "BRC",
         "price": 407.2,
         "availability": 7
     },
     {
-        "data": "2020-12-10",
+        "data": "2021-12-10",
         "origin": "COR",
         "destination": "MDZ",
         "price": 202.48,
         "availability": 7
     },
     {
-        "data": "2020-12-10",
+        "data": "2021-12-10",
         "origin": "COR",
         "destination": "BRC",
         "price": 152.68,
         "availability": 5
     },
     {
-        "data": "2020-12-10",
+        "data": "2021-12-10",
         "origin": "EPA",
         "destination": "BRC",
         "price": 435.9,
         "availability": 4
     },
     {
-        "data": "2020-12-24",
+        "data": "2021-12-24",
         "origin": "COR",
         "destination": "MDZ",
         "price": 488.91,
         "availability": 5
     },
     {
-        "data": "2020-12-24",
+        "data": "2021-12-24",
         "origin": "COR",
         "destination": "BRC",
         "price": 267.7,
         "availability": 3
     },
     {
-        "data": "2020-12-24",
+        "data": "2021-12-24",
         "origin": "EPA",
         "destination": "BRC",
         "price": 279.36,
@@ -777,21 +777,21 @@
         "availability": 3
     },
     {
-        "data": "2020-12-14",
+        "data": "2021-12-14",
         "origin": "COR",
         "destination": "MDZ",
         "price": 374.24,
         "availability": 3
     },
     {
-        "data": "2020-12-14",
+        "data": "2021-12-14",
         "origin": "COR",
         "destination": "BRC",
         "price": 306.45,
         "availability": 5
     },
     {
-        "data": "2020-12-14",
+        "data": "2021-12-14",
         "origin": "EPA",
         "destination": "BRC",
         "price": 483.94,
@@ -819,21 +819,21 @@
         "availability": 5
     },
     {
-        "data": "2020-12-25",
+        "data": "2021-12-25",
         "origin": "COR",
         "destination": "MDZ",
         "price": 470.91,
         "availability": 6
     },
     {
-        "data": "2020-12-25",
+        "data": "2021-12-25",
         "origin": "COR",
         "destination": "BRC",
         "price": 273.17,
         "availability": 5
     },
     {
-        "data": "2020-12-25",
+        "data": "2021-12-25",
         "origin": "EPA",
         "destination": "BRC",
         "price": 479.43,
@@ -861,63 +861,63 @@
         "availability": 2
     },
     {
-        "data": "2020-12-19",
+        "data": "2021-12-19",
         "origin": "COR",
         "destination": "MDZ",
         "price": 425.81,
         "availability": 7
     },
     {
-        "data": "2020-12-19",
+        "data": "2021-12-19",
         "origin": "COR",
         "destination": "BRC",
         "price": 466.2,
         "availability": 2
     },
     {
-        "data": "2020-12-19",
+        "data": "2021-12-19",
         "origin": "EPA",
         "destination": "BRC",
         "price": 397.24,
         "availability": 8
     },
     {
-        "data": "2020-12-22",
+        "data": "2021-12-22",
         "origin": "COR",
         "destination": "MDZ",
         "price": 407.8,
         "availability": 2
     },
     {
-        "data": "2020-12-22",
+        "data": "2021-12-22",
         "origin": "COR",
         "destination": "BRC",
         "price": 164.07,
         "availability": 6
     },
     {
-        "data": "2020-12-22",
+        "data": "2021-12-22",
         "origin": "EPA",
         "destination": "BRC",
         "price": 268.69,
         "availability": 5
     },
     {
-        "data": "2020-12-28",
+        "data": "2021-12-28",
         "origin": "COR",
         "destination": "MDZ",
         "price": 363.38,
         "availability": 5
     },
     {
-        "data": "2020-12-28",
+        "data": "2021-12-28",
         "origin": "COR",
         "destination": "BRC",
         "price": 423.93,
         "availability": 1
     },
     {
-        "data": "2020-12-28",
+        "data": "2021-12-28",
         "origin": "EPA",
         "destination": "BRC",
         "price": 282.32,
@@ -945,21 +945,21 @@
         "availability": 2
     },
     {
-        "data": "2020-12-18",
+        "data": "2021-12-18",
         "origin": "COR",
         "destination": "MDZ",
         "price": 262.17,
         "availability": 4
     },
     {
-        "data": "2020-12-18",
+        "data": "2021-12-18",
         "origin": "COR",
         "destination": "BRC",
         "price": 214.09,
         "availability": 6
     },
     {
-        "data": "2020-12-18",
+        "data": "2021-12-18",
         "origin": "EPA",
         "destination": "BRC",
         "price": 226.23,
@@ -987,21 +987,21 @@
         "availability": 3
     },
     {
-        "data": "2020-12-29",
+        "data": "2021-12-29",
         "origin": "COR",
         "destination": "MDZ",
         "price": 348.44,
         "availability": 1
     },
     {
-        "data": "2020-12-29",
+        "data": "2021-12-29",
         "origin": "COR",
         "destination": "BRC",
         "price": 227.04,
         "availability": 5
     },
     {
-        "data": "2020-12-29",
+        "data": "2021-12-29",
         "origin": "EPA",
         "destination": "BRC",
         "price": 450.37,
@@ -1029,21 +1029,21 @@
         "availability": 1
     },
     {
-        "data": "2020-12-27",
+        "data": "2021-12-27",
         "origin": "COR",
         "destination": "MDZ",
         "price": 364.98,
         "availability": 9
     },
     {
-        "data": "2020-12-27",
+        "data": "2021-12-27",
         "origin": "COR",
         "destination": "BRC",
         "price": 249.73,
         "availability": 1
     },
     {
-        "data": "2020-12-27",
+        "data": "2021-12-27",
         "origin": "EPA",
         "destination": "BRC",
         "price": 475.98,
@@ -1071,21 +1071,21 @@
         "availability": 5
     },
     {
-        "data": "2020-12-31",
+        "data": "2021-12-31",
         "origin": "COR",
         "destination": "MDZ",
         "price": 433.53,
         "availability": 4
     },
     {
-        "data": "2020-12-31",
+        "data": "2021-12-31",
         "origin": "COR",
         "destination": "BRC",
         "price": 469.08,
         "availability": 2
     },
     {
-        "data": "2020-12-31",
+        "data": "2021-12-31",
         "origin": "EPA",
         "destination": "BRC",
         "price": 192.66,
@@ -1113,21 +1113,21 @@
         "availability": 5
     },
     {
-        "data": "2020-12-26",
+        "data": "2021-12-26",
         "origin": "COR",
         "destination": "MDZ",
         "price": 422.3,
         "availability": 5
     },
     {
-        "data": "2020-12-26",
+        "data": "2021-12-26",
         "origin": "COR",
         "destination": "BRC",
         "price": 345.29,
         "availability": 6
     },
     {
-        "data": "2020-12-26",
+        "data": "2021-12-26",
         "origin": "EPA",
         "destination": "BRC",
         "price": 359.05,
@@ -1155,21 +1155,21 @@
         "availability": 7
     },
     {
-        "data": "2020-12-30",
+        "data": "2021-12-30",
         "origin": "COR",
         "destination": "MDZ",
         "price": 482.47,
         "availability": 2
     },
     {
-        "data": "2020-12-30",
+        "data": "2021-12-30",
         "origin": "COR",
         "destination": "BRC",
         "price": 199.83,
         "availability": 1
     },
     {
-        "data": "2020-12-30",
+        "data": "2021-12-30",
         "origin": "EPA",
         "destination": "BRC",
         "price": 260.33,
@@ -2940,21 +2940,21 @@
         "availability": 7
     },
     {
-        "data": "2020-11-17",
+        "data": "2021-11-17",
         "origin": "MDZ",
         "destination": "COR",
         "price": 312.27,
         "availability": 6
     },
     {
-        "data": "2020-11-17",
+        "data": "2021-11-17",
         "origin": "BRC",
         "destination": "COR",
         "price": 399.95,
         "availability": 1
     },
     {
-        "data": "2020-11-17",
+        "data": "2021-11-17",
         "origin": "BRC",
         "destination": "EPA",
         "price": 451.01,
@@ -3108,21 +3108,21 @@
         "availability": 6
     },
     {
-        "data": "2020-11-24",
+        "data": "2021-11-24",
         "origin": "MDZ",
         "destination": "COR",
         "price": 374.5,
         "availability": 3
     },
     {
-        "data": "2020-11-24",
+        "data": "2021-11-24",
         "origin": "BRC",
         "destination": "COR",
         "price": 157.36,
         "availability": 4
     },
     {
-        "data": "2020-11-24",
+        "data": "2021-11-24",
         "origin": "BRC",
         "destination": "EPA",
         "price": 450.28,
@@ -3150,21 +3150,21 @@
         "availability": 2
     },
     {
-        "data": "2020-11-15",
+        "data": "2021-11-15",
         "origin": "MDZ",
         "destination": "COR",
         "price": 275.75,
         "availability": 4
     },
     {
-        "data": "2020-11-15",
+        "data": "2021-11-15",
         "origin": "BRC",
         "destination": "COR",
         "price": 384.91,
         "availability": 5
     },
     {
-        "data": "2020-11-15",
+        "data": "2021-11-15",
         "origin": "BRC",
         "destination": "EPA",
         "price": 417.6,
@@ -3276,21 +3276,21 @@
         "availability": 8
     },
     {
-        "data": "2020-12-03",
+        "data": "2021-12-03",
         "origin": "MDZ",
         "destination": "COR",
         "price": 286.35,
         "availability": 4
     },
     {
-        "data": "2020-12-03",
+        "data": "2021-12-03",
         "origin": "BRC",
         "destination": "COR",
         "price": 480.76,
         "availability": 8
     },
     {
-        "data": "2020-12-03",
+        "data": "2021-12-03",
         "origin": "BRC",
         "destination": "EPA",
         "price": 233.36,
@@ -3318,21 +3318,21 @@
         "availability": 6
     },
     {
-        "data": "2020-11-27",
+        "data": "2021-11-27",
         "origin": "MDZ",
         "destination": "COR",
         "price": 150.63,
         "availability": 4
     },
     {
-        "data": "2020-11-27",
+        "data": "2021-11-27",
         "origin": "BRC",
         "destination": "COR",
         "price": 225.46,
         "availability": 3
     },
     {
-        "data": "2020-11-27",
+        "data": "2021-11-27",
         "origin": "BRC",
         "destination": "EPA",
         "price": 181.1,
@@ -3444,21 +3444,21 @@
         "availability": 7
     },
     {
-        "data": "2020-12-12",
+        "data": "2021-12-12",
         "origin": "MDZ",
         "destination": "COR",
         "price": 406.62,
         "availability": 6
     },
     {
-        "data": "2020-12-12",
+        "data": "2021-12-12",
         "origin": "BRC",
         "destination": "COR",
         "price": 439.64,
         "availability": 4
     },
     {
-        "data": "2020-12-12",
+        "data": "2021-12-12",
         "origin": "BRC",
         "destination": "EPA",
         "price": 377.07,
@@ -3486,21 +3486,21 @@
         "availability": 6
     },
     {
-        "data": "2020-12-01",
+        "data": "2021-12-01",
         "origin": "MDZ",
         "destination": "COR",
         "price": 171.29,
         "availability": 4
     },
     {
-        "data": "2020-12-01",
+        "data": "2021-12-01",
         "origin": "BRC",
         "destination": "COR",
         "price": 273.9,
         "availability": 4
     },
     {
-        "data": "2020-12-01",
+        "data": "2021-12-01",
         "origin": "BRC",
         "destination": "EPA",
         "price": 269.4,
@@ -3528,21 +3528,21 @@
         "availability": 2
     },
     {
-        "data": "2020-11-16",
+        "data": "2021-11-16",
         "origin": "MDZ",
         "destination": "COR",
         "price": 353.63,
         "availability": 1
     },
     {
-        "data": "2020-11-16",
+        "data": "2021-11-16",
         "origin": "BRC",
         "destination": "COR",
         "price": 281.29,
         "availability": 9
     },
     {
-        "data": "2020-11-16",
+        "data": "2021-11-16",
         "origin": "BRC",
         "destination": "EPA",
         "price": 346.25,
@@ -3612,21 +3612,21 @@
         "availability": 6
     },
     {
-        "data": "2020-12-21",
+        "data": "2021-12-21",
         "origin": "MDZ",
         "destination": "COR",
         "price": 481.53,
         "availability": 4
     },
     {
-        "data": "2020-12-21",
+        "data": "2021-12-21",
         "origin": "BRC",
         "destination": "COR",
         "price": 169.55,
         "availability": 7
     },
     {
-        "data": "2020-12-21",
+        "data": "2021-12-21",
         "origin": "BRC",
         "destination": "EPA",
         "price": 351.34,
@@ -3654,21 +3654,21 @@
         "availability": 3
     },
     {
-        "data": "2020-12-10",
+        "data": "2021-12-10",
         "origin": "MDZ",
         "destination": "COR",
         "price": 381.19,
         "availability": 6
     },
     {
-        "data": "2020-12-10",
+        "data": "2021-12-10",
         "origin": "BRC",
         "destination": "COR",
         "price": 454.86,
         "availability": 1
     },
     {
-        "data": "2020-12-10",
+        "data": "2021-12-10",
         "origin": "BRC",
         "destination": "EPA",
         "price": 444.01,
@@ -3696,21 +3696,21 @@
         "availability": 5
     },
     {
-        "data": "2020-11-25",
+        "data": "2021-11-25",
         "origin": "MDZ",
         "destination": "COR",
         "price": 191.48,
         "availability": 7
     },
     {
-        "data": "2020-11-25",
+        "data": "2021-11-25",
         "origin": "BRC",
         "destination": "COR",
         "price": 397.48,
         "availability": 8
     },
     {
-        "data": "2020-11-25",
+        "data": "2021-11-25",
         "origin": "BRC",
         "destination": "EPA",
         "price": 419.17,
@@ -3738,21 +3738,21 @@
         "availability": 9
     },
     {
-        "data": "2020-11-26",
+        "data": "2021-11-26",
         "origin": "MDZ",
         "destination": "COR",
         "price": 393.14,
         "availability": 1
     },
     {
-        "data": "2020-11-26",
+        "data": "2021-11-26",
         "origin": "BRC",
         "destination": "COR",
         "price": 188.78,
         "availability": 5
     },
     {
-        "data": "2020-11-26",
+        "data": "2021-11-26",
         "origin": "BRC",
         "destination": "EPA",
         "price": 402.6,
@@ -3780,21 +3780,21 @@
         "availability": 8
     },
     {
-        "data": "2020-12-30",
+        "data": "2021-12-30",
         "origin": "MDZ",
         "destination": "COR",
         "price": 260.27,
         "availability": 4
     },
     {
-        "data": "2020-12-30",
+        "data": "2021-12-30",
         "origin": "BRC",
         "destination": "COR",
         "price": 398.07,
         "availability": 5
     },
     {
-        "data": "2020-12-30",
+        "data": "2021-12-30",
         "origin": "BRC",
         "destination": "EPA",
         "price": 161.17,
@@ -3822,63 +3822,63 @@
         "availability": 4
     },
     {
-        "data": "2020-12-22",
+        "data": "2021-12-22",
         "origin": "MDZ",
         "destination": "COR",
         "price": 319.16,
         "availability": 9
     },
     {
-        "data": "2020-12-22",
+        "data": "2021-12-22",
         "origin": "BRC",
         "destination": "COR",
         "price": 205.65,
         "availability": 3
     },
     {
-        "data": "2020-12-22",
+        "data": "2021-12-22",
         "origin": "BRC",
         "destination": "EPA",
         "price": 274.68,
         "availability": 7
     },
     {
-        "data": "2020-11-20",
+        "data": "2021-11-20",
         "origin": "MDZ",
         "destination": "COR",
         "price": 187.66,
         "availability": 4
     },
     {
-        "data": "2020-11-20",
+        "data": "2021-11-20",
         "origin": "BRC",
         "destination": "COR",
         "price": 482.7,
         "availability": 4
     },
     {
-        "data": "2020-11-20",
+        "data": "2021-11-20",
         "origin": "BRC",
         "destination": "EPA",
         "price": 185.05,
         "availability": 8
     },
     {
-        "data": "2020-12-02",
+        "data": "2021-12-02",
         "origin": "MDZ",
         "destination": "COR",
         "price": 475.32,
         "availability": 2
     },
     {
-        "data": "2020-12-02",
+        "data": "2021-12-02",
         "origin": "BRC",
         "destination": "COR",
         "price": 159.69,
         "availability": 7
     },
     {
-        "data": "2020-12-02",
+        "data": "2021-12-02",
         "origin": "BRC",
         "destination": "EPA",
         "price": 412.2,
@@ -3906,42 +3906,42 @@
         "availability": 5
     },
     {
-        "data": "2020-12-11",
+        "data": "2021-12-11",
         "origin": "MDZ",
         "destination": "COR",
         "price": 493.06,
         "availability": 7
     },
     {
-        "data": "2020-12-11",
+        "data": "2021-12-11",
         "origin": "BRC",
         "destination": "COR",
         "price": 312.18,
         "availability": 9
     },
     {
-        "data": "2020-12-11",
+        "data": "2021-12-11",
         "origin": "BRC",
         "destination": "EPA",
         "price": 200.46,
         "availability": 2
     },
     {
-        "data": "2020-11-21",
+        "data": "2021-11-21",
         "origin": "MDZ",
         "destination": "COR",
         "price": 448.23,
         "availability": 7
     },
     {
-        "data": "2020-11-21",
+        "data": "2021-11-21",
         "origin": "BRC",
         "destination": "COR",
         "price": 459.27,
         "availability": 2
     },
     {
-        "data": "2020-11-21",
+        "data": "2021-11-21",
         "origin": "BRC",
         "destination": "EPA",
         "price": 456.06,
@@ -4011,105 +4011,105 @@
         "availability": 6
     },
     {
-        "data": "2020-11-28",
+        "data": "2021-11-28",
         "origin": "MDZ",
         "destination": "COR",
         "price": 273.76,
         "availability": 9
     },
     {
-        "data": "2020-11-28",
+        "data": "2021-11-28",
         "origin": "BRC",
         "destination": "COR",
         "price": 188.74,
         "availability": 8
     },
     {
-        "data": "2020-11-28",
+        "data": "2021-11-28",
         "origin": "BRC",
         "destination": "EPA",
         "price": 305.88,
         "availability": 8
     },
     {
-        "data": "2020-12-13",
+        "data": "2021-12-13",
         "origin": "MDZ",
         "destination": "COR",
         "price": 259.43,
         "availability": 1
     },
     {
-        "data": "2020-12-13",
+        "data": "2021-12-13",
         "origin": "BRC",
         "destination": "COR",
         "price": 376.8,
         "availability": 2
     },
     {
-        "data": "2020-12-13",
+        "data": "2021-12-13",
         "origin": "BRC",
         "destination": "EPA",
         "price": 243.59,
         "availability": 5
     },
     {
-        "data": "2020-11-19",
+        "data": "2021-11-19",
         "origin": "MDZ",
         "destination": "COR",
         "price": 154.62,
         "availability": 4
     },
     {
-        "data": "2020-11-19",
+        "data": "2021-11-19",
         "origin": "BRC",
         "destination": "COR",
         "price": 483.41,
         "availability": 4
     },
     {
-        "data": "2020-11-19",
+        "data": "2021-11-19",
         "origin": "BRC",
         "destination": "EPA",
         "price": 316.86,
         "availability": 2
     },
     {
-        "data": "2020-12-23",
+        "data": "2021-12-23",
         "origin": "MDZ",
         "destination": "COR",
         "price": 395.44,
         "availability": 9
     },
     {
-        "data": "2020-12-23",
+        "data": "2021-12-23",
         "origin": "BRC",
         "destination": "COR",
         "price": 428.94,
         "availability": 4
     },
     {
-        "data": "2020-12-23",
+        "data": "2021-12-23",
         "origin": "BRC",
         "destination": "EPA",
         "price": 498.53,
         "availability": 1
     },
     {
-        "data": "2020-11-29",
+        "data": "2021-11-29",
         "origin": "MDZ",
         "destination": "COR",
         "price": 371.58,
         "availability": 9
     },
     {
-        "data": "2020-11-29",
+        "data": "2021-11-29",
         "origin": "BRC",
         "destination": "COR",
         "price": 359.45,
         "availability": 6
     },
     {
-        "data": "2020-11-29",
+        "data": "2021-11-29",
         "origin": "BRC",
         "destination": "EPA",
         "price": 191.29,
@@ -4179,21 +4179,21 @@
         "availability": 4
     },
     {
-        "data": "2020-12-06",
+        "data": "2021-12-06",
         "origin": "MDZ",
         "destination": "COR",
         "price": 440.5,
         "availability": 1
     },
     {
-        "data": "2020-12-06",
+        "data": "2021-12-06",
         "origin": "BRC",
         "destination": "COR",
         "price": 228.01,
         "availability": 7
     },
     {
-        "data": "2020-12-06",
+        "data": "2021-12-06",
         "origin": "BRC",
         "destination": "EPA",
         "price": 422.39,
@@ -7242,6 +7242,2316 @@
         "origin": "BRC",
         "destination": "EPA",
         "price": 271.38,
+        "availability": 7
+    },
+    {
+        "data": "2021-05-07",
+        "origin": "COR",
+        "destination": "MDZ",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-07",
+        "origin": "COR",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-07",
+        "origin": "EPA",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-07",
+        "origin": "MDZ",
+        "destination": "COR",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-07",
+        "origin": "BRC",
+        "destination": "COR",
+        "price": 469.6,
+        "availability": 6
+    },
+    {
+        "data": "2021-05-07",
+        "origin": "BRC",
+        "destination": "EPA",
+        "price": 321.23,
+        "availability": 7
+    },
+    {
+        "data": "2021-05-08",
+        "origin": "COR",
+        "destination": "MDZ",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-08",
+        "origin": "COR",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-08",
+        "origin": "EPA",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-08",
+        "origin": "MDZ",
+        "destination": "COR",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-08",
+        "origin": "BRC",
+        "destination": "COR",
+        "price": 469.6,
+        "availability": 6
+    },
+    {
+        "data": "2021-05-08",
+        "origin": "BRC",
+        "destination": "EPA",
+        "price": 321.23,
+        "availability": 7
+    },
+    {
+        "data": "2021-05-09",
+        "origin": "COR",
+        "destination": "MDZ",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-09",
+        "origin": "COR",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-09",
+        "origin": "EPA",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-09",
+        "origin": "MDZ",
+        "destination": "COR",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-09",
+        "origin": "BRC",
+        "destination": "COR",
+        "price": 469.6,
+        "availability": 6
+    },
+    {
+        "data": "2021-05-09",
+        "origin": "BRC",
+        "destination": "EPA",
+        "price": 321.23,
+        "availability": 7
+    },
+    {
+        "data": "2021-05-10",
+        "origin": "COR",
+        "destination": "MDZ",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-10",
+        "origin": "COR",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-10",
+        "origin": "EPA",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-10",
+        "origin": "MDZ",
+        "destination": "COR",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-10",
+        "origin": "BRC",
+        "destination": "COR",
+        "price": 469.6,
+        "availability": 6
+    },
+    {
+        "data": "2021-05-10",
+        "origin": "BRC",
+        "destination": "EPA",
+        "price": 321.23,
+        "availability": 7
+    },
+    {
+        "data": "2021-05-11",
+        "origin": "COR",
+        "destination": "MDZ",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-11",
+        "origin": "COR",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-11",
+        "origin": "EPA",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-11",
+        "origin": "MDZ",
+        "destination": "COR",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-11",
+        "origin": "BRC",
+        "destination": "COR",
+        "price": 469.6,
+        "availability": 6
+    },
+    {
+        "data": "2021-05-11",
+        "origin": "BRC",
+        "destination": "EPA",
+        "price": 321.23,
+        "availability": 7
+    },
+    {
+        "data": "2021-05-12",
+        "origin": "COR",
+        "destination": "MDZ",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-12",
+        "origin": "COR",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-12",
+        "origin": "EPA",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-12",
+        "origin": "MDZ",
+        "destination": "COR",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-12",
+        "origin": "BRC",
+        "destination": "COR",
+        "price": 469.6,
+        "availability": 6
+    },
+    {
+        "data": "2021-05-12",
+        "origin": "BRC",
+        "destination": "EPA",
+        "price": 321.23,
+        "availability": 7
+    },
+    {
+        "data": "2021-05-13",
+        "origin": "COR",
+        "destination": "MDZ",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-13",
+        "origin": "COR",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-13",
+        "origin": "EPA",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-13",
+        "origin": "MDZ",
+        "destination": "COR",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-13",
+        "origin": "BRC",
+        "destination": "COR",
+        "price": 469.6,
+        "availability": 6
+    },
+    {
+        "data": "2021-05-13",
+        "origin": "BRC",
+        "destination": "EPA",
+        "price": 321.23,
+        "availability": 7
+    },
+    {
+        "data": "2021-05-14",
+        "origin": "COR",
+        "destination": "MDZ",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-14",
+        "origin": "COR",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-14",
+        "origin": "EPA",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-14",
+        "origin": "MDZ",
+        "destination": "COR",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-14",
+        "origin": "BRC",
+        "destination": "COR",
+        "price": 469.6,
+        "availability": 6
+    },
+    {
+        "data": "2021-05-14",
+        "origin": "BRC",
+        "destination": "EPA",
+        "price": 321.23,
+        "availability": 7
+    },
+    {
+        "data": "2021-05-15",
+        "origin": "COR",
+        "destination": "MDZ",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-15",
+        "origin": "COR",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-15",
+        "origin": "EPA",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-15",
+        "origin": "MDZ",
+        "destination": "COR",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-15",
+        "origin": "BRC",
+        "destination": "COR",
+        "price": 469.6,
+        "availability": 6
+    },
+    {
+        "data": "2021-05-15",
+        "origin": "BRC",
+        "destination": "EPA",
+        "price": 321.23,
+        "availability": 7
+    },
+    {
+        "data": "2021-05-16",
+        "origin": "COR",
+        "destination": "MDZ",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-16",
+        "origin": "COR",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-16",
+        "origin": "EPA",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-16",
+        "origin": "MDZ",
+        "destination": "COR",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-16",
+        "origin": "BRC",
+        "destination": "COR",
+        "price": 469.6,
+        "availability": 6
+    },
+    {
+        "data": "2021-05-16",
+        "origin": "BRC",
+        "destination": "EPA",
+        "price": 321.23,
+        "availability": 7
+    },
+    {
+        "data": "2021-05-17",
+        "origin": "COR",
+        "destination": "MDZ",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-17",
+        "origin": "COR",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-17",
+        "origin": "EPA",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-17",
+        "origin": "MDZ",
+        "destination": "COR",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-17",
+        "origin": "BRC",
+        "destination": "COR",
+        "price": 469.6,
+        "availability": 6
+    },
+    {
+        "data": "2021-05-17",
+        "origin": "BRC",
+        "destination": "EPA",
+        "price": 321.23,
+        "availability": 7
+    },
+    {
+        "data": "2021-05-18",
+        "origin": "COR",
+        "destination": "MDZ",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-18",
+        "origin": "COR",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-18",
+        "origin": "EPA",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-18",
+        "origin": "MDZ",
+        "destination": "COR",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-18",
+        "origin": "BRC",
+        "destination": "COR",
+        "price": 469.6,
+        "availability": 6
+    },
+    {
+        "data": "2021-05-18",
+        "origin": "BRC",
+        "destination": "EPA",
+        "price": 321.23,
+        "availability": 7
+    },
+    {
+        "data": "2021-05-19",
+        "origin": "COR",
+        "destination": "MDZ",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-19",
+        "origin": "COR",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-19",
+        "origin": "EPA",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-19",
+        "origin": "MDZ",
+        "destination": "COR",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-19",
+        "origin": "BRC",
+        "destination": "COR",
+        "price": 469.6,
+        "availability": 6
+    },
+    {
+        "data": "2021-05-19",
+        "origin": "BRC",
+        "destination": "EPA",
+        "price": 321.23,
+        "availability": 7
+    },
+    {
+        "data": "2021-05-20",
+        "origin": "COR",
+        "destination": "MDZ",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-20",
+        "origin": "COR",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-20",
+        "origin": "EPA",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-20",
+        "origin": "MDZ",
+        "destination": "COR",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-20",
+        "origin": "BRC",
+        "destination": "COR",
+        "price": 469.6,
+        "availability": 6
+    },
+    {
+        "data": "2021-05-20",
+        "origin": "BRC",
+        "destination": "EPA",
+        "price": 321.23,
+        "availability": 7
+    },
+    {
+        "data": "2021-05-21",
+        "origin": "COR",
+        "destination": "MDZ",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-21",
+        "origin": "COR",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-21",
+        "origin": "EPA",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-21",
+        "origin": "MDZ",
+        "destination": "COR",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-21",
+        "origin": "BRC",
+        "destination": "COR",
+        "price": 469.6,
+        "availability": 6
+    },
+    {
+        "data": "2021-05-21",
+        "origin": "BRC",
+        "destination": "EPA",
+        "price": 321.23,
+        "availability": 7
+    },
+    {
+        "data": "2021-05-22",
+        "origin": "COR",
+        "destination": "MDZ",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-22",
+        "origin": "COR",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-22",
+        "origin": "EPA",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-22",
+        "origin": "MDZ",
+        "destination": "COR",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-22",
+        "origin": "BRC",
+        "destination": "COR",
+        "price": 469.6,
+        "availability": 6
+    },
+    {
+        "data": "2021-05-22",
+        "origin": "BRC",
+        "destination": "EPA",
+        "price": 321.23,
+        "availability": 7
+    },
+    {
+        "data": "2021-05-23",
+        "origin": "COR",
+        "destination": "MDZ",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-23",
+        "origin": "COR",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-23",
+        "origin": "EPA",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-23",
+        "origin": "MDZ",
+        "destination": "COR",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-23",
+        "origin": "BRC",
+        "destination": "COR",
+        "price": 469.6,
+        "availability": 6
+    },
+    {
+        "data": "2021-05-23",
+        "origin": "BRC",
+        "destination": "EPA",
+        "price": 321.23,
+        "availability": 7
+    },
+    {
+        "data": "2021-05-24",
+        "origin": "COR",
+        "destination": "MDZ",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-24",
+        "origin": "COR",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-24",
+        "origin": "EPA",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-24",
+        "origin": "MDZ",
+        "destination": "COR",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-24",
+        "origin": "BRC",
+        "destination": "COR",
+        "price": 469.6,
+        "availability": 6
+    },
+    {
+        "data": "2021-05-24",
+        "origin": "BRC",
+        "destination": "EPA",
+        "price": 321.23,
+        "availability": 7
+    },
+    {
+        "data": "2021-05-25",
+        "origin": "COR",
+        "destination": "MDZ",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-25",
+        "origin": "COR",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-25",
+        "origin": "EPA",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-25",
+        "origin": "MDZ",
+        "destination": "COR",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-25",
+        "origin": "BRC",
+        "destination": "COR",
+        "price": 469.6,
+        "availability": 6
+    },
+    {
+        "data": "2021-05-25",
+        "origin": "BRC",
+        "destination": "EPA",
+        "price": 321.23,
+        "availability": 7
+    },
+    {
+        "data": "2021-05-26",
+        "origin": "COR",
+        "destination": "MDZ",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-26",
+        "origin": "COR",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-26",
+        "origin": "EPA",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-26",
+        "origin": "MDZ",
+        "destination": "COR",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-26",
+        "origin": "BRC",
+        "destination": "COR",
+        "price": 469.6,
+        "availability": 6
+    },
+    {
+        "data": "2021-05-26",
+        "origin": "BRC",
+        "destination": "EPA",
+        "price": 321.23,
+        "availability": 7
+    },
+    {
+        "data": "2021-05-27",
+        "origin": "COR",
+        "destination": "MDZ",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-27",
+        "origin": "COR",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-27",
+        "origin": "EPA",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-27",
+        "origin": "MDZ",
+        "destination": "COR",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-27",
+        "origin": "BRC",
+        "destination": "COR",
+        "price": 469.6,
+        "availability": 6
+    },
+    {
+        "data": "2021-05-27",
+        "origin": "BRC",
+        "destination": "EPA",
+        "price": 321.23,
+        "availability": 7
+    },
+    {
+        "data": "2021-05-28",
+        "origin": "COR",
+        "destination": "MDZ",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-28",
+        "origin": "COR",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-28",
+        "origin": "EPA",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-28",
+        "origin": "MDZ",
+        "destination": "COR",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-28",
+        "origin": "BRC",
+        "destination": "COR",
+        "price": 469.6,
+        "availability": 6
+    },
+    {
+        "data": "2021-05-28",
+        "origin": "BRC",
+        "destination": "EPA",
+        "price": 321.23,
+        "availability": 7
+    },
+    {
+        "data": "2021-05-29",
+        "origin": "COR",
+        "destination": "MDZ",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-29",
+        "origin": "COR",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-29",
+        "origin": "EPA",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-29",
+        "origin": "MDZ",
+        "destination": "COR",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-29",
+        "origin": "BRC",
+        "destination": "COR",
+        "price": 469.6,
+        "availability": 6
+    },
+    {
+        "data": "2021-05-29",
+        "origin": "BRC",
+        "destination": "EPA",
+        "price": 321.23,
+        "availability": 7
+    },
+    {
+        "data": "2021-05-30",
+        "origin": "COR",
+        "destination": "MDZ",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-30",
+        "origin": "COR",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-30",
+        "origin": "EPA",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-30",
+        "origin": "MDZ",
+        "destination": "COR",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-30",
+        "origin": "BRC",
+        "destination": "COR",
+        "price": 469.6,
+        "availability": 6
+    },
+    {
+        "data": "2021-05-30",
+        "origin": "BRC",
+        "destination": "EPA",
+        "price": 321.23,
+        "availability": 7
+    },
+    {
+        "data": "2021-05-31",
+        "origin": "COR",
+        "destination": "MDZ",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-31",
+        "origin": "COR",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-31",
+        "origin": "EPA",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-31",
+        "origin": "MDZ",
+        "destination": "COR",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-05-31",
+        "origin": "BRC",
+        "destination": "COR",
+        "price": 469.6,
+        "availability": 6
+    },
+    {
+        "data": "2021-05-31",
+        "origin": "BRC",
+        "destination": "EPA",
+        "price": 321.23,
+        "availability": 7
+    },
+    {
+        "data": "2021-06-01",
+        "origin": "COR",
+        "destination": "MDZ",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-01",
+        "origin": "COR",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-01",
+        "origin": "EPA",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-01",
+        "origin": "MDZ",
+        "destination": "COR",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-01",
+        "origin": "BRC",
+        "destination": "COR",
+        "price": 469.6,
+        "availability": 6
+    },
+    {
+        "data": "2021-06-01",
+        "origin": "BRC",
+        "destination": "EPA",
+        "price": 321.23,
+        "availability": 7
+    },
+    {
+        "data": "2021-06-02",
+        "origin": "COR",
+        "destination": "MDZ",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-02",
+        "origin": "COR",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-02",
+        "origin": "EPA",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-02",
+        "origin": "MDZ",
+        "destination": "COR",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-02",
+        "origin": "BRC",
+        "destination": "COR",
+        "price": 469.6,
+        "availability": 6
+    },
+    {
+        "data": "2021-06-02",
+        "origin": "BRC",
+        "destination": "EPA",
+        "price": 321.23,
+        "availability": 7
+    },
+    {
+        "data": "2021-06-03",
+        "origin": "COR",
+        "destination": "MDZ",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-03",
+        "origin": "COR",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-03",
+        "origin": "EPA",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-03",
+        "origin": "MDZ",
+        "destination": "COR",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-03",
+        "origin": "BRC",
+        "destination": "COR",
+        "price": 469.6,
+        "availability": 6
+    },
+    {
+        "data": "2021-06-03",
+        "origin": "BRC",
+        "destination": "EPA",
+        "price": 321.23,
+        "availability": 7
+    },
+    {
+        "data": "2021-06-04",
+        "origin": "COR",
+        "destination": "MDZ",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-04",
+        "origin": "COR",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-04",
+        "origin": "EPA",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-04",
+        "origin": "MDZ",
+        "destination": "COR",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-04",
+        "origin": "BRC",
+        "destination": "COR",
+        "price": 469.6,
+        "availability": 6
+    },
+    {
+        "data": "2021-06-04",
+        "origin": "BRC",
+        "destination": "EPA",
+        "price": 321.23,
+        "availability": 7
+    },
+    {
+        "data": "2021-06-05",
+        "origin": "COR",
+        "destination": "MDZ",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-05",
+        "origin": "COR",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-05",
+        "origin": "EPA",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-05",
+        "origin": "MDZ",
+        "destination": "COR",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-05",
+        "origin": "BRC",
+        "destination": "COR",
+        "price": 469.6,
+        "availability": 6
+    },
+    {
+        "data": "2021-06-05",
+        "origin": "BRC",
+        "destination": "EPA",
+        "price": 321.23,
+        "availability": 7
+    },
+    {
+        "data": "2021-06-06",
+        "origin": "COR",
+        "destination": "MDZ",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-06",
+        "origin": "COR",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-06",
+        "origin": "EPA",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-06",
+        "origin": "MDZ",
+        "destination": "COR",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-06",
+        "origin": "BRC",
+        "destination": "COR",
+        "price": 469.6,
+        "availability": 6
+    },
+    {
+        "data": "2021-06-06",
+        "origin": "BRC",
+        "destination": "EPA",
+        "price": 321.23,
+        "availability": 7
+    },
+    {
+        "data": "2021-06-07",
+        "origin": "COR",
+        "destination": "MDZ",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-07",
+        "origin": "COR",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-07",
+        "origin": "EPA",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-07",
+        "origin": "MDZ",
+        "destination": "COR",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-07",
+        "origin": "BRC",
+        "destination": "COR",
+        "price": 469.6,
+        "availability": 6
+    },
+    {
+        "data": "2021-06-07",
+        "origin": "BRC",
+        "destination": "EPA",
+        "price": 321.23,
+        "availability": 7
+    },
+    {
+        "data": "2021-06-08",
+        "origin": "COR",
+        "destination": "MDZ",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-08",
+        "origin": "COR",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-08",
+        "origin": "EPA",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-08",
+        "origin": "MDZ",
+        "destination": "COR",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-08",
+        "origin": "BRC",
+        "destination": "COR",
+        "price": 469.6,
+        "availability": 6
+    },
+    {
+        "data": "2021-06-08",
+        "origin": "BRC",
+        "destination": "EPA",
+        "price": 321.23,
+        "availability": 7
+    },
+    {
+        "data": "2021-06-09",
+        "origin": "COR",
+        "destination": "MDZ",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-09",
+        "origin": "COR",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-09",
+        "origin": "EPA",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-09",
+        "origin": "MDZ",
+        "destination": "COR",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-09",
+        "origin": "BRC",
+        "destination": "COR",
+        "price": 469.6,
+        "availability": 6
+    },
+    {
+        "data": "2021-06-09",
+        "origin": "BRC",
+        "destination": "EPA",
+        "price": 321.23,
+        "availability": 7
+    },
+    {
+        "data": "2021-06-10",
+        "origin": "COR",
+        "destination": "MDZ",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-10",
+        "origin": "COR",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-10",
+        "origin": "EPA",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-10",
+        "origin": "MDZ",
+        "destination": "COR",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-10",
+        "origin": "BRC",
+        "destination": "COR",
+        "price": 469.6,
+        "availability": 6
+    },
+    {
+        "data": "2021-06-10",
+        "origin": "BRC",
+        "destination": "EPA",
+        "price": 321.23,
+        "availability": 7
+    },
+    {
+        "data": "2021-06-11",
+        "origin": "COR",
+        "destination": "MDZ",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-11",
+        "origin": "COR",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-11",
+        "origin": "EPA",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-11",
+        "origin": "MDZ",
+        "destination": "COR",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-11",
+        "origin": "BRC",
+        "destination": "COR",
+        "price": 469.6,
+        "availability": 6
+    },
+    {
+        "data": "2021-06-11",
+        "origin": "BRC",
+        "destination": "EPA",
+        "price": 321.23,
+        "availability": 7
+    },
+    {
+        "data": "2021-06-12",
+        "origin": "COR",
+        "destination": "MDZ",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-12",
+        "origin": "COR",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-12",
+        "origin": "EPA",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-12",
+        "origin": "MDZ",
+        "destination": "COR",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-12",
+        "origin": "BRC",
+        "destination": "COR",
+        "price": 469.6,
+        "availability": 6
+    },
+    {
+        "data": "2021-06-12",
+        "origin": "BRC",
+        "destination": "EPA",
+        "price": 321.23,
+        "availability": 7
+    },
+    {
+        "data": "2021-06-13",
+        "origin": "COR",
+        "destination": "MDZ",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-13",
+        "origin": "COR",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-13",
+        "origin": "EPA",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-13",
+        "origin": "MDZ",
+        "destination": "COR",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-13",
+        "origin": "BRC",
+        "destination": "COR",
+        "price": 469.6,
+        "availability": 6
+    },
+    {
+        "data": "2021-06-13",
+        "origin": "BRC",
+        "destination": "EPA",
+        "price": 321.23,
+        "availability": 7
+    },
+    {
+        "data": "2021-06-14",
+        "origin": "COR",
+        "destination": "MDZ",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-14",
+        "origin": "COR",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-14",
+        "origin": "EPA",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-14",
+        "origin": "MDZ",
+        "destination": "COR",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-14",
+        "origin": "BRC",
+        "destination": "COR",
+        "price": 469.6,
+        "availability": 6
+    },
+    {
+        "data": "2021-06-14",
+        "origin": "BRC",
+        "destination": "EPA",
+        "price": 321.23,
+        "availability": 7
+    },
+    {
+        "data": "2021-06-15",
+        "origin": "COR",
+        "destination": "MDZ",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-15",
+        "origin": "COR",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-15",
+        "origin": "EPA",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-15",
+        "origin": "MDZ",
+        "destination": "COR",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-15",
+        "origin": "BRC",
+        "destination": "COR",
+        "price": 469.6,
+        "availability": 6
+    },
+    {
+        "data": "2021-06-15",
+        "origin": "BRC",
+        "destination": "EPA",
+        "price": 321.23,
+        "availability": 7
+    },
+    {
+        "data": "2021-06-16",
+        "origin": "COR",
+        "destination": "MDZ",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-16",
+        "origin": "COR",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-16",
+        "origin": "EPA",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-16",
+        "origin": "MDZ",
+        "destination": "COR",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-16",
+        "origin": "BRC",
+        "destination": "COR",
+        "price": 469.6,
+        "availability": 6
+    },
+    {
+        "data": "2021-06-16",
+        "origin": "BRC",
+        "destination": "EPA",
+        "price": 321.23,
+        "availability": 7
+    },
+    {
+        "data": "2021-06-17",
+        "origin": "COR",
+        "destination": "MDZ",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-17",
+        "origin": "COR",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-17",
+        "origin": "EPA",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-17",
+        "origin": "MDZ",
+        "destination": "COR",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-17",
+        "origin": "BRC",
+        "destination": "COR",
+        "price": 469.6,
+        "availability": 6
+    },
+    {
+        "data": "2021-06-17",
+        "origin": "BRC",
+        "destination": "EPA",
+        "price": 321.23,
+        "availability": 7
+    },
+    {
+        "data": "2021-06-18",
+        "origin": "COR",
+        "destination": "MDZ",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-18",
+        "origin": "COR",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-18",
+        "origin": "EPA",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-18",
+        "origin": "MDZ",
+        "destination": "COR",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-18",
+        "origin": "BRC",
+        "destination": "COR",
+        "price": 469.6,
+        "availability": 6
+    },
+    {
+        "data": "2021-06-18",
+        "origin": "BRC",
+        "destination": "EPA",
+        "price": 321.23,
+        "availability": 7
+    },
+    {
+        "data": "2021-06-19",
+        "origin": "COR",
+        "destination": "MDZ",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-19",
+        "origin": "COR",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-19",
+        "origin": "EPA",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-19",
+        "origin": "MDZ",
+        "destination": "COR",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-19",
+        "origin": "BRC",
+        "destination": "COR",
+        "price": 469.6,
+        "availability": 6
+    },
+    {
+        "data": "2021-06-19",
+        "origin": "BRC",
+        "destination": "EPA",
+        "price": 321.23,
+        "availability": 7
+    },
+    {
+        "data": "2021-06-20",
+        "origin": "COR",
+        "destination": "MDZ",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-20",
+        "origin": "COR",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-20",
+        "origin": "EPA",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-20",
+        "origin": "MDZ",
+        "destination": "COR",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-20",
+        "origin": "BRC",
+        "destination": "COR",
+        "price": 469.6,
+        "availability": 6
+    },
+    {
+        "data": "2021-06-20",
+        "origin": "BRC",
+        "destination": "EPA",
+        "price": 321.23,
+        "availability": 7
+    },
+    {
+        "data": "2021-06-21",
+        "origin": "COR",
+        "destination": "MDZ",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-21",
+        "origin": "COR",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-21",
+        "origin": "EPA",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-21",
+        "origin": "MDZ",
+        "destination": "COR",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-21",
+        "origin": "BRC",
+        "destination": "COR",
+        "price": 469.6,
+        "availability": 6
+    },
+    {
+        "data": "2021-06-21",
+        "origin": "BRC",
+        "destination": "EPA",
+        "price": 321.23,
+        "availability": 7
+    },
+    {
+        "data": "2021-06-22",
+        "origin": "COR",
+        "destination": "MDZ",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-22",
+        "origin": "COR",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-22",
+        "origin": "EPA",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-22",
+        "origin": "MDZ",
+        "destination": "COR",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-22",
+        "origin": "BRC",
+        "destination": "COR",
+        "price": 469.6,
+        "availability": 6
+    },
+    {
+        "data": "2021-06-22",
+        "origin": "BRC",
+        "destination": "EPA",
+        "price": 321.23,
+        "availability": 7
+    },
+    {
+        "data": "2021-06-23",
+        "origin": "COR",
+        "destination": "MDZ",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-23",
+        "origin": "COR",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-23",
+        "origin": "EPA",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-23",
+        "origin": "MDZ",
+        "destination": "COR",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-23",
+        "origin": "BRC",
+        "destination": "COR",
+        "price": 469.6,
+        "availability": 6
+    },
+    {
+        "data": "2021-06-23",
+        "origin": "BRC",
+        "destination": "EPA",
+        "price": 321.23,
+        "availability": 7
+    },
+    {
+        "data": "2021-06-24",
+        "origin": "COR",
+        "destination": "MDZ",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-24",
+        "origin": "COR",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-24",
+        "origin": "EPA",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-24",
+        "origin": "MDZ",
+        "destination": "COR",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-24",
+        "origin": "BRC",
+        "destination": "COR",
+        "price": 469.6,
+        "availability": 6
+    },
+    {
+        "data": "2021-06-24",
+        "origin": "BRC",
+        "destination": "EPA",
+        "price": 321.23,
+        "availability": 7
+    },
+    {
+        "data": "2021-06-25",
+        "origin": "COR",
+        "destination": "MDZ",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-25",
+        "origin": "COR",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-25",
+        "origin": "EPA",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-25",
+        "origin": "MDZ",
+        "destination": "COR",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-25",
+        "origin": "BRC",
+        "destination": "COR",
+        "price": 469.6,
+        "availability": 6
+    },
+    {
+        "data": "2021-06-25",
+        "origin": "BRC",
+        "destination": "EPA",
+        "price": 321.23,
+        "availability": 7
+    },
+    {
+        "data": "2021-06-26",
+        "origin": "COR",
+        "destination": "MDZ",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-26",
+        "origin": "COR",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-26",
+        "origin": "EPA",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-26",
+        "origin": "MDZ",
+        "destination": "COR",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-26",
+        "origin": "BRC",
+        "destination": "COR",
+        "price": 469.6,
+        "availability": 6
+    },
+    {
+        "data": "2021-06-26",
+        "origin": "BRC",
+        "destination": "EPA",
+        "price": 321.23,
+        "availability": 7
+    },
+    {
+        "data": "2021-06-27",
+        "origin": "COR",
+        "destination": "MDZ",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-27",
+        "origin": "COR",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-27",
+        "origin": "EPA",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-27",
+        "origin": "MDZ",
+        "destination": "COR",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-27",
+        "origin": "BRC",
+        "destination": "COR",
+        "price": 469.6,
+        "availability": 6
+    },
+    {
+        "data": "2021-06-27",
+        "origin": "BRC",
+        "destination": "EPA",
+        "price": 321.23,
+        "availability": 7
+    },
+    {
+        "data": "2021-06-28",
+        "origin": "COR",
+        "destination": "MDZ",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-28",
+        "origin": "COR",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-28",
+        "origin": "EPA",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-28",
+        "origin": "MDZ",
+        "destination": "COR",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-28",
+        "origin": "BRC",
+        "destination": "COR",
+        "price": 469.6,
+        "availability": 6
+    },
+    {
+        "data": "2021-06-28",
+        "origin": "BRC",
+        "destination": "EPA",
+        "price": 321.23,
+        "availability": 7
+    },
+    {
+        "data": "2021-06-29",
+        "origin": "COR",
+        "destination": "MDZ",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-29",
+        "origin": "COR",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-29",
+        "origin": "EPA",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-29",
+        "origin": "MDZ",
+        "destination": "COR",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-29",
+        "origin": "BRC",
+        "destination": "COR",
+        "price": 469.6,
+        "availability": 6
+    },
+    {
+        "data": "2021-06-29",
+        "origin": "BRC",
+        "destination": "EPA",
+        "price": 321.23,
+        "availability": 7
+    },
+    {
+        "data": "2021-06-30",
+        "origin": "COR",
+        "destination": "MDZ",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-30",
+        "origin": "COR",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-30",
+        "origin": "EPA",
+        "destination": "BRC",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-30",
+        "origin": "MDZ",
+        "destination": "COR",
+        "price": 316.47,
+        "availability": 4
+    },
+    {
+        "data": "2021-06-30",
+        "origin": "BRC",
+        "destination": "COR",
+        "price": 469.6,
+        "availability": 6
+    },
+    {
+        "data": "2021-06-30",
+        "origin": "BRC",
+        "destination": "EPA",
+        "price": 321.23,
         "availability": 7
     }
 ]
