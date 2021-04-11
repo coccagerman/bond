@@ -1,9 +1,10 @@
+import { CSSTransition } from 'react-transition-group';
 import { useState } from 'react';
 import FlightSearchParameters from './FlightSearchParameters'
 import DepartureFlightOption from './DepartureFlightOption'
 import ErrorMessageNoAvailableFlights from './ErrorMessageNoAvailableFlights'
 
-function AvailableDepartureFlights ({flightSearchParams, searchDepartureFlights, setSectionShown, setChosenDepartureFlight, chosenDepartureFlight, typeOfTripSwitch, formatPlaces, handleSearchAgain, typeOfDepartureDate, typeOfReturnDate, searchReturnFlights}) {
+function AvailableDepartureFlights ({flightSearchParams, searchDepartureFlights, setSectionShown, setChosenDepartureFlight, chosenDepartureFlight, typeOfTripSwitch, formatPlaces, handleSearchAgain, typeOfDepartureDate, typeOfReturnDate, searchReturnFlights, showDepSearchResults}) {
 
     let typeOfTrip = typeOfTripSwitch%2 === 0 ? 'oneWay' : 'round'
     let desiredTotalPrice = flightSearchParams[5]
@@ -48,14 +49,20 @@ function AvailableDepartureFlights ({flightSearchParams, searchDepartureFlights,
         else { return null }
     }
 
-    return (
-        <div className='searchResult'>
-            <FlightSearchParameters flightSearchParams={flightSearchParams} typeOfDepartureDate={typeOfDepartureDate} typeOfReturnDate={typeOfReturnDate} typeOfTripSwitch={typeOfTripSwitch} formatPlaces={formatPlaces}/>
 
-            <h1>Vuelos {typeOfSearchTittle()} disponibles:</h1>
-            {showFlights()}
-            <button className='btn btn-secondary' onClick={(e) => handleSearchAgain(e)}>Buscar más vuelos</button>
-        </div>
+    return (
+        <CSSTransition in={showDepSearchResults} timeout={3000} classNames="fade" onEntered={() => showDepSearchResults(true)} onExit={() => showDepSearchResults(false)} >
+            <div className='searchResult' key='searchResult'>
+
+
+                <FlightSearchParameters flightSearchParams={flightSearchParams} typeOfDepartureDate={typeOfDepartureDate} typeOfReturnDate={typeOfReturnDate} typeOfTripSwitch={typeOfTripSwitch} formatPlaces={formatPlaces}/>
+
+                <h1>Vuelos {typeOfSearchTittle()} disponibles:</h1>
+                {showFlights()}
+                <button className='btn btn-secondary' onClick={(e) => handleSearchAgain(e)}>Buscar más vuelos</button>
+
+            </div>
+        </CSSTransition>
     )
 }
 

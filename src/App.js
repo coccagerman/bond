@@ -10,15 +10,25 @@ import CheckOut from './components/CheckOut'
 
 function App() {
 
+
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    const [showForm, setShowForm] = useState(true);
+    const [showDepSearchResults, setShowDepSearchResults] = useState(false);
+    const [showRetSearchResults, setShowRetSearchResults] = useState(false);
+    const [showCheckOut, setShowCheckOut] = useState(false);
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
     // Hook used to display and hide the different sections of the app
     const [sectionShown,setSectionShown] = useState('InitialForm');
 
     // Function used to display and hide the different sections of the app
     const showSection = () => {
       if (sectionShown === 'InitialForm') {
-          return (<InitialForm searchReturnFlights={searchReturnFlights} chosenDepartureFlight={chosenDepartureFlight} flightSearchParams={flightSearchParams} searchDepartureFlights={searchDepartureFlights} dataset={dataset} setFlightSearchParams={setFlightSearchParams} setSectionShown={setSectionShown} setTypeOfTripSwitch={setTypeOfTripSwitch} typeOfTripSwitch={typeOfTripSwitch} formatPlaces={formatPlaces} typeOfDepartureDate={typeOfDepartureDate} setTypeOfDepartureDate={setTypeOfDepartureDate} typeOfReturnDate={typeOfReturnDate} setTypeOfReturnDate={setTypeOfReturnDate} desiredFlexDepartureDates={desiredFlexDepartureDates} setDesiredFlexDepartureDates={setDesiredFlexDepartureDates} desiredFlexReturnDates={desiredFlexReturnDates} setDesiredFlexReturnDates={setDesiredFlexReturnDates} desiredOrigin={desiredOrigin} setDesiredOrigin={setDesiredOrigin} desiredDestination={desiredDestination} setDesiredDestination={setDesiredDestination} desiredPassengers={desiredPassengers} setDesiredPassengers={setDesiredPassengers} desiredDepartureDate={desiredDepartureDate} setDesiredDepartureDate={setDesiredDepartureDate} desiredReturnDate={desiredReturnDate} setDesiredReturnDate={setDesiredReturnDate} desiredTotalPrice={desiredTotalPrice} setDesiredTotalPrice={setDesiredTotalPrice} />)
+          return (<InitialForm dataset={dataset} setFlightSearchParams={setFlightSearchParams} setSectionShown={setSectionShown} setTypeOfTripSwitch={setTypeOfTripSwitch} typeOfTripSwitch={typeOfTripSwitch} formatPlaces={formatPlaces} typeOfDepartureDate={typeOfDepartureDate} setTypeOfDepartureDate={setTypeOfDepartureDate} typeOfReturnDate={typeOfReturnDate} setTypeOfReturnDate={setTypeOfReturnDate} desiredFlexDepartureDates={desiredFlexDepartureDates} setDesiredFlexDepartureDates={setDesiredFlexDepartureDates} desiredFlexReturnDates={desiredFlexReturnDates} setDesiredFlexReturnDates={setDesiredFlexReturnDates} desiredOrigin={desiredOrigin} setDesiredOrigin={setDesiredOrigin} desiredDestination={desiredDestination} setDesiredDestination={setDesiredDestination} desiredPassengers={desiredPassengers} setDesiredPassengers={setDesiredPassengers} desiredDepartureDate={desiredDepartureDate} setDesiredDepartureDate={setDesiredDepartureDate} desiredReturnDate={desiredReturnDate} setDesiredReturnDate={setDesiredReturnDate} desiredTotalPrice={desiredTotalPrice} setDesiredTotalPrice={setDesiredTotalPrice}/>)
       } else if (sectionShown === 'AvailableDepartureFlights') {
-          return <AvailableDepartureFlights flightSearchParams={flightSearchParams} searchDepartureFlights={searchDepartureFlights} setSectionShown={setSectionShown} setChosenDepartureFlight={setChosenDepartureFlight} chosenDepartureFlight={chosenDepartureFlight} typeOfTripSwitch={typeOfTripSwitch} setTypeOfTripSwitch={setTypeOfTripSwitch} formatPlaces={formatPlaces} handleSearchAgain={handleSearchAgain} typeOfDepartureDate={typeOfDepartureDate} typeOfReturnDate={typeOfReturnDate} searchReturnFlights={searchReturnFlights} />
+          return <AvailableDepartureFlights flightSearchParams={flightSearchParams} searchDepartureFlights={searchDepartureFlights} setSectionShown={setSectionShown} setChosenDepartureFlight={setChosenDepartureFlight} chosenDepartureFlight={chosenDepartureFlight} typeOfTripSwitch={typeOfTripSwitch} setTypeOfTripSwitch={setTypeOfTripSwitch} formatPlaces={formatPlaces} handleSearchAgain={handleSearchAgain} typeOfDepartureDate={typeOfDepartureDate} typeOfReturnDate={typeOfReturnDate} searchReturnFlights={searchReturnFlights} showDepSearchResults={showDepSearchResults}/>
       } else if (sectionShown === 'AvailableReturnFlights') {
           return <AvailableReturnFlights flightSearchParams={flightSearchParams} setSectionShown={setSectionShown} setChosenReturnFlight={setChosenReturnFlight} chosenReturnFlight={chosenReturnFlight} chosenDepartureFlight={chosenDepartureFlight} setTypeOfTripSwitch={setTypeOfTripSwitch} typeOfTripSwitch={typeOfTripSwitch} formatPlaces={formatPlaces} handleSearchAgain={handleSearchAgain} searchReturnFlights={searchReturnFlights} typeOfDepartureDate={typeOfDepartureDate} typeOfReturnDate={typeOfReturnDate}/>
       } else if (sectionShown === 'CheckOut') {
@@ -217,7 +227,7 @@ function App() {
         else if (place === 'MDZ') { return 'MDZ - Mendoza' }
         else if (place === 'BRC') { return 'BRC - Bariloche' } 
     }
-
+    
   return (
     <div className="App">
         <Navbar sectionShown={sectionShown} setSectionShown={setSectionShown} handleSearchAgain={handleSearchAgain}/>
