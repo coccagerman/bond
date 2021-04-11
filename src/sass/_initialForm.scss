@@ -17,6 +17,7 @@
         border-radius: 1rem;
         padding-top: 2rem;
         margin-bottom: -25rem;
+        z-index: 1;
         .inputs-div {
             display: flex;
                 justify-content: center;
@@ -56,8 +57,8 @@
             align-items: center;
             
             .switchTittle {
-                padding-left: 2.8rem;
                 font-weight: bold;
+                padding-left: 3rem;
                     .gray{
                     color: #ccc;
                     transition: .5s;
@@ -68,7 +69,6 @@
                 font-size: 1rem;
                 margin-top: 1rem;   
 
-                padding-left: .5rem;
                 font-weight: bold;
                     .gray{
                     color: #ccc;
@@ -138,12 +138,6 @@
     }
 
     .small-switch-container{
-            // .switchTittle {
-            //     font-size: 1rem;
-            //     width: 24rem;
-            //     margin-top: 1rem;
-            //     // padding-left: 2.5rem;
-            // }
 
             .switch {
                 height: 22px;
@@ -163,12 +157,19 @@
     }
     
     .btnAndError-div {
+        margin-bottom: 2rem;
         display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-        }
+        
+            p {
+                text-align: center;
+                max-width: 25rem;
+                margin: .5rem;
+            }
     }
+}
 
     .formInput-display-none {
         margin: 0 2rem;

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import CheckOutForm from './CheckOutForm'
+import {useSpring, animated} from 'react-spring'
 
 function CheckOut({setSectionShown, typeOfTripSwitch, chosenDepartureFlight, chosenReturnFlight, handleSearchAgain, formatPlaces}) {
     
@@ -24,7 +25,7 @@ function CheckOut({setSectionShown, typeOfTripSwitch, chosenDepartureFlight, cho
     function showReturnFlight () {
         if (typeOfTrip === 'round') {
             return (
-                <article className="flight">
+                <animated.article style={retFlightAnimationProps} className="flight">
                     <h2>Vuelo de vuelta:</h2>
                     <div className="row row1">
                         <p><span className="label">Fecha:</span> {chosenReturnFlight[0]}</p>
@@ -37,7 +38,7 @@ function CheckOut({setSectionShown, typeOfTripSwitch, chosenDepartureFlight, cho
                         <p><span className="label">Precio total:</span> $ {(chosenReturnFlight[3]*chosenReturnFlight[4]).toFixed(2)}</p>
                         <button className="btn btn-secondary" disabled={buttonDisabled} onClick={(e) => handleReturnToReturnSearchResults(e)}>Modificar</button>
                     </div>
-                </article>
+                </animated.article>
             )
         } else {
             return null
@@ -75,13 +76,19 @@ function CheckOut({setSectionShown, typeOfTripSwitch, chosenDepartureFlight, cho
         return dayCount
       }
 
+    // Animation props
+    const tittleAnimationProps = useSpring({opacity: 1, marginTop:0, from: {opacity: 0, marginTop:-100, }, delay: 200})
+    const depFlightAnimationProps = useSpring({opacity: 1, marginLeft:0, from: {opacity: 0, marginLeft:-100, }, delay: 400})
+    const retFlightAnimationProps = useSpring({opacity: 1, marginLeft:0, from: {opacity: 0, marginLeft:-100, }, delay: 600})
+    const recapInfoAnimationProps = useSpring({opacity: 1, marginLeft:0, from: {opacity: 0, marginLeft:-100, }, delay: 800})
+
     return (
         <section className="checkOut-section">
-            <h1>Revise la información de sus vuelos y complete el formulario para confirmar su compra.</h1>
+            <animated.h1 style={tittleAnimationProps}>Revise la información de sus vuelos y complete el formulario para confirmar su compra.</animated.h1>
 
             <div className="checkOut-container">
                 <div className="selectedFlights-container">
-                    <article className="flight">
+                    <animated.article style={depFlightAnimationProps} className="flight">
                         <h2>Vuelo de ida:</h2>
                         <div className="row row1">
                             <p><span className="label">Fecha:</span> {chosenDepartureFlight[0]}</p>
@@ -94,11 +101,11 @@ function CheckOut({setSectionShown, typeOfTripSwitch, chosenDepartureFlight, cho
                             <p><span className="label">Precio total:</span> $ {(chosenDepartureFlight[3]*chosenDepartureFlight[4]).toFixed(2)}</p>
                             <button className="btn btn-secondary" disabled={buttonDisabled} onClick={(e) => handleReturnToDepartureSearchResults(e)}>Modificar</button>
                         </div>
-                    </article>
+                    </animated.article>
 
                     {showReturnFlight()}
 
-                    <article className="flight">
+                    <animated.article style={recapInfoAnimationProps} className="flight">
                         <h2>Resumen:</h2>
                         <div className="row row1">
                             <p><span className="label">Precio unitario:</span> $ {showRecapInfo('unitPrice')}</p>
@@ -107,7 +114,7 @@ function CheckOut({setSectionShown, typeOfTripSwitch, chosenDepartureFlight, cho
                         <div className="row row2">
                             <p><span className="label">Extensión:</span> {showRecapInfo('extension')}</p>
                         </div>
-                    </article>
+                    </animated.article>
                 </div>
 
                 <CheckOutForm setbuttonDisabled={setbuttonDisabled}/>

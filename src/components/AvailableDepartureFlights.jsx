@@ -1,10 +1,10 @@
-import { CSSTransition } from 'react-transition-group';
 import { useState } from 'react';
+import {useSpring, animated} from 'react-spring'
 import FlightSearchParameters from './FlightSearchParameters'
 import DepartureFlightOption from './DepartureFlightOption'
 import ErrorMessageNoAvailableFlights from './ErrorMessageNoAvailableFlights'
 
-function AvailableDepartureFlights ({flightSearchParams, searchDepartureFlights, setSectionShown, setChosenDepartureFlight, chosenDepartureFlight, typeOfTripSwitch, formatPlaces, handleSearchAgain, typeOfDepartureDate, typeOfReturnDate, searchReturnFlights, showDepSearchResults}) {
+function AvailableDepartureFlights ({flightSearchParams, searchDepartureFlights, setSectionShown, setChosenDepartureFlight, chosenDepartureFlight, typeOfTripSwitch, formatPlaces, handleSearchAgain, typeOfDepartureDate, typeOfReturnDate, searchReturnFlights, setPreloadNextSection}) {
 
     let typeOfTrip = typeOfTripSwitch%2 === 0 ? 'oneWay' : 'round'
     let desiredTotalPrice = flightSearchParams[5]
@@ -36,7 +36,7 @@ function AvailableDepartureFlights ({flightSearchParams, searchDepartureFlights,
         } else {
             return checkedFlightsList.map((item) => (
                 <article>
-                    <DepartureFlightOption data={item.data} origin={item.origin} destination={item.destination} price={item.price} totalPrice={item.price*flightSearchParams[2]} passengers={flightSearchParams[2]} setSectionShown={setSectionShown} setChosenDepartureFlight={setChosenDepartureFlight} chosenDepartureFlight={chosenDepartureFlight} typeOfTripSwitch={typeOfTripSwitch} formatPlaces={formatPlaces}/>
+                    <DepartureFlightOption data={item.data} origin={item.origin} destination={item.destination} price={item.price} totalPrice={item.price*flightSearchParams[2]} passengers={flightSearchParams[2]} setSectionShown={setSectionShown} setChosenDepartureFlight={setChosenDepartureFlight} chosenDepartureFlight={chosenDepartureFlight} typeOfTripSwitch={typeOfTripSwitch} formatPlaces={formatPlaces} setPreloadNextSection={setPreloadNextSection}/>
                 </article>
                 )
             )
@@ -49,20 +49,20 @@ function AvailableDepartureFlights ({flightSearchParams, searchDepartureFlights,
         else { return null }
     }
 
+    // Animation props
+    const searchTittleAnimationProps = useSpring({opacity: 1, from: {opacity: 0}, delay: 0})
 
     return (
-        <CSSTransition in={showDepSearchResults} timeout={3000} classNames="fade" onEntered={() => showDepSearchResults(true)} onExit={() => showDepSearchResults(false)} >
             <div className='searchResult' key='searchResult'>
 
 
                 <FlightSearchParameters flightSearchParams={flightSearchParams} typeOfDepartureDate={typeOfDepartureDate} typeOfReturnDate={typeOfReturnDate} typeOfTripSwitch={typeOfTripSwitch} formatPlaces={formatPlaces}/>
 
-                <h1>Vuelos {typeOfSearchTittle()} disponibles:</h1>
+                <animated.h1 style={searchTittleAnimationProps}>Vuelos {typeOfSearchTittle()} disponibles:</animated.h1>
                 {showFlights()}
                 <button className='btn btn-secondary' onClick={(e) => handleSearchAgain(e)}>Buscar más vuelos</button>
 
             </div>
-        </CSSTransition>
     )
 }
 

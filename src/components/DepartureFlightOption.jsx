@@ -1,4 +1,6 @@
-function DepartureFlightOption ({data, origin, destination, price, passengers, setSectionShown, setChosenDepartureFlight, typeOfTripSwitch, totalPrice, formatPlaces}) {
+import {useSpring, animated} from 'react-spring'
+
+function DepartureFlightOption ({data, origin, destination, price, passengers, setSectionShown, setChosenDepartureFlight, typeOfTripSwitch, totalPrice, formatPlaces, setPreloadNextSection}) {
 
     let typeOfTrip = typeOfTripSwitch%2 === 0 ? 'oneWay' : 'round'
 
@@ -8,7 +10,8 @@ function DepartureFlightOption ({data, origin, destination, price, passengers, s
         setChosenDepartureFlight([data, origin, destination, price, passengers])
 
         if (typeOfTrip === 'round') {
-            setSectionShown('AvailableReturnFlights')
+            setSectionShown('Preloader')
+            setPreloadNextSection('AvailableReturnFlights')
         }
         else {
             setSectionShown('CheckOut')
@@ -23,8 +26,11 @@ function DepartureFlightOption ({data, origin, destination, price, passengers, s
         }
     }
 
+    // Animation props
+    const departureFlightOptionAnimationProps = useSpring({opacity: 1, marginTop:0, from: {opacity: 0, marginTop:-100, }, delay: 600})
+
     return (
-        <article className="flight">
+        <animated.article style={departureFlightOptionAnimationProps} className="flight">
             <div className="row row1">
                 <p><span className="label">Fecha:</span> {data}</p>
                 <p><span className="label">Origen:</span> {formatPlaces(origin)}</p>
@@ -36,7 +42,7 @@ function DepartureFlightOption ({data, origin, destination, price, passengers, s
                 <p><span className="label">Precio total:</span> $ {totalPrice.toFixed(2)}</p>
                 {selectFlightBtnContent()}
             </div>
-        </article>
+        </animated.article>
     )
 }
 

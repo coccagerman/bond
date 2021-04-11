@@ -7,18 +7,10 @@ import InitialForm from './components/InitialForm'
 import AvailableDepartureFlights from './components/AvailableDepartureFlights'
 import AvailableReturnFlights from './components/AvailableReturnFlights'
 import CheckOut from './components/CheckOut'
+import Preloader from './components/Preloader'
+
 
 function App() {
-
-
-    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    const [showForm, setShowForm] = useState(true);
-    const [showDepSearchResults, setShowDepSearchResults] = useState(false);
-    const [showRetSearchResults, setShowRetSearchResults] = useState(false);
-    const [showCheckOut, setShowCheckOut] = useState(false);
-    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     // Hook used to display and hide the different sections of the app
     const [sectionShown,setSectionShown] = useState('InitialForm');
@@ -28,13 +20,18 @@ function App() {
       if (sectionShown === 'InitialForm') {
           return (<InitialForm dataset={dataset} setFlightSearchParams={setFlightSearchParams} setSectionShown={setSectionShown} setTypeOfTripSwitch={setTypeOfTripSwitch} typeOfTripSwitch={typeOfTripSwitch} formatPlaces={formatPlaces} typeOfDepartureDate={typeOfDepartureDate} setTypeOfDepartureDate={setTypeOfDepartureDate} typeOfReturnDate={typeOfReturnDate} setTypeOfReturnDate={setTypeOfReturnDate} desiredFlexDepartureDates={desiredFlexDepartureDates} setDesiredFlexDepartureDates={setDesiredFlexDepartureDates} desiredFlexReturnDates={desiredFlexReturnDates} setDesiredFlexReturnDates={setDesiredFlexReturnDates} desiredOrigin={desiredOrigin} setDesiredOrigin={setDesiredOrigin} desiredDestination={desiredDestination} setDesiredDestination={setDesiredDestination} desiredPassengers={desiredPassengers} setDesiredPassengers={setDesiredPassengers} desiredDepartureDate={desiredDepartureDate} setDesiredDepartureDate={setDesiredDepartureDate} desiredReturnDate={desiredReturnDate} setDesiredReturnDate={setDesiredReturnDate} desiredTotalPrice={desiredTotalPrice} setDesiredTotalPrice={setDesiredTotalPrice}/>)
       } else if (sectionShown === 'AvailableDepartureFlights') {
-          return <AvailableDepartureFlights flightSearchParams={flightSearchParams} searchDepartureFlights={searchDepartureFlights} setSectionShown={setSectionShown} setChosenDepartureFlight={setChosenDepartureFlight} chosenDepartureFlight={chosenDepartureFlight} typeOfTripSwitch={typeOfTripSwitch} setTypeOfTripSwitch={setTypeOfTripSwitch} formatPlaces={formatPlaces} handleSearchAgain={handleSearchAgain} typeOfDepartureDate={typeOfDepartureDate} typeOfReturnDate={typeOfReturnDate} searchReturnFlights={searchReturnFlights} showDepSearchResults={showDepSearchResults}/>
+          return <AvailableDepartureFlights flightSearchParams={flightSearchParams} searchDepartureFlights={searchDepartureFlights} setSectionShown={setSectionShown} setChosenDepartureFlight={setChosenDepartureFlight} chosenDepartureFlight={chosenDepartureFlight} typeOfTripSwitch={typeOfTripSwitch} setTypeOfTripSwitch={setTypeOfTripSwitch} formatPlaces={formatPlaces} handleSearchAgain={handleSearchAgain} typeOfDepartureDate={typeOfDepartureDate} typeOfReturnDate={typeOfReturnDate} searchReturnFlights={searchReturnFlights} setPreloadNextSection={setPreloadNextSection}/>
       } else if (sectionShown === 'AvailableReturnFlights') {
           return <AvailableReturnFlights flightSearchParams={flightSearchParams} setSectionShown={setSectionShown} setChosenReturnFlight={setChosenReturnFlight} chosenReturnFlight={chosenReturnFlight} chosenDepartureFlight={chosenDepartureFlight} setTypeOfTripSwitch={setTypeOfTripSwitch} typeOfTripSwitch={typeOfTripSwitch} formatPlaces={formatPlaces} handleSearchAgain={handleSearchAgain} searchReturnFlights={searchReturnFlights} typeOfDepartureDate={typeOfDepartureDate} typeOfReturnDate={typeOfReturnDate}/>
       } else if (sectionShown === 'CheckOut') {
           return <CheckOut flightSearchParams={flightSearchParams} setSectionShown={setSectionShown} typeOfTripSwitch={typeOfTripSwitch} chosenDepartureFlight={chosenDepartureFlight} chosenReturnFlight={chosenReturnFlight} handleSearchAgain={handleSearchAgain} formatPlaces={formatPlaces} />
+      } else if (sectionShown === 'Preloader') {
+          return <Preloader setSectionShown={setSectionShown} preloadNextSection={preloadNextSection}/>
       }
     }
+
+    // Hook that stores the next section the preloader will show
+    const [preloadNextSection,setPreloadNextSection] = useState('AvailableDepartureFlights');
 
     // Function that returns to InitialForm section when ReturnToSearchResults is pressed
     function handleSearchAgain(e) {
@@ -50,6 +47,7 @@ function App() {
         setFlightSearchParams([])
         setTypeOfDepartureDate(0)
         setTypeOfReturnDate(0)
+        setPreloadNextSection('AvailableDepartureFlights')
     }
 
     // Hooks that store the options selected in the form

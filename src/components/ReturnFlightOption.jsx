@@ -1,4 +1,6 @@
-function ReturnFlightOption ({data, origin, destination, price, availability, setSectionShown, setChosenReturnFlight, passengers, totalPrice, formatPlaces}) {
+import {useSpring, animated} from 'react-spring'
+
+function ReturnFlightOption ({data, origin, destination, price, setSectionShown, setChosenReturnFlight, passengers, totalPrice, formatPlaces}) {
 
     // Function that executes when Select flight button is pressed
     function handleSelectFlight(e) {
@@ -6,9 +8,12 @@ function ReturnFlightOption ({data, origin, destination, price, availability, se
         setChosenReturnFlight([data, origin, destination, price, passengers])
         setSectionShown('CheckOut')
         }
+    
+    // Animation props
+    const returnFlightOptionAnimationProps = useSpring({opacity: 1, marginTop:0, from: {opacity: 0, marginTop:-100, }, delay: 600})
 
     return (
-        <div className='flightOption-div'>
+        <animated.div style={returnFlightOptionAnimationProps} className='flightOption-div'>
         <article className="flight">
             <div className="row row1">
                 <p><span className="label">Fecha:</span> {data}</p>
@@ -22,7 +27,7 @@ function ReturnFlightOption ({data, origin, destination, price, availability, se
                 <button className='btn btn-primary' onClick={(e) => handleSelectFlight(e)}>Seleccionar vuelo de vuelta</button> 
             </div>
         </article>
-        </div>
+        </animated.div>
     )
 }
 

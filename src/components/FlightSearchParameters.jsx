@@ -1,3 +1,4 @@
+import {useSpring, animated} from 'react-spring'
 
 function FlightSearchParameters ({typeOfDepartureDate, typeOfReturnDate, flightSearchParams, typeOfTripSwitch, formatPlaces}) {
 
@@ -21,8 +22,11 @@ function FlightSearchParameters ({typeOfDepartureDate, typeOfReturnDate, flightS
         else { return flightSearchParams[4]}
     }
 
+    // Animation props
+    const searchParamsAnimationProps = useSpring({opacity: 1, marginTop:0, from: {opacity: 0, marginTop:-100, }, delay: 200})
+
     return (
-        <article className="flight searchParameters">
+        <animated.article style={searchParamsAnimationProps} className="flight searchParameters">
             <h2>Resultados de búsqueda para:</h2>
             <div className="row row1">
                 <p><span className="label">Fecha de salida:</span> {flexibleDeparture === true ? 'Flex' : flightSearchParams[3]}</p>
@@ -34,7 +38,7 @@ function FlightSearchParameters ({typeOfDepartureDate, typeOfReturnDate, flightS
                 <p><span className="label">Pasajeros:</span>  {flightSearchParams[2]}</p>
                 <p><span className="label">Precio:</span> {priceParam()}</p>
             </div>
-        </article>
+        </animated.article>
 
     )
 }

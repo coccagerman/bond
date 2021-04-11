@@ -49,36 +49,6 @@
   background-color: #9b9b9b;
 }
 
-.fade-appear {
-  opacity: 0;
-}
-
-.fade-appear-active {
-  opacity: 1;
-  -webkit-transition: opacity 3000ms;
-  transition: opacity 3000ms;
-}
-
-.fade-enter {
-  opacity: 0;
-}
-
-.fade-enter-active {
-  opacity: 1;
-  -webkit-transition: opacity 3000ms;
-  transition: opacity 3000ms;
-}
-
-.fade-exit {
-  opacity: 1;
-}
-
-.fade-exit-active {
-  opacity: 0;
-  -webkit-transition: opacity 3000ms;
-  transition: opacity 3000ms;
-}
-
 nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -111,6 +81,63 @@ nav .companyName .subTittle {
   margin-right: .1rem;
 }
 
+footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+footer .company_identity {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  cursor: pointer;
+}
+
+footer .company_identity .footer_logo {
+  width: 7rem;
+}
+
+footer .company_identity .companyName {
+  text-align: right;
+  line-height: 2rem;
+  margin: 1.5rem 0 0 1.5rem;
+}
+
+footer .company_identity .companyName .tittle {
+  font-family: 'Dosis', sans-serif;
+  font-size: 3rem;
+}
+
+footer .company_identity .companyName .subTittle {
+  font-family: 'Dosis', sans-serif;
+  font-size: 1.5rem;
+  margin-right: .2rem;
+}
+
+footer .socialNetwork {
+  color: white;
+  font-size: 2rem;
+  margin: 0 1.5rem;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+footer .socialNetwork:hover {
+  color: #FDBE14;
+}
+
 .formContainer {
   background-image: url(../images/bckgrdImg.png);
   background-size: cover;
@@ -137,6 +164,7 @@ nav .companyName .subTittle {
   border-radius: 1rem;
   padding-top: 2rem;
   margin-bottom: -25rem;
+  z-index: 1;
 }
 
 .formContainer .initialForm .inputs-div {
@@ -203,8 +231,8 @@ nav .companyName .subTittle {
 }
 
 .formContainer .initialForm .switch-container .switchTittle {
-  padding-left: 2.8rem;
   font-weight: bold;
+  padding-left: 3rem;
 }
 
 .formContainer .initialForm .switch-container .switchTittle .gray {
@@ -216,7 +244,6 @@ nav .companyName .subTittle {
 .formContainer .initialForm .switch-container .smallSwitchTittle {
   font-size: 1rem;
   margin-top: 1rem;
-  padding-left: .5rem;
   font-weight: bold;
 }
 
@@ -302,6 +329,7 @@ nav .companyName .subTittle {
 }
 
 .formContainer .initialForm .btnAndError-div {
+  margin-bottom: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -315,6 +343,12 @@ nav .companyName .subTittle {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.formContainer .initialForm .btnAndError-div p {
+  text-align: center;
+  max-width: 25rem;
+  margin: .5rem;
 }
 
 .formContainer .formInput-display-none {
@@ -386,25 +420,45 @@ nav .companyName .subTittle {
   cursor: pointer;
 }
 
-.preloaderContainer {
+.preloaderSection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.preloaderSection .btn {
+  margin-bottom: 4rem;
+}
+
+.preloaderSection .preloaderContainer {
   width: 100%;
   height: 100%;
-  padding: 0;
+  padding: 18rem 0 20rem 0;
   margin: 0;
   position: relative;
   background-color: white;
 }
 
-.preloaderContainer .cls-1, .preloaderContainer .cls-2 {
+.preloaderSection .preloaderContainer .cls-1, .preloaderSection .preloaderContainer .cls-2 {
   fill: #FDBE14;
 }
 
-.preloaderContainer .cls-1 {
+.preloaderSection .preloaderContainer .cls-1 {
   stroke: #000;
   stroke-miterlimit: 10;
 }
 
-.loading-bar {
+.preloaderSection .loading-bar {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -413,12 +467,12 @@ nav .companyName .subTittle {
   text-align: center;
 }
 
-.airplane {
+.preloaderSection .airplane {
   -webkit-animation: goUp 1s ease-in-out infinite alternate, rotate 2s ease-out infinite;
           animation: goUp 1s ease-in-out infinite alternate, rotate 2s ease-out infinite;
 }
 
-#load {
+.preloaderSection #load {
   width: 500px;
   height: 36px;
   margin-left: -300px;
@@ -430,7 +484,7 @@ nav .companyName .subTittle {
   cursor: default;
 }
 
-#load div {
+.preloaderSection #load div {
   position: absolute;
   width: 20px;
   height: 36px;
@@ -447,42 +501,42 @@ nav .companyName .subTittle {
   color: black;
 }
 
-#load div:nth-child(2) {
+.preloaderSection #load div:nth-child(2) {
   animation-delay: 0.2s;
   -o-animation-delay: 0.2s;
   -moz-animation-delay: 0.2s;
   -webkit-animation-delay: 0.2s;
 }
 
-#load div:nth-child(3) {
+.preloaderSection #load div:nth-child(3) {
   animation-delay: 0.4s;
   -o-animation-delay: 0.4s;
   -webkit-animation-delay: 0.4s;
   -webkit-animation-delay: 0.4s;
 }
 
-#load div:nth-child(4) {
+.preloaderSection #load div:nth-child(4) {
   animation-delay: 0.6s;
   -o-animation-delay: 0.6s;
   -moz-animation-delay: 0.6s;
   -webkit-animation-delay: 0.6s;
 }
 
-#load div:nth-child(5) {
+.preloaderSection #load div:nth-child(5) {
   animation-delay: 0.8s;
   -o-animation-delay: 0.8s;
   -moz-animation-delay: 0.8s;
   -webkit-animation-delay: 0.8s;
 }
 
-#load div:nth-child(6) {
+.preloaderSection #load div:nth-child(6) {
   animation-delay: 1s;
   -o-animation-delay: 1s;
   -moz-animation-delay: 1s;
   -webkit-animation-delay: 1s;
 }
 
-#load div:nth-child(7) {
+.preloaderSection #load div:nth-child(7) {
   animation-delay: 1.2s;
   -o-animation-delay: 1.2s;
   -moz-animation-delay: 1.2s;
@@ -752,60 +806,6 @@ nav .companyName .subTittle {
           transform: scale(1.05);
 }
 
-footer {
-  background-color: black;
-  color: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-
-footer .company_identity {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 0;
-  cursor: pointer;
-}
-
-footer .company_identity .footer_logo {
-  width: 7rem;
-}
-
-footer .company_identity .companyName {
-  text-align: right;
-  line-height: 2rem;
-  margin: 1.5rem 0 0 1.5rem;
-}
-
-footer .company_identity .companyName .tittle {
-  font-family: 'Dosis', sans-serif;
-  font-size: 3rem;
-}
-
-footer .company_identity .companyName .subTittle {
-  font-family: 'Dosis', sans-serif;
-  font-size: 1.5rem;
-  margin-right: .2rem;
-}
-
-footer .socialNetwork {
-  color: white;
-  font-size: 2rem;
-  margin: 0 1.5rem;
-  -webkit-transition: .5s;
-  transition: .5s;
-}
-
-footer .socialNetwork:hover {
-  color: #FDBE14;
-}
-
 @media screen and (max-width: 1000px) {
   nav {
     width: 100%;
@@ -825,34 +825,98 @@ footer .socialNetwork:hover {
   nav .companyName .subTittle {
     font-size: 1.10rem;
   }
-  .initialForm {
-    margin: 0;
+  .formContainer {
+    background-image: none;
+    background-size: auto;
+    background-position: center;
+    width: auto;
+    height: auto;
+    display: block;
+    margin-bottom: 0;
   }
-  .initialForm .inputs-div {
+  .formContainer .initialForm {
+    background-color: white;
+    font-size: 1.5rem;
+    margin: 0 0;
+    width: 100%;
+    border-radius: 0;
+    padding-top: 1.5rem;
+    margin-bottom: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .formContainer .initialForm .inputs-div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin: 0;
   }
-  .initialForm .formInput {
-    margin: .5rem auto;
+  .formContainer .initialForm .formInput {
+    margin: .75rem 0;
+    min-width: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
-  .initialForm .formInput label {
-    margin-bottom: .25rem;
+  .formContainer .initialForm .switch-container {
+    width: auto;
   }
-  .initialForm .formInput .selectBox {
-    margin-bottom: .5rem;
+  .formContainer .formInput-display-none {
+    display: none;
   }
-  .initialForm .btnAndError-div {
-    text-align: center;
-  }
-  .initialForm p {
-    font-size: 1.25rem;
-    max-width: 20rem;
-    margin-bottom: .5rem;
+  .formContainer .formInput-display-block {
+    margin: 0 2rem;
+    min-width: 8rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: block;
   }
   footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
     -ms-flex-pack: distribute;
         justify-content: space-around;
   }

@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import {useSpring, animated} from 'react-spring'
+
 
 function InitialForm ({dataset, setFlightSearchParams, setSectionShown, setTypeOfTripSwitch, typeOfTripSwitch, formatPlaces, typeOfDepartureDate, setTypeOfDepartureDate, typeOfReturnDate, setTypeOfReturnDate, desiredFlexDepartureDates, setDesiredFlexDepartureDates, desiredFlexReturnDates, setDesiredFlexReturnDates, desiredOrigin, setDesiredOrigin, desiredDestination, setDesiredDestination, desiredPassengers, setDesiredPassengers, desiredDepartureDate, setDesiredDepartureDate, desiredReturnDate, setDesiredReturnDate, desiredTotalPrice, setDesiredTotalPrice}) {
 
@@ -116,24 +118,19 @@ function InitialForm ({dataset, setFlightSearchParams, setSectionShown, setTypeO
                 searchFlexReturnDates()
                 setFlightSearchParams([desiredOrigin, desiredDestination, desiredPassengers, desiredFlexDepartureDates, desiredFlexReturnDates, desiredTotalPrice])
             }
-            
-            setSectionShown('AvailableDepartureFlights')
+            setSectionShown('Preloader')
         }
     }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-function handleMockSearch (e) {
-    e.preventDefault()
-    searchFlexDepartureDates ()
-    console.log(desiredFlexDepartureDates)
-}
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // Animation props
+    const sectionAnimationProps = useSpring({opacity: 1, from: {opacity: 0}, delay: 100})
+    const formAnimationProps = useSpring({opacity: 1, marginTop:0, from: {opacity: 0, marginTop:-100, }, delay: 300})
 
     return (
-        <section className="formContainer">
-            <form action="" method="get" className="initialForm">
+
+                    
+        <animated.section style={sectionAnimationProps} className="formContainer">
+            <animated.form style={formAnimationProps} action="" method="get" className="initialForm">
 
                 <div className="inputs-div inputs-div-row1">
                     <article className="formInput" data-trigger="hover" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">
@@ -234,10 +231,9 @@ function handleMockSearch (e) {
                 <div className='btnAndError-div'>
                     <p>{errorMessage}</p>
                     <button className="btn btn-primary" onClick={(e) => handleSubmit(e)}>Buscar vuelos</button>
-                    <button className="btn btn-secondary" onClick={(e) => handleMockSearch(e)}>Run mock search</button>
                 </div>
-            </form>
-        </section>
+            </animated.form>
+        </animated.section>
     )
 }
 

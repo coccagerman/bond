@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import {useSpring, animated} from 'react-spring'
 import FlightSearchParameters from './FlightSearchParameters'
 import ReturnFlightOption from './ReturnFlightOption'
 import ErrorMessageNoAvailableFlights from './ErrorMessageNoAvailableFlights'
@@ -33,12 +34,17 @@ function AvailableReturnFlights ({flightSearchParams, setSectionShown, setChosen
         setSectionShown('AvailableDepartureFlights')
     }
 
+    // Animation props
+    const flightSelectedAnimationProps = useSpring({opacity: 1, marginTop:0, from: {opacity: 0, marginTop:-100, }, delay: 200})
+    const tittleAnimationProps = useSpring({opacity: 1, from: {opacity: 0}, delay: 0})
+    const searchTittleAnimationProps = useSpring({opacity: 1, from: {opacity: 0}, delay: 0})
+
     return (
         <div className='searchResult'>
             <FlightSearchParameters flightSearchParams={flightSearchParams} typeOfDepartureDate={typeOfDepartureDate} typeOfReturnDate={typeOfReturnDate} typeOfTripSwitch={typeOfTripSwitch} formatPlaces={formatPlaces}/>
 
-            <h2>Vuelo de ida seleccionado:</h2>
-            <article className="flight flightSelected">
+            <animated.h2 style={tittleAnimationProps}>Vuelo de ida seleccionado:</animated.h2>
+            <animated.article style={flightSelectedAnimationProps} className="flight flightSelected">
                 <div className="row row1">
                     <p><span className="label">Fecha:</span> {chosenDepartureFlight[0]}</p>
                     <p><span className="label">Origen:</span> {formatPlaces(chosenDepartureFlight[1])}</p>
@@ -50,9 +56,9 @@ function AvailableReturnFlights ({flightSearchParams, setSectionShown, setChosen
                     <p><span className="label">Precio total:</span> $ {(chosenDepartureFlight[4]*chosenDepartureFlight[3]).toFixed(2)}</p>
                     <button className="btn btn-secondary" onClick={(e) => handleReturnToDepartureSearchResults(e)}>Modificar</button>
                 </div>
-            </article>
+            </animated.article>
 
-            <h1>Vuelos de vuelta disponibles:</h1>
+            <animated.h1 style={searchTittleAnimationProps}>Vuelos de vuelta disponibles:</animated.h1>
             {showFlights()}
             <button className='btn btn-secondary' onClick={(e) => handleSearchAgain(e)}>Buscar más vuelos</button>
         </div>
