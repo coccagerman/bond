@@ -20,10 +20,12 @@ function AvailableDepartureFlights ({flightSearchParams, searchDepartureFlights,
     let checkedFlightsList = availableDepartureFlightsList.filter(item => (new Date(item.data) > yesterday && item.price <= desiredTotalPrice))
 
         if (typeOfTrip === 'round') {
-        let possibleReturnFlights = searchReturnFlights(flightSearchParams[1], flightSearchParams[0], flightSearchParams[2], flightSearchParams[4], flightSearchParams[5])
         let minDeparturePrice = Math.min.apply(Math, checkedFlightsList.map(item => item.price))
+        
+        // desiredOrigin, desiredDestination, desiredPassengers, formatDate(desiredDepartureDate), desiredFlexReturnDates, desiredTotalPrice
+        // origin, destination, passengers, departureDate, price
+        let possibleReturnFlights = searchReturnFlights(flightSearchParams[1], flightSearchParams[0], flightSearchParams[2], flightSearchParams[4], flightSearchParams[5])
         let minReturnPrice = Math.min.apply(Math, possibleReturnFlights.map(item => item.price))
-
             if (minDeparturePrice + minReturnPrice > desiredTotalPrice) {
                 checkedFlightsList = []
             }

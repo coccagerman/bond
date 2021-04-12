@@ -97,7 +97,7 @@ function App() {
         } else if (origin !== '' && destination === '' && flexibleDeparture === false) {
             return dataset.filter(o => (o.origin === origin && o.availability >= passengers && o.data === departureDate && o.price <= price))
         
-        } else if (origin !== '' && destination === '' && flexibleDeparture === false) {
+        } else if (origin !== '' && destination === '' && flexibleDeparture === true) {
             return (dataset.filter(o => (o.origin === origin && o.availability >= passengers && o.price <= price &&
                 (o.data === desiredFlexDepartureDates[0] ||
                 o.data === desiredFlexDepartureDates[1] ||
@@ -168,7 +168,7 @@ function App() {
         } else if (origin !== '' && destination === '' && flexibleReturn === false) {
             return dataset.filter(o => (o.origin === origin && o.availability >= passengers && o.data === departureDate && o.price <= price))
         
-        } else if (origin !== '' && destination === '' && flexibleReturn === false) {
+        } else if (origin !== '' && destination === '' && flexibleReturn === true) {
             return (dataset.filter(o => (o.origin === origin && o.availability >= passengers && o.price <= price &&
                 (o.data === desiredFlexReturnDates[0] ||
                 o.data === desiredFlexReturnDates[1] ||
