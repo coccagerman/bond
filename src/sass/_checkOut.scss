@@ -63,10 +63,16 @@
                     margin: 2rem 0;
                     width: 8rem;
                     transition: 1s;
+                    cursor: pointer;
 
                     &:hover {
                         transform: scale(1.05);
                     }
+                }
+
+                .cumbancha {
+                    width: 30rem;
+                    cursor: pointer;
                 }
             }
         }

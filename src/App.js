@@ -198,7 +198,7 @@ function App() {
 
         // Cases with certain origin and certain destination
         } else if (origin !== '' && destination !== '' && flexibleReturn === false) {
-        return dataset.filter(o => (o.origin === origin && o.destination === destination && o.availability >= passengers && o.data === departureDate && o.price <= price))
+            return dataset.filter(o => (o.origin === origin && o.destination === destination && o.availability >= passengers && o.data === departureDate && o.price <= price))
 
         } else if (origin !== '' && destination !== '' && flexibleReturn === true) {
             return (dataset.filter(o => (o.origin === origin && o.destination === destination && o.availability >= passengers && o.price <= price &&

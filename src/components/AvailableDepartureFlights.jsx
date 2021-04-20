@@ -21,9 +21,6 @@ function AvailableDepartureFlights ({flightSearchParams, searchDepartureFlights,
 
         if (typeOfTrip === 'round') {
         let minDeparturePrice = Math.min.apply(Math, checkedFlightsList.map(item => item.price))
-        
-        // desiredOrigin, desiredDestination, desiredPassengers, formatDate(desiredDepartureDate), desiredFlexReturnDates, desiredTotalPrice
-        // origin, destination, passengers, departureDate, price
         let possibleReturnFlights = searchReturnFlights(flightSearchParams[1], flightSearchParams[0], flightSearchParams[2], flightSearchParams[4], flightSearchParams[5])
         let minReturnPrice = Math.min.apply(Math, possibleReturnFlights.map(item => item.price))
             if (minDeparturePrice + minReturnPrice > desiredTotalPrice) {
@@ -56,7 +53,6 @@ function AvailableDepartureFlights ({flightSearchParams, searchDepartureFlights,
 
     return (
             <div className='searchResult' key='searchResult'>
-
 
                 <FlightSearchParameters flightSearchParams={flightSearchParams} typeOfDepartureDate={typeOfDepartureDate} typeOfReturnDate={typeOfReturnDate} typeOfTripSwitch={typeOfTripSwitch} formatPlaces={formatPlaces}/>
 

@@ -3,11 +3,11 @@ import {useSpring, animated} from 'react-spring'
 function Preloader ({setSectionShown, preloadNextSection}) {
 
     // Functions used to control the preloader navigation flow
-    function handleSubmit () {
+    function handlePreload() {
         setSectionShown(preloadNextSection)
     }
 
-    setTimeout(handleSubmit, 2000);
+    setTimeout(handlePreload, 2000);
 
     // Animation props
     const preloaderAnimationProps = useSpring({opacity: 1, from: {opacity: 0}, delay: 200})

@@ -3,7 +3,6 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import {useSpring, animated} from 'react-spring'
 
-
 function InitialForm ({dataset, setFlightSearchParams, setSectionShown, setTypeOfTripSwitch, typeOfTripSwitch, formatPlaces, typeOfDepartureDate, setTypeOfDepartureDate, typeOfReturnDate, setTypeOfReturnDate, desiredFlexDepartureDates, setDesiredFlexDepartureDates, desiredFlexReturnDates, setDesiredFlexReturnDates, desiredOrigin, setDesiredOrigin, desiredDestination, setDesiredDestination, desiredPassengers, setDesiredPassengers, desiredDepartureDate, setDesiredDepartureDate, desiredReturnDate, setDesiredReturnDate, desiredTotalPrice, setDesiredTotalPrice}) {
 
     // Variables with functions that identify the different possible origins and destinations for the flights.
@@ -28,7 +27,7 @@ function InitialForm ({dataset, setFlightSearchParams, setSectionShown, setTypeO
     }
     
     // Hook used to show error message when form fields are uncompleted
-    const [errorMessage, setErrorMessage] = useState(null);
+    const [errorMessage, setErrorMessage] = useState(null)
 
     // Function used to format departure and return dates
     function formatDate (date) {
@@ -133,7 +132,7 @@ function InitialForm ({dataset, setFlightSearchParams, setSectionShown, setTypeO
             <animated.form style={formAnimationProps} action="" method="get" className="initialForm">
 
                 <div className="inputs-div inputs-div-row1">
-                    <article className="formInput" data-trigger="hover" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">
+                    <article className="formInput">
                         <label for="desiredOrigin">Origen</label>
                         <select id="desiredOrigin" className="selectBox" onChange={e => setDesiredOrigin(e.target.value)}>
                         
@@ -223,7 +222,6 @@ function InitialForm ({dataset, setFlightSearchParams, setSectionShown, setTypeO
                             <option value="800">Hasta $800</option>
                             <option value="1000" selected>Hasta $1000</option>
                         </select>
-
                     </article>
 
             </div>

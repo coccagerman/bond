@@ -49,6 +49,15 @@
   background-color: #9b9b9b;
 }
 
+.displayNone {
+  display: none;
+}
+
+.cumbanchaClass {
+  display: block;
+  width: 10rem;
+}
+
 nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -799,11 +808,17 @@ footer .socialNetwork:hover {
   width: 8rem;
   -webkit-transition: 1s;
   transition: 1s;
+  cursor: pointer;
 }
 
 .checkOut-section .checkOut-container .checkOutform-container .thanksMessage .paperPlaneIcon:hover {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
+}
+
+.checkOut-section .checkOut-container .checkOutform-container .thanksMessage .cumbancha {
+  width: 30rem;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 1000px) {

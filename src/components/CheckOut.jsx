@@ -58,7 +58,6 @@ function CheckOut({setSectionShown, typeOfTripSwitch, chosenDepartureFlight, cho
             if (infoRequired === 'unitPrice') {return chosenDepartureFlight[3]}
             else if (infoRequired === 'totalPrice') {return (chosenDepartureFlight[3]*chosenDepartureFlight[4])}
             else if (infoRequired === 'extension') {return 'N/A'}
-                
         }
     }
 
