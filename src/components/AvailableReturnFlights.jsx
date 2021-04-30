@@ -4,7 +4,7 @@ import FlightSearchParameters from './FlightSearchParameters'
 import ReturnFlightOption from './ReturnFlightOption'
 import ErrorMessageNoAvailableFlights from './ErrorMessageNoAvailableFlights'
 
-function AvailableReturnFlights ({flightSearchParams, setSectionShown, setChosenReturnFlight, chosenReturnFlight, chosenDepartureFlight, formatPlaces, handleSearchAgain, searchReturnFlights, typeOfDepartureDate, typeOfReturnDate,typeOfTripSwitch}) {
+function AvailableReturnFlights ({flightSearchParams, setSectionShown, setChosenReturnFlight, chosenReturnFlight, chosenDepartureFlight, formatPlaces, handleSearchAgain, searchReturnFlights, flexDepartureDate, flexReturnDate, roundTrip}) {
     
     let desiredTotalPrice = flightSearchParams[5]
     let departureFlightPrice = chosenDepartureFlight[3]
@@ -41,7 +41,7 @@ function AvailableReturnFlights ({flightSearchParams, setSectionShown, setChosen
 
     return (
         <div className='searchResult'>
-            <FlightSearchParameters flightSearchParams={flightSearchParams} typeOfDepartureDate={typeOfDepartureDate} typeOfReturnDate={typeOfReturnDate} typeOfTripSwitch={typeOfTripSwitch} formatPlaces={formatPlaces}/>
+            <FlightSearchParameters flightSearchParams={flightSearchParams} flexDepartureDate={flexDepartureDate} flexReturnDate={flexReturnDate} roundTrip={roundTrip} formatPlaces={formatPlaces}/>
 
             <animated.h2 style={tittleAnimationProps}>Vuelo de ida seleccionado:</animated.h2>
             <animated.article style={flightSelectedAnimationProps} className="flight flightSelected">

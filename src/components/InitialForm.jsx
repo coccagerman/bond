@@ -3,7 +3,7 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import {useSpring, animated} from 'react-spring'
 
-function InitialForm ({dataset, setFlightSearchParams, setSectionShown, setTypeOfTripSwitch, typeOfTripSwitch, formatPlaces, typeOfDepartureDate, setTypeOfDepartureDate, typeOfReturnDate, setTypeOfReturnDate, desiredFlexDepartureDates, setDesiredFlexDepartureDates, desiredFlexReturnDates, setDesiredFlexReturnDates, desiredOrigin, setDesiredOrigin, desiredDestination, setDesiredDestination, desiredPassengers, setDesiredPassengers, desiredDepartureDate, setDesiredDepartureDate, desiredReturnDate, setDesiredReturnDate, desiredTotalPrice, setDesiredTotalPrice}) {
+function InitialForm ({dataset, setFlightSearchParams, setSectionShown, setRoundTrip, roundTrip, formatPlaces, flexDepartureDate, setFlexDepartureDate, flexReturnDate, setFlexReturnDate, desiredFlexDepartureDates, setDesiredFlexDepartureDates, desiredFlexReturnDates, setDesiredFlexReturnDates, desiredOrigin, setDesiredOrigin, desiredDestination, setDesiredDestination, desiredPassengers, setDesiredPassengers, desiredDepartureDate, setDesiredDepartureDate, desiredReturnDate, setDesiredReturnDate, desiredTotalPrice, setDesiredTotalPrice}) {
 
     // Variables with functions that identify the different possible origins and destinations for the flights.
     const distinctOrigins = [...new Set(dataset.map(item => item.origin))]
@@ -11,18 +11,18 @@ function InitialForm ({dataset, setFlightSearchParams, setSectionShown, setTypeO
 
     // Function that shows/hides the return date selector when the oneWay/roundTrip switch is clicked
     function switchIsDisabled () {
-        if (typeOfTripSwitch%2 === 0) { return 'formInput-display-none' }
+        if (roundTrip === false) { return 'formInput-display-none' }
         else { return 'formInput-display-block' }
     }
 
     // Functions that switch the className of switchTittles when the buttons are clicked
     function switchClass1 (state) {
-        if  (state%2 === 1) { return 'gray' } 
+        if  (state) { return 'gray' } 
         else { return null }
     }
 
     function switchClass2 (state) {
-        if  (state%2 === 1) { return null } 
+        if  (state) { return null } 
         else { return 'gray' }
     }
     
@@ -88,27 +88,24 @@ function InitialForm ({dataset, setFlightSearchParams, setSectionShown, setTypeO
     // Function that takes actions when submit button is clicked
     function handleSubmit (e) {
         e.preventDefault()
-        let typeOfTrip = typeOfTripSwitch%2 === 0 ? 'oneWay' : 'round'
-        let flexibleDeparture = typeOfDepartureDate%2 === 1 ? true : false
-        let flexibleReturn = typeOfReturnDate%2 === 1 ? true : false
 
         // Shows error messages if the dates entered have errors
         if (checkDepartureDate (desiredDepartureDate) === false) {
             setErrorMessage('La fecha de salida no puede estar en el pasado.')
 
-        } else if (typeOfTrip === 'round' && (checkDepartureAndReturnDates(desiredDepartureDate, desiredReturnDate) === false)) {
+        } else if (roundTrip && (checkDepartureAndReturnDates(desiredDepartureDate, desiredReturnDate) === false)) {
             setErrorMessage('La fecha de retorno no pude ser anterior a la fecha de salida.')
 
         } else {
             // Passes different params to the searchFlight function depending if the dates entered are exact or flex
-            if (flexibleDeparture === false && flexibleReturn === false){
+            if (flexDepartureDate === false && flexReturnDate === false){
                 setFlightSearchParams([desiredOrigin, desiredDestination, desiredPassengers, formatDate(desiredDepartureDate), formatDate(desiredReturnDate), desiredTotalPrice])
 
-            } else if (flexibleDeparture === true && flexibleReturn === false) {
+            } else if (flexDepartureDate && flexReturnDate === false) {
                 searchFlexDepartureDates()
                 setFlightSearchParams([desiredOrigin, desiredDestination, desiredPassengers, desiredFlexDepartureDates, formatDate(desiredReturnDate), desiredTotalPrice])
 
-            } else if (flexibleDeparture === false && flexibleReturn === true) {
+            } else if (flexDepartureDate === false && flexReturnDate) {
                 searchFlexReturnDates()
                 setFlightSearchParams([desiredOrigin, desiredDestination, desiredPassengers, formatDate(desiredDepartureDate), desiredFlexReturnDates, desiredTotalPrice])
 
@@ -177,9 +174,9 @@ function InitialForm ({dataset, setFlightSearchParams, setSectionShown, setTypeO
                     </article>
                     
                     <article className="switch-container" >
-                        <p className="switchTittle"><span className={switchClass1(typeOfTripSwitch)}>Solo ida</span> | <span className={switchClass2(typeOfTripSwitch)}>Ida y vuelta</span></p>
+                        <p className="switchTittle"><span className={switchClass1(roundTrip)}>Solo ida</span> | <span className={switchClass2(roundTrip)}>Ida y vuelta</span></p>
                         <label className="switch" >
-                            <input type="checkbox" onClick={(e) => setTypeOfTripSwitch(typeOfTripSwitch+1)}/>
+                            <input type="checkbox" onClick={(e) => setRoundTrip(!roundTrip)}/>
                             <span className="slider round" />
                         </label>
                     </article>
@@ -191,9 +188,9 @@ function InitialForm ({dataset, setFlightSearchParams, setSectionShown, setTypeO
                         <DatePicker id="desiredDepartureDate" className="selectBox" dateFormat="yyyy-MM-dd" selected={desiredDepartureDate} onChange={date => setDesiredDepartureDate(date)} />
 
                         <div className="switch-container small-switch-container" >
-                            <p className="smallSwitchTittle"><span className={switchClass1(typeOfDepartureDate)}>Búsqueda exacta</span> | <span className={switchClass2(typeOfDepartureDate)}>Búsqueda flexible</span></p>
+                            <p className="smallSwitchTittle"><span className={switchClass1(flexDepartureDate)}>Búsqueda exacta</span> | <span className={switchClass2(flexDepartureDate)}>Búsqueda flexible</span></p>
                             <label className="switch" >
-                                <input type="checkbox" onClick={(e) => setTypeOfDepartureDate(typeOfDepartureDate+1)}/>
+                                <input type="checkbox" onClick={(e) => setFlexDepartureDate(!flexDepartureDate)}/>
                                 <span className="slider round" />
                             </label>
                         </div>
@@ -205,9 +202,9 @@ function InitialForm ({dataset, setFlightSearchParams, setSectionShown, setTypeO
                             <DatePicker id="desiredReturnDate" className="selectBox" dateFormat="yyyy-MM-dd" selected={desiredReturnDate} onChange={date => setDesiredReturnDate(date)} />
                         </div>
                         <div className="switch-container small-switch-container" >
-                            <p className="smallSwitchTittle"><span className={switchClass1(typeOfReturnDate)}>Búsqueda exacta</span> | <span className={switchClass2(typeOfReturnDate)}>Búsqueda flexible</span></p>
+                            <p className="smallSwitchTittle"><span className={switchClass1(flexReturnDate)}>Búsqueda exacta</span> | <span className={switchClass2(flexReturnDate)}>Búsqueda flexible</span></p>
                             <label className="switch" >
-                                <input type="checkbox" onClick={(e) => setTypeOfReturnDate(typeOfReturnDate+1)}/>
+                                <input type="checkbox" onClick={(e) => setFlexReturnDate(!flexReturnDate)}/>
                                 <span className="slider round" />
                             </label>
                         </div>

@@ -1,15 +1,13 @@
 import {useSpring, animated} from 'react-spring'
 
-function DepartureFlightOption ({data, origin, destination, price, passengers, setSectionShown, setChosenDepartureFlight, typeOfTripSwitch, totalPrice, formatPlaces, setPreloadNextSection}) {
-
-    let typeOfTrip = typeOfTripSwitch%2 === 0 ? 'oneWay' : 'round'
+function DepartureFlightOption ({data, origin, destination, price, passengers, setSectionShown, setChosenDepartureFlight, roundTrip, totalPrice, formatPlaces, setPreloadNextSection}) {
 
     // Function that executes when Select flight button is pressed
     function handleSelectFlight(e) {
         e.preventDefault();
         setChosenDepartureFlight([data, origin, destination, price, passengers])
 
-        if (typeOfTrip === 'round') {
+        if (roundTrip) {
             setSectionShown('Preloader')
             setPreloadNextSection('AvailableReturnFlights')
         }
@@ -19,7 +17,7 @@ function DepartureFlightOption ({data, origin, destination, price, passengers, s
     }
 
     function selectFlightBtnContent () {
-        if (typeOfTrip === 'round') {
+        if (roundTrip) {
             return <button className='btn btn-primary' onClick={(e) => handleSelectFlight(e)}>Seleccionar vuelo de ida</button> 
         } else {
             return <button className='btn btn-primary' onClick={(e) => handleSelectFlight(e)}>Seleccionar vuelo</button> 

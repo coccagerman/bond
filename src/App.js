@@ -18,13 +18,13 @@ function App() {
     // Function used to display and hide the different sections of the app
     const showSection = () => {
       if (sectionShown === 'InitialForm') {
-          return (<InitialForm dataset={dataset} setFlightSearchParams={setFlightSearchParams} setSectionShown={setSectionShown} setTypeOfTripSwitch={setTypeOfTripSwitch} typeOfTripSwitch={typeOfTripSwitch} formatPlaces={formatPlaces} typeOfDepartureDate={typeOfDepartureDate} setTypeOfDepartureDate={setTypeOfDepartureDate} typeOfReturnDate={typeOfReturnDate} setTypeOfReturnDate={setTypeOfReturnDate} desiredFlexDepartureDates={desiredFlexDepartureDates} setDesiredFlexDepartureDates={setDesiredFlexDepartureDates} desiredFlexReturnDates={desiredFlexReturnDates} setDesiredFlexReturnDates={setDesiredFlexReturnDates} desiredOrigin={desiredOrigin} setDesiredOrigin={setDesiredOrigin} desiredDestination={desiredDestination} setDesiredDestination={setDesiredDestination} desiredPassengers={desiredPassengers} setDesiredPassengers={setDesiredPassengers} desiredDepartureDate={desiredDepartureDate} setDesiredDepartureDate={setDesiredDepartureDate} desiredReturnDate={desiredReturnDate} setDesiredReturnDate={setDesiredReturnDate} desiredTotalPrice={desiredTotalPrice} setDesiredTotalPrice={setDesiredTotalPrice}/>)
+          return (<InitialForm dataset={dataset} setFlightSearchParams={setFlightSearchParams} setSectionShown={setSectionShown} setRoundTrip={setRoundTrip} roundTrip={roundTrip} formatPlaces={formatPlaces} flexDepartureDate={flexDepartureDate} setFlexDepartureDate={setFlexDepartureDate} flexReturnDate={flexReturnDate} setFlexReturnDate={setFlexReturnDate} desiredFlexDepartureDates={desiredFlexDepartureDates} setDesiredFlexDepartureDates={setDesiredFlexDepartureDates} desiredFlexReturnDates={desiredFlexReturnDates} setDesiredFlexReturnDates={setDesiredFlexReturnDates} desiredOrigin={desiredOrigin} setDesiredOrigin={setDesiredOrigin} desiredDestination={desiredDestination} setDesiredDestination={setDesiredDestination} desiredPassengers={desiredPassengers} setDesiredPassengers={setDesiredPassengers} desiredDepartureDate={desiredDepartureDate} setDesiredDepartureDate={setDesiredDepartureDate} desiredReturnDate={desiredReturnDate} setDesiredReturnDate={setDesiredReturnDate} desiredTotalPrice={desiredTotalPrice} setDesiredTotalPrice={setDesiredTotalPrice}/>)
       } else if (sectionShown === 'AvailableDepartureFlights') {
-          return <AvailableDepartureFlights flightSearchParams={flightSearchParams} searchDepartureFlights={searchDepartureFlights} setSectionShown={setSectionShown} setChosenDepartureFlight={setChosenDepartureFlight} chosenDepartureFlight={chosenDepartureFlight} typeOfTripSwitch={typeOfTripSwitch} setTypeOfTripSwitch={setTypeOfTripSwitch} formatPlaces={formatPlaces} handleSearchAgain={handleSearchAgain} typeOfDepartureDate={typeOfDepartureDate} typeOfReturnDate={typeOfReturnDate} searchReturnFlights={searchReturnFlights} setPreloadNextSection={setPreloadNextSection}/>
+          return <AvailableDepartureFlights flightSearchParams={flightSearchParams} searchDepartureFlights={searchDepartureFlights} setSectionShown={setSectionShown} setChosenDepartureFlight={setChosenDepartureFlight} chosenDepartureFlight={chosenDepartureFlight} roundTrip={roundTrip} setRoundTrip={setRoundTrip} formatPlaces={formatPlaces} handleSearchAgain={handleSearchAgain} flexDepartureDate={flexDepartureDate} flexReturnDate={flexReturnDate} searchReturnFlights={searchReturnFlights} setPreloadNextSection={setPreloadNextSection}/>
       } else if (sectionShown === 'AvailableReturnFlights') {
-          return <AvailableReturnFlights flightSearchParams={flightSearchParams} setSectionShown={setSectionShown} setChosenReturnFlight={setChosenReturnFlight} chosenReturnFlight={chosenReturnFlight} chosenDepartureFlight={chosenDepartureFlight} setTypeOfTripSwitch={setTypeOfTripSwitch} typeOfTripSwitch={typeOfTripSwitch} formatPlaces={formatPlaces} handleSearchAgain={handleSearchAgain} searchReturnFlights={searchReturnFlights} typeOfDepartureDate={typeOfDepartureDate} typeOfReturnDate={typeOfReturnDate}/>
+          return <AvailableReturnFlights flightSearchParams={flightSearchParams} setSectionShown={setSectionShown} setChosenReturnFlight={setChosenReturnFlight} chosenReturnFlight={chosenReturnFlight} chosenDepartureFlight={chosenDepartureFlight} setRoundTrip={setRoundTrip} roundTrip={roundTrip} formatPlaces={formatPlaces} handleSearchAgain={handleSearchAgain} searchReturnFlights={searchReturnFlights} flexDepartureDate={flexDepartureDate} flexReturnDate={flexReturnDate}/>
       } else if (sectionShown === 'CheckOut') {
-          return <CheckOut flightSearchParams={flightSearchParams} setSectionShown={setSectionShown} typeOfTripSwitch={typeOfTripSwitch} chosenDepartureFlight={chosenDepartureFlight} chosenReturnFlight={chosenReturnFlight} handleSearchAgain={handleSearchAgain} formatPlaces={formatPlaces} />
+          return <CheckOut flightSearchParams={flightSearchParams} setSectionShown={setSectionShown} roundTrip={roundTrip} chosenDepartureFlight={chosenDepartureFlight} chosenReturnFlight={chosenReturnFlight} handleSearchAgain={handleSearchAgain} formatPlaces={formatPlaces} />
       } else if (sectionShown === 'Preloader') {
           return <Preloader setSectionShown={setSectionShown} preloadNextSection={preloadNextSection}/>
       }
@@ -36,7 +36,7 @@ function App() {
     // Function that returns to InitialForm section when ReturnToSearchResults is pressed
     function handleSearchAgain(e) {
         e.preventDefault();
-        setTypeOfTripSwitch(0)
+        setRoundTrip(false)
         setSectionShown('InitialForm')
         setDesiredOrigin('')
         setDesiredDestination('')
@@ -45,8 +45,8 @@ function App() {
         setDesiredReturnDate(new Date())
         setDesiredTotalPrice(1000)
         setFlightSearchParams([])
-        setTypeOfDepartureDate(0)
-        setTypeOfReturnDate(0)
+        setFlexDepartureDate(false)
+        setFlexReturnDate(false)
         setPreloadNextSection('AvailableDepartureFlights')
     }
 
@@ -58,15 +58,15 @@ function App() {
     const [desiredReturnDate, setDesiredReturnDate] = useState(new Date())
     const [desiredTotalPrice, setDesiredTotalPrice] = useState(1000);
 
-    // Hook that stores the click count on the oneWay/roundTrip switch
-    const [typeOfTripSwitch, setTypeOfTripSwitch] = useState(0);
+    // Hook used to check if the flight desired is round or one way
+    const [roundTrip, setRoundTrip] = useState(false);
 
     // Hook that contains flight search parameters entered in InitialForm
     const [flightSearchParams,setFlightSearchParams] = useState([]);
 
     // Hooks that stores the click count on the flexible/exact search switches
-    const [typeOfDepartureDate, setTypeOfDepartureDate] = useState(0);
-    const [typeOfReturnDate, setTypeOfReturnDate] = useState(0);
+    const [flexDepartureDate, setFlexDepartureDate] = useState(false);
+    const [flexReturnDate, setFlexReturnDate] = useState(false);
 
     // Hook used to store the array of possible departure dates when the flex search option is selected
     const [desiredFlexDepartureDates, setDesiredFlexDepartureDates] = useState([]);
@@ -75,13 +75,12 @@ function App() {
 
     // Function that filters the flights database with the search parameters entered in InitialForm
     function searchDepartureFlights (origin, destination, passengers, departureDate, price) {
-        let flexibleDeparture = typeOfDepartureDate%2 === 1 ? true : false
 
         // Cases with uncertain origin and certain destination
-        if (origin === '' && destination !== '' && flexibleDeparture === false) {
+        if (origin === '' && destination !== '' && flexDepartureDate === false) {
             return dataset.filter(o => (o.destination === destination && o.availability >= passengers && o.data === departureDate && o.price <= price))
 
-        } else if (origin === '' && destination !== '' && flexibleDeparture === true) {
+        } else if (origin === '' && destination !== '' && flexDepartureDate) {
             return (dataset.filter(o => (o.destination === destination && o.availability >= passengers && o.price <= price &&
                 (o.data === desiredFlexDepartureDates[0] ||
                 o.data === desiredFlexDepartureDates[1] ||
@@ -94,10 +93,10 @@ function App() {
                 )))
             
         // Cases with certain origin and uncertain destination
-        } else if (origin !== '' && destination === '' && flexibleDeparture === false) {
+        } else if (origin !== '' && destination === '' && flexDepartureDate === false) {
             return dataset.filter(o => (o.origin === origin && o.availability >= passengers && o.data === departureDate && o.price <= price))
         
-        } else if (origin !== '' && destination === '' && flexibleDeparture === true) {
+        } else if (origin !== '' && destination === '' && flexDepartureDate) {
             return (dataset.filter(o => (o.origin === origin && o.availability >= passengers && o.price <= price &&
                 (o.data === desiredFlexDepartureDates[0] ||
                 o.data === desiredFlexDepartureDates[1] ||
@@ -110,10 +109,10 @@ function App() {
                 )))
 
         // Cases with uncertain origin and uncertain destination
-        } else if (origin === '' && destination === '' && flexibleDeparture === false) {
+        } else if (origin === '' && destination === '' && flexDepartureDate === false) {
             return dataset.filter(o => (o.availability >= passengers && o.data === departureDate && o.price <= price))
             
-        } else if (origin === '' && destination === '' && flexibleDeparture === true) {
+        } else if (origin === '' && destination === '' && flexDepartureDate) {
             return (dataset.filter(o => (o.availability >= passengers && o.price <= price && 
                 (o.data === desiredFlexDepartureDates[0] ||
                 o.data === desiredFlexDepartureDates[1] ||
@@ -126,10 +125,10 @@ function App() {
                 )))
         
         // Cases with certain origin and certain destination
-        } else if (origin !== '' && destination !== '' && flexibleDeparture === false) {
+        } else if (origin !== '' && destination !== '' && flexDepartureDate === false) {
             return dataset.filter(o => (o.origin === origin && o.destination === destination && o.availability >= passengers && o.data === departureDate && o.price <= price))
          
-        } else if (origin !== '' && destination !== '' && flexibleDeparture === true) {
+        } else if (origin !== '' && destination !== '' && flexDepartureDate) {
             return (dataset.filter(o => (o.origin === origin && o.destination === destination && o.availability >= passengers && o.price <= price &&
                 (o.data === desiredFlexDepartureDates[0] ||
                 o.data === desiredFlexDepartureDates[1] ||
@@ -146,13 +145,12 @@ function App() {
 
     // Function that filters the return flights database with the search parameters entered in InitialForm
     function searchReturnFlights (origin, destination, passengers, departureDate, price) {
-        let flexibleReturn = typeOfReturnDate%2 === 1 ? true : false
 
         // Cases with uncertain origin and certain destination
-        if (origin === '' && destination !== '' && flexibleReturn === false) {
+        if (origin === '' && destination !== '' && flexDepartureDate === false) {
             return dataset.filter(o => (o.destination === destination && o.availability >= passengers && o.data === departureDate && o.price <= price))
 
-        } else if (origin === '' && destination !== '' && flexibleReturn === true) {
+        } else if (origin === '' && destination !== '' && flexDepartureDate) {
             return (dataset.filter(o => (o.destination === destination && o.availability >= passengers && o.price <= price &&
                 (o.data === desiredFlexReturnDates[0] ||
                 o.data === desiredFlexReturnDates[1] ||
@@ -165,10 +163,10 @@ function App() {
                 )))
         
         // Cases with certain origin and uncertain destination
-        } else if (origin !== '' && destination === '' && flexibleReturn === false) {
+        } else if (origin !== '' && destination === '' && flexDepartureDate === false) {
             return dataset.filter(o => (o.origin === origin && o.availability >= passengers && o.data === departureDate && o.price <= price))
         
-        } else if (origin !== '' && destination === '' && flexibleReturn === true) {
+        } else if (origin !== '' && destination === '' && flexDepartureDate) {
             return (dataset.filter(o => (o.origin === origin && o.availability >= passengers && o.price <= price &&
                 (o.data === desiredFlexReturnDates[0] ||
                 o.data === desiredFlexReturnDates[1] ||
@@ -181,10 +179,10 @@ function App() {
                 )))
         
         // Cases with uncertain origin and uncertain destination
-        } else if (origin === '' && destination === '' && flexibleReturn === false) {
+        } else if (origin === '' && destination === '' && flexDepartureDate === false) {
             return dataset.filter(o => (o.availability >= passengers && o.data === departureDate && o.price <= price))
             
-        } else if (origin === '' && destination === '' && flexibleReturn === true) {
+        } else if (origin === '' && destination === '' && flexDepartureDate) {
             return (dataset.filter(o => (o.availability >= passengers && o.price <= price && 
                 (o.data === desiredFlexReturnDates[0] ||
                 o.data === desiredFlexReturnDates[1] ||
@@ -197,10 +195,10 @@ function App() {
                 )))
 
         // Cases with certain origin and certain destination
-        } else if (origin !== '' && destination !== '' && flexibleReturn === false) {
+        } else if (origin !== '' && destination !== '' && flexDepartureDate === false) {
             return dataset.filter(o => (o.origin === origin && o.destination === destination && o.availability >= passengers && o.data === departureDate && o.price <= price))
 
-        } else if (origin !== '' && destination !== '' && flexibleReturn === true) {
+        } else if (origin !== '' && destination !== '' && flexDepartureDate) {
             return (dataset.filter(o => (o.origin === origin && o.destination === destination && o.availability >= passengers && o.price <= price &&
                 (o.data === desiredFlexReturnDates[0] ||
                 o.data === desiredFlexReturnDates[1] ||

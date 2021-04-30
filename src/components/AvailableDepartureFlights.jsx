@@ -4,9 +4,8 @@ import FlightSearchParameters from './FlightSearchParameters'
 import DepartureFlightOption from './DepartureFlightOption'
 import ErrorMessageNoAvailableFlights from './ErrorMessageNoAvailableFlights'
 
-function AvailableDepartureFlights ({flightSearchParams, searchDepartureFlights, setSectionShown, setChosenDepartureFlight, chosenDepartureFlight, typeOfTripSwitch, formatPlaces, handleSearchAgain, typeOfDepartureDate, typeOfReturnDate, searchReturnFlights, setPreloadNextSection}) {
+function AvailableDepartureFlights ({flightSearchParams, searchDepartureFlights, setSectionShown, setChosenDepartureFlight, chosenDepartureFlight, roundTrip, formatPlaces, handleSearchAgain, flexDepartureDate, flexReturnDate, searchReturnFlights, setPreloadNextSection}) {
 
-    let typeOfTrip = typeOfTripSwitch%2 === 0 ? 'oneWay' : 'round'
     let desiredTotalPrice = flightSearchParams[5]
     
     // Hook used to hold the results of the departure flight search done
@@ -19,7 +18,7 @@ function AvailableDepartureFlights ({flightSearchParams, searchDepartureFlights,
     let yesterday = today.setDate(today.getDate() - 1)
     let checkedFlightsList = availableDepartureFlightsList.filter(item => (new Date(item.data) > yesterday && item.price <= desiredTotalPrice))
 
-        if (typeOfTrip === 'round') {
+        if (roundTrip) {
         let minDeparturePrice = Math.min.apply(Math, checkedFlightsList.map(item => item.price))
         let possibleReturnFlights = searchReturnFlights(flightSearchParams[1], flightSearchParams[0], flightSearchParams[2], flightSearchParams[4], flightSearchParams[5])
         let minReturnPrice = Math.min.apply(Math, possibleReturnFlights.map(item => item.price))
@@ -35,7 +34,7 @@ function AvailableDepartureFlights ({flightSearchParams, searchDepartureFlights,
         } else {
             return checkedFlightsList.map((item) => (
                 <article>
-                    <DepartureFlightOption data={item.data} origin={item.origin} destination={item.destination} price={item.price} totalPrice={item.price*flightSearchParams[2]} passengers={flightSearchParams[2]} setSectionShown={setSectionShown} setChosenDepartureFlight={setChosenDepartureFlight} chosenDepartureFlight={chosenDepartureFlight} typeOfTripSwitch={typeOfTripSwitch} formatPlaces={formatPlaces} setPreloadNextSection={setPreloadNextSection}/>
+                    <DepartureFlightOption data={item.data} origin={item.origin} destination={item.destination} price={item.price} totalPrice={item.price*flightSearchParams[2]} passengers={flightSearchParams[2]} setSectionShown={setSectionShown} setChosenDepartureFlight={setChosenDepartureFlight} chosenDepartureFlight={chosenDepartureFlight} roundTrip={roundTrip} formatPlaces={formatPlaces} setPreloadNextSection={setPreloadNextSection}/>
                 </article>
                 )
             )
@@ -44,7 +43,7 @@ function AvailableDepartureFlights ({flightSearchParams, searchDepartureFlights,
 
     // Function used to display a different search tittle wether the trip desired is one way or round
     function typeOfSearchTittle () {
-        if (typeOfTrip === 'round') { return 'de ida' }
+        if (roundTrip) { return 'de ida' }
         else { return null }
     }
 
@@ -54,7 +53,7 @@ function AvailableDepartureFlights ({flightSearchParams, searchDepartureFlights,
     return (
             <div className='searchResult' key='searchResult'>
 
-                <FlightSearchParameters flightSearchParams={flightSearchParams} typeOfDepartureDate={typeOfDepartureDate} typeOfReturnDate={typeOfReturnDate} typeOfTripSwitch={typeOfTripSwitch} formatPlaces={formatPlaces}/>
+                <FlightSearchParameters flightSearchParams={flightSearchParams} flexDepartureDate={flexDepartureDate} flexReturnDate={flexReturnDate} roundTrip={roundTrip} formatPlaces={formatPlaces}/>
 
                 <animated.h1 style={searchTittleAnimationProps}>Vuelos {typeOfSearchTittle()} disponibles:</animated.h1>
                 {showFlights()}

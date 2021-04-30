@@ -1,10 +1,6 @@
 import {useSpring, animated} from 'react-spring'
 
-function FlightSearchParameters ({typeOfDepartureDate, typeOfReturnDate, flightSearchParams, typeOfTripSwitch, formatPlaces}) {
-
-    let typeOfTrip = typeOfTripSwitch%2 === 0 ? 'oneWay' : 'round'
-    let flexibleDeparture = typeOfDepartureDate%2 === 1 ? true : false
-    let flexibleReturn = typeOfReturnDate%2 === 1 ? true : false
+function FlightSearchParameters ({flexDepartureDate, flexReturnDate, flightSearchParams, roundTrip, formatPlaces}) {
 
     // Function used to display a different price search parameter depending on the param entered in the search form
     function priceParam () {
@@ -17,8 +13,8 @@ function FlightSearchParameters ({typeOfDepartureDate, typeOfReturnDate, flightS
 
     // Function used to display a different return date search parameter depending on the type of search entered in the search form
     function returnDateParam () {    
-        if (typeOfTrip === 'oneWay') { return 'N/A' }
-        else if (flexibleReturn === true) { return 'Flex' }
+        if (roundTrip === false) { return 'N/A' }
+        else if (flexReturnDate) { return 'Flex' }
         else { return flightSearchParams[4]}
     }
 
@@ -29,7 +25,7 @@ function FlightSearchParameters ({typeOfDepartureDate, typeOfReturnDate, flightS
         <animated.article style={searchParamsAnimationProps} className="flight searchParameters">
             <h2>Resultados de búsqueda para:</h2>
             <div className="row row1">
-                <p><span className="label">Fecha de salida:</span> {flexibleDeparture === true ? 'Flex' : flightSearchParams[3]}</p>
+                <p><span className="label">Fecha de salida:</span> {flexDepartureDate ? 'Flex' : flightSearchParams[3]}</p>
                 <p><span className="label">Fecha de retorno:</span> {returnDateParam()}</p>
                 <p><span className="label">Origen:</span> {flightSearchParams[0] === '' ? 'N/A' : formatPlaces(flightSearchParams[0])}</p>
                 <p><span className="label">Destino:</span> {flightSearchParams[0] === '' ? 'N/A' : formatPlaces(flightSearchParams[1])}</p>
