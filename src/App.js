@@ -77,10 +77,10 @@ function App() {
     function searchDepartureFlights (origin, destination, passengers, departureDate, price) {
 
         // Cases with uncertain origin and certain destination
-        if (origin === '' && destination !== '' && flexDepartureDate === false) {
+        if (!origin && destination && !flexDepartureDate) {
             return dataset.filter(o => (o.destination === destination && o.availability >= passengers && o.data === departureDate && o.price <= price))
 
-        } else if (origin === '' && destination !== '' && flexDepartureDate) {
+        } else if (!origin && destination && flexDepartureDate) {
             return (dataset.filter(o => (o.destination === destination && o.availability >= passengers && o.price <= price &&
                 (o.data === desiredFlexDepartureDates[0] ||
                 o.data === desiredFlexDepartureDates[1] ||
@@ -93,10 +93,10 @@ function App() {
                 )))
             
         // Cases with certain origin and uncertain destination
-        } else if (origin !== '' && destination === '' && flexDepartureDate === false) {
+        } else if (origin && !destination && !flexDepartureDate) {
             return dataset.filter(o => (o.origin === origin && o.availability >= passengers && o.data === departureDate && o.price <= price))
         
-        } else if (origin !== '' && destination === '' && flexDepartureDate) {
+        } else if (origin && !destination && flexDepartureDate) {
             return (dataset.filter(o => (o.origin === origin && o.availability >= passengers && o.price <= price &&
                 (o.data === desiredFlexDepartureDates[0] ||
                 o.data === desiredFlexDepartureDates[1] ||
@@ -109,10 +109,10 @@ function App() {
                 )))
 
         // Cases with uncertain origin and uncertain destination
-        } else if (origin === '' && destination === '' && flexDepartureDate === false) {
+        } else if (!origin && !destination && !flexDepartureDate) {
             return dataset.filter(o => (o.availability >= passengers && o.data === departureDate && o.price <= price))
             
-        } else if (origin === '' && destination === '' && flexDepartureDate) {
+        } else if (!origin && !destination && flexDepartureDate) {
             return (dataset.filter(o => (o.availability >= passengers && o.price <= price && 
                 (o.data === desiredFlexDepartureDates[0] ||
                 o.data === desiredFlexDepartureDates[1] ||
@@ -125,10 +125,10 @@ function App() {
                 )))
         
         // Cases with certain origin and certain destination
-        } else if (origin !== '' && destination !== '' && flexDepartureDate === false) {
+        } else if (origin && destination && !flexDepartureDate) {
             return dataset.filter(o => (o.origin === origin && o.destination === destination && o.availability >= passengers && o.data === departureDate && o.price <= price))
          
-        } else if (origin !== '' && destination !== '' && flexDepartureDate) {
+        } else if (origin && destination && flexDepartureDate) {
             return (dataset.filter(o => (o.origin === origin && o.destination === destination && o.availability >= passengers && o.price <= price &&
                 (o.data === desiredFlexDepartureDates[0] ||
                 o.data === desiredFlexDepartureDates[1] ||
@@ -147,10 +147,10 @@ function App() {
     function searchReturnFlights (origin, destination, passengers, departureDate, price) {
 
         // Cases with uncertain origin and certain destination
-        if (origin === '' && destination !== '' && flexDepartureDate === false) {
+        if (!origin && destination && !flexDepartureDate) {
             return dataset.filter(o => (o.destination === destination && o.availability >= passengers && o.data === departureDate && o.price <= price))
 
-        } else if (origin === '' && destination !== '' && flexDepartureDate) {
+        } else if (!origin && destination && flexDepartureDate) {
             return (dataset.filter(o => (o.destination === destination && o.availability >= passengers && o.price <= price &&
                 (o.data === desiredFlexReturnDates[0] ||
                 o.data === desiredFlexReturnDates[1] ||
@@ -163,10 +163,10 @@ function App() {
                 )))
         
         // Cases with certain origin and uncertain destination
-        } else if (origin !== '' && destination === '' && flexDepartureDate === false) {
+        } else if (origin && !destination && !flexDepartureDate) {
             return dataset.filter(o => (o.origin === origin && o.availability >= passengers && o.data === departureDate && o.price <= price))
         
-        } else if (origin !== '' && destination === '' && flexDepartureDate) {
+        } else if (origin && !destination && flexDepartureDate) {
             return (dataset.filter(o => (o.origin === origin && o.availability >= passengers && o.price <= price &&
                 (o.data === desiredFlexReturnDates[0] ||
                 o.data === desiredFlexReturnDates[1] ||
@@ -179,10 +179,10 @@ function App() {
                 )))
         
         // Cases with uncertain origin and uncertain destination
-        } else if (origin === '' && destination === '' && flexDepartureDate === false) {
+        } else if (!origin && !destination && !flexDepartureDate) {
             return dataset.filter(o => (o.availability >= passengers && o.data === departureDate && o.price <= price))
             
-        } else if (origin === '' && destination === '' && flexDepartureDate) {
+        } else if (!origin && !destination && flexDepartureDate) {
             return (dataset.filter(o => (o.availability >= passengers && o.price <= price && 
                 (o.data === desiredFlexReturnDates[0] ||
                 o.data === desiredFlexReturnDates[1] ||
@@ -195,10 +195,10 @@ function App() {
                 )))
 
         // Cases with certain origin and certain destination
-        } else if (origin !== '' && destination !== '' && flexDepartureDate === false) {
+        } else if (origin && destination && !flexDepartureDate) {
             return dataset.filter(o => (o.origin === origin && o.destination === destination && o.availability >= passengers && o.data === departureDate && o.price <= price))
 
-        } else if (origin !== '' && destination !== '' && flexDepartureDate) {
+        } else if (origin && destination && flexDepartureDate) {
             return (dataset.filter(o => (o.origin === origin && o.destination === destination && o.availability >= passengers && o.price <= price &&
                 (o.data === desiredFlexReturnDates[0] ||
                 o.data === desiredFlexReturnDates[1] ||
